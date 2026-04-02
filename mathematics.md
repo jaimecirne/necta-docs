@@ -1,50 +1,64 @@
 # Fundamentação Matemática do NECTA
 
-O NECTA (*Neural Electrophysiological Connectivity Time-resolved Analysis*) incorpora diferentes estimadores de conectividade, sendo a **Coerência Direcionada Parcial (PDC - *Partial Directed Coherence*)** o núcleo de conectividade causal/efetiva da plataforma. 
+O NECTA (*Neural Electrophysiological Connectivity Time-resolved Analysis*) incorpora estimadores robustos de conectividade para sinais eletrofisiológicos, abordando tanto as interferências espaciais (condução de volume) quanto as causalidades direcionais. 
 
-A implementação do PDC no NECTA (`directed_metrics.py`) não utiliza pacotes simplificados, optando por um fluxo rigoroso de modelagem, processamento rápido e controle estatístico de Falsas Descobertas.
+## 1. Conectividade Funcional Espectral (LFP)
 
-## 1. Controle de Estacionaridade (Filtro de Qualidade)
+O sistema mitiga o problema clássico da *Volume Conduction* (um mesmo sinal elétrico sendo captado instantaneamente por múltiplos eletrodos) dividindo a análise de fase e magnitude. Sendo $S_{xy}(f)$ o espectro cruzado entre os sinais $x$ e $y$ na frequência $f$:
 
-Antes da modelagem, cada janela temporal de LFP é submetida a um filtro de estacionaridade. A plataforma computa a variância média da janela; caso o sinal ultrapasse um limite paramétrico de ruído, a janela é classificada como ruidosa/não-estacionária e sumariamente rejeitada. Essa triagem é imperativa, pois janelas com artefatos de alta variância quebram as premissas dos modelos autoregressivos, corrompendo a matriz de resultados.
+### 1.1. Coerência de Magnitude Quadrada (Padrão)
+Mede a sincronia linear geral. É altamente sensível a influências de fase zero (condução de volume).
+$$C_{xy}(f) = \frac{|S_{xy}(f)|^2}{S_{xx}(f) S_{yy}(f)}$$
 
-## 2. Modelagem Autoregressiva Vetorial (MVAR)
+### 1.2. Coerência Imaginária (iCoh)
+Isola o atraso temporal verdadeiro, ignorando por completo as interações instantâneas de fase zero.
+$$iCoh_{xy}(f) = \frac{Im(S_{xy}(f))}{\sqrt{S_{xx}(f) S_{yy}(f)}}$$
 
-O LFP pré-processado é ajustado em um modelo multivariado no domínio do tempo, onde o estado presente de todos os canais é explicado pelo seu histórico:
+### 1.3. Weighted Phase Lag Index (wPLI)
+Uma evolução das métricas de fase. É baseada unicamente na assimetria da diferença de fase entre os sinais, ponderada pela magnitude imaginária do espectro cruzado para reduzir a sensibilidade a pequenos ruídos aleatórios.
+$$wPLI_{xy} = \frac{|E[Im(S_{xy})]|}{|E[|Im(S_{xy})|]|}$$
+*(Onde $E[\cdot]$ é o valor esperado calculado sobre as janelas/trials. Considerada uma das métricas mais imunes à condução de volume do estado-da-arte).*
 
-$$Y(t) = \sum_{r=1}^{p} A_r Y(t-r) + \epsilon(t)$$
+## 2. Conectividade Efetiva Direcional: Otimização do PDC
 
-Onde $A_r$ são as matrizes de coeficientes de lag e $\epsilon(t)$ é o ruído não correlacionado.
+Para inferência causal, o NECTA utiliza a Coerência Direcionada Parcial (PDC). A principal inovação matemática da plataforma (`directed_metrics.py`) reside no abandono de ordens estáticas de modelagem em favor da otimização dinâmica.
 
-- **Otimização Mínimos Quadrados:** Para evitar a sobrecarga (overhead) da biblioteca estática (`statsmodels`), os coeficientes são inferidos empregando uma abordagem puramente matricial de Mínimos Quadrados Ordinários (OLS) via `np.linalg.lstsq`.
-- **Seleção Dinâmica de Ordem ($p$):** A ordem do modelo não é cravada arbitrariamente. Ela é escolhida otimizando os resíduos (matriz de covariância do erro) frente à complexidade, avaliando Critérios de Informação clássicos (BIC, AIC ou HQIC).
+### 2.1. Ajuste Autoregressivo Vetorial (VAR)
+Os sinais LFP são submetidos a um filtro de estacionaridade temporal (rejeição por excesso de variância) e ajustados por um modelo de ordem $p$:
+$$X(t) = \sum_{r=1}^{p} A_r X(t-r) + E(t)$$
 
-## 3. Cálculo da PDC no Domínio da Frequência
+### 2.2. Seleção de Ordem Automática (Critérios de Informação)
+O Dask itera a ordem $p$ de 1 até `max_order=20`, solucionando o sistema via Mínimos Quadrados Ordinários (OLS) acelerados em NumPy. A escolha do melhor modelo minimiza a seguinte função de custo paramétrica:
 
-Uma vez estabelecidos os coeficientes $A_r$, o cálculo migra para o domínio da frequência aplicando a Transformada Discreta de Fourier.
+**Bayesian Information Criterion (BIC):** O critério padrão da plataforma penaliza severamente modelos complexos ($k$ parâmetros), induzindo à parcimônia contra o *overfitting*:
+$$BIC = k \ln(n) - 2 \ln(\hat{L})$$
+*(O AIC - Akaike Information Criterion - também é suportado como alternativa).*
 
+### 2.3. Transformada PDC
+Uma vez estabelecidos os coeficientes $A_r$ da ordem ótima, o cálculo migra para o domínio da frequência aplicando a Transformada de Fourier (*FastMath* via Numba).
 $$A(f) = I - \sum_{r=1}^{p} A_r e^{-j 2 \pi f \frac{r}{f_s}}$$
 
-Para lidar com a exigência computacional dessa etapa em matrizes densas de alta taxa de amostragem, essa transformada é processada por funções compiladas e acelaradas em C (FastMath via **Numba**).
-
-O valor escalar do fluxo de informação da fonte $j$ para o alvo $i$ na frequência $f$ é dado pela intensidade dessa via sobre toda a energia que deixa o canal de origem:
-
+O valor da conectividade de $j$ para $i$ é a fração da energia que sai de $j$ canalizada na direção de $i$:
 $$PDC_{ij}(f) = \frac{|A_{ij}(f)|}{\sqrt{\sum_{k} |A_{kj}(f)|^2}}$$
 
-*(Esta restrição assegura que as somas das magnitudes quadradas por coluna sejam iguais a 1)*
+### 2.4. Validação Estatística (Surrogates & FDR)
+1. **Surrogate Data:** O sistema gira a fase da Transformada de Fourier dos dados reais (randomização), recriando $100$ distribuições nulas que preservam o espectro de energia exato, mas destroem a causalidade temporal.
+2. **P-Values:** O PDC otimizado é recalculado nos nulos. O valor-p surge da contagem do percentil ($p < 0.05$ global em $95\%$).
+3. **FDR (Benjamini-Hochberg):** Aplica a restrição rigorosa de *False Discovery Rate* para mitigar os Falsos Positivos do grau massivo de testes por arestas, mascarando como zero qualquer aresta não significativa.
 
-## 4. Validação Estatística Robusta (Surrogates & FDR)
+## 3. Teoria dos Grafos e Topologia de Rede
 
-O mero valor escalar da PDC pode incorrer em achados casuais. A plataforma utiliza controle estatístico estrito para separar conexões reais de correlações espúrias:
+As matrizes de conectividade resultantes alimentam o módulo `metrics.py` e `statistical_validation.py`:
 
-1. **Dados Substitutos (Surrogate Data):** O NECTA recria o universo nulo do sinal. Os dados reais têm sua fase randomizada via Transformada de Fourier, destruindo interações causais enquanto preservam o espectro de energia exato.
-2. **P-Values Baseados em Contagem:** O fluxo MVAR/PDC é rodado para essas réplicas nulas ($N=100$). A métrica de significância local (o valor-p empírico da aresta) surge comparando-se a taxa com que os valores da rede falsa igualam ou superam a rede verdadeira.
-3. **FDR - Correção de Benjamini-Hochberg:** Finalmente, para domar o risco de Falsos Positivos inerente às comparações múltiplas das arestas, não basta aceitar um $p < 0.05$. O algoritmo controla a *False Discovery Rate* (FDR). Conexões reprovadas pelo rigor do FDR são zeradas matematicamente na matriz persistida no cache.
+### 3.1. Assortatividade
+Mede a correlação de Pearson ($r$) entre os graus de nós adjacentes.
+*   **$r > 0$ (Assortativa):** Nós influentes (*Hubs*) conectam-se entre si. Indica um cérebro/rede robusto.
+*   **$r < 0$ (Disassortativa):** Hubs conectam-se primariamente a nós menores. Uma rede vulnerável a falhas direcionadas aos *hubs*.
 
-## 5. Teoria dos Grafos e Modelos Nulos (Topologia)
+### 3.2. Small-Worldness ($\sigma$)
+Utiliza a aproximação teórica rápida baseada no agrupamento e distância do componente gigante:
+$$\sigma = \frac{C/C_{rand}}{L/L_{rand}}$$
+*(Viabilizado via fórmula de Erdös-Rényi instantânea para escalar em centenas de janelas dinâmicas).*
 
-O framework também estende o rigor estatístico para a topologia global da rede (`metrics.py` e `statistical_validation.py`):
-
-* **Ensembles de Redes Aleatórias:** O NECTA testa a significância de métricas globais (como a Modularidade, Coeficiente de Clustering e Comprimento de Caminho - *Path Length*) contra centenas de Grafos Aleatórios.
-* **Erdös-Rényi e Small-Worldness:** Gera grafos preservando o número de arestas originais para computar o coeficiente de *Small-worldness* ($\sigma = \frac{\gamma}{\lambda}$).
-* **Configuration Model:** Um teste topológico mais rigoroso que embaralha as arestas reais (*Double Edge Swap*) preservando exatamente o grau de cada nó cerebral individual. O z-score calculado em cima desses *ensembles* nulos prova se a comunidade detectada na matriz é um artefato biológico verdadeiro ou acaso probabilístico.
+### 3.3. Null Models Estruturais (Configuration Model)
+Para validar métricas globais (como Modularidade via *Louvain*), o NECTA cruza os resultados reais contra ensaios nulos estritos gerados por permutações do tipo *Double Edge Swap*, preservando exatamente a densidade grau a grau da matriz neurofisiológica original.

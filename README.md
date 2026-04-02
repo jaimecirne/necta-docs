@@ -14,6 +14,7 @@ Esta documentação centraliza os aspectos metodológicos, arquiteturais e matem
 4. [Ingestão de Dados e Gestão de Estado Global](data_ingestion_and_state.md): Detalha o carregamento assíncrono (*Lazy Loading*), a extração de fase e amplitude via Transformada de Hilbert (para *iCoh* e *wPLI*) e o gerenciamento do estado via `core.py`.
 5. [Arquitetura do Motor de Pré-Cálculo e Orquestração (Dask)](precompute_orchestration.md): Explica o versionamento de cache via *fingerprinting*, os pipelines paralelos do LFP (Magnitude, iCoh, wPLI), e a Auto-Otimização dinâmica de ordem dos modelos VAR no cálculo de PDC.
 6. [Arquitetura de Visualização e Dashboard Interativo](dashboard_architecture.md): Documenta o design em componentes da UI (Dash/Cytoscape), a gestão do Estado Global (`ids.py` e Callbacks rápidos via `xarray.sel()`), e os painéis especializados (Integração Temporal, Fluxo de Informação e Assortatividade).
+7. [Aplicação Biológica e Estudo de Caso](biological_application.md): Documenta a validação científica da ferramenta no córtex visual (A17/A18) e a prova de conceito empírica do mesoconectoma dinâmico ("Dynome").
 
 ---
 *Gerenciado como parte do projeto de doutorado em Bioinformática (UFRN - Instituto do Cérebro) de Jaime Bruno Cirne de Oliveira.*

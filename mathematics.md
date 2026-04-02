@@ -40,3 +40,11 @@ O mero valor escalar da PDC pode incorrer em achados casuais. A plataforma utili
 1. **Dados Substitutos (Surrogate Data):** O NECTA recria o universo nulo do sinal. Os dados reais têm sua fase randomizada via Transformada de Fourier, destruindo interações causais enquanto preservam o espectro de energia exato.
 2. **P-Values Baseados em Contagem:** O fluxo MVAR/PDC é rodado para essas réplicas nulas ($N=100$). A métrica de significância local (o valor-p empírico da aresta) surge comparando-se a taxa com que os valores da rede falsa igualam ou superam a rede verdadeira.
 3. **FDR - Correção de Benjamini-Hochberg:** Finalmente, para domar o risco de Falsos Positivos inerente às comparações múltiplas das arestas, não basta aceitar um $p < 0.05$. O algoritmo controla a *False Discovery Rate* (FDR). Conexões reprovadas pelo rigor do FDR são zeradas matematicamente na matriz persistida no cache.
+
+## 5. Teoria dos Grafos e Modelos Nulos (Topologia)
+
+O framework também estende o rigor estatístico para a topologia global da rede (`metrics.py` e `statistical_validation.py`):
+
+* **Ensembles de Redes Aleatórias:** O NECTA testa a significância de métricas globais (como a Modularidade, Coeficiente de Clustering e Comprimento de Caminho - *Path Length*) contra centenas de Grafos Aleatórios.
+* **Erdös-Rényi e Small-Worldness:** Gera grafos preservando o número de arestas originais para computar o coeficiente de *Small-worldness* ($\sigma = \frac{\gamma}{\lambda}$).
+* **Configuration Model:** Um teste topológico mais rigoroso que embaralha as arestas reais (*Double Edge Swap*) preservando exatamente o grau de cada nó cerebral individual. O z-score calculado em cima desses *ensembles* nulos prova se a comunidade detectada na matriz é um artefato biológico verdadeiro ou acaso probabilístico.

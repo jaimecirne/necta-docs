@@ -12,6 +12,7 @@ Esta documentação centraliza os aspectos metodológicos, arquiteturais e matem
 2. [Fundamentação Matemática](mathematics.md): Descreve em profundidade a implementação dos cálculos de conectividade, com foco no modelo Autoregressivo Vetorial (VAR), Coerência Direcionada Parcial (PDC) e os rigorosos critérios de validação estatística (FDR).
 3. [Estrutura de Dados (Zarr)](data_structure.md): Especifica o formato de entrada dos dados eletrofisiológicos (LFP, spikes e metadados) convertido de legados pelo pipeline Isaac.
 4. [Ingestão de Dados e Gestão de Estado Global](data_ingestion_and_state.md): Detalha o carregamento assíncrono (*Lazy Loading*), a extração de fase e amplitude via Transformada de Hilbert (para *iCoh* e *wPLI*) e o gerenciamento do estado via `core.py`.
+5. [Arquitetura do Motor de Pré-Cálculo e Orquestração (Dask)](precompute_orchestration.md): Explica o versionamento de cache via *fingerprinting*, os pipelines paralelos do LFP (Magnitude, iCoh, wPLI), e a Auto-Otimização dinâmica de ordem dos modelos VAR no cálculo de PDC.
 
 ---
 *Gerenciado como parte do projeto de doutorado em Bioinformática (UFRN - Instituto do Cérebro) de Jaime Bruno Cirne de Oliveira.*

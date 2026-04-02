@@ -2,29 +2,27 @@
 
 O NECTA não é apenas uma ferramenta de engenharia de software; ele foi projetado para responder a perguntas neurofisiológicas fundamentais, preenchendo a lacuna entre análises estáticas tradicionais e a natureza dinâmica da comunicação neural — conceito conhecido como o **"Dynome"** (Kopell et al., 2014).
 
-Este documento resume a aplicação prática do NECTA em um cenário biológico real, conforme apresentado no *Natal Bioinformatics Forum (2025)*.
+Este documento resume a aplicação prática do NECTA em cenários biológicos reais, consolidando achados apresentados em fóruns científicos (como o *Natal Bioinformatics Forum 2025* e validações recentes da dinâmica topológica).
 
 ## 1. O Paradigma do Mesoconectoma Dinâmico
-Análises de conectoma tradicionais frequentemente negligenciam a dimensão temporal ("Dynome"). O NECTA processa dados brutos de eletrofisiologia (LFP e Spikes) usando uma abordagem de janela deslizante (*sliding-window*, cf. Allen et al., 2014) para revelar essas interações resolvidas no tempo, suportadas por dados substitutos (*surrogates*) para significância (Schreiber & Schmitz, 2000) e métricas da Teoria dos Grafos (Rubinov & Sporns, 2010).
+Análises de conectoma tradicionais frequentemente negligenciam a evolução em escala de milissegundos das redes funcionais. O NECTA processa dados de LFP e *Spikes* usando uma abordagem de janela deslizante (ex: $W = 500ms$ com 50% ou 100% de sobreposição) para revelar essas interações no tempo. O framework integra métricas como Coerência e PDC com validações estatísticas (dados *surrogate*) e Teoria dos Grafos.
 
-## 2. Estudo de Caso: Mapeamento Cortical (Experimento `c1608a01`)
+## 2. Estudo de Caso: Mapeamento do Córtex Visual (Experimento `c1608a01`)
 
-O NECTA foi empregado para analisar um *dataset* de 48 canais originado de eletrodos implantados ao longo de três áreas do córtex visual de um modelo animal (trabalho com S. Neuenschwander, D. Y. Takahashi e K. E. Schmidt):
-*   **Área 18 (A18):** Canais 1 a 16.
-*   **Zona de Transição (TZ):** Canais 17 a 32.
-*   **Área 17 (A17):** Canais 33 a 48.
+O NECTA analisou *datasets* de múltiplos eletrodos (32 a 64 canais) implantados no córtex visual primário de um modelo felino (Áreas 17, 18 e Zona de Transição - TZ). O experimento foi conduzido sob anestesia geral e paralisia (Wunderle et al., 2013), estado crítico por eliminar variáveis de confusão (como atenção consciente ou movimentos oculares), isolando puramente as propriedades dinâmicas intrínsecas da rede cortical.
 
-### 2.1. Resultados Funcionais e Anatômicos
-A plataforma demonstrou sucesso ao extrair comunidades (módulos) funcionais puramente dos dados de Coerência que **mapearam perfeitamente a matriz anatômica** física dos eletrodos no córtex (A17, TZ e A18).
+### 2.1. O Esqueleto Estrutural (Grafo Estático)
+A Coerência em *Low Gamma* (densidade a 15%) extraiu módulos funcionais que **mapearam perfeitamente a matriz anatômica** física dos eletrodos: A17, TZ e A18 agrupam-se em comunidades distintas ligadas por nós "ponte". Este grafo estático serve como a espinha dorsal estrutural (cf. Vezoli et al., 2021).
 
 ### 2.2. Fluxo de Informação Hierárquico (PDC)
-A análise estática do Partial Directed Coherence (PDC) na banda *Low Gamma* revelou um fluxo de informação direcional e hierárquico claro:
-*   **A17:** Atua como a principal **Fonte** (*Source*) da rede (Net Flow: +1.10).
-*   **A18:** Funciona como o principal **Sumidouro** (*Sink*) (Net Flow: -1.36).
-*   **Via Dominante:** O fluxo de informação direcional consolidado segue a rota `A17 -> TZ -> A18`.
+A análise dinâmica direcional (PDC) na banda *Low Gamma* (30-59 Hz) revelou a evolução do fluxo entre as regiões:
+*   **A17:** Atua como o **Driver** (Fonte) persistente da rede, liderando o envio de informação.
+*   **A18:** Funciona como o **Receiver** (Sumidouro) persistente, recebendo coerência direcionada.
+*   **Zona de Transição (TZ):** Atua de forma fascinante como um **Modulador Dinâmico**, alternando seu papel (fonte/sumidouro) exatamente no momento em que o estímulo visual se inicia.
 
-### 2.3. Dinâmica de Redes (DFC)
-A arquitetura dinâmica do NECTA capturou fotografias (*snapshots*) da rede de Coerência em *Low Gamma*. Os grafos ilustram uma organização rítmica estável (baixa variância), onde *hubs* na A17 (nós 32-47) e na TZ (nós 16-31) mantêm sua clusterização coesa ao longo do tempo.
+### 2.3. Topologia Dinâmica: Spikes vs Small-Worldness
+O painel de Integração Temporal do NECTA correlacionou a topologia com o comportamento celular. Durante janelas de 500ms, o coeficiente de *Small-Worldness* foi sobreposto ao histograma de disparos globais (PSTH).
+Descobriu-se que **a rede atinge o pico de otimização topológica (*Small-Worldness*) durante a fase de movimento do estímulo visual**, impulsionada por um aumento abrupto no coeficiente de clusterização local, revelando que a arquitetura de "mundo pequeno" do cérebro não é estática, mas reage temporalmente ao processamento de informações.
 
 ## 3. Conclusão Científica
-A aplicação do NECTA permitiu traduzir sinais brutos em insights dinâmicos a nível de sistemas. O estudo *'c1608a01'* caracterizou uma rede dissociada, onde a Área 17 (A17) atua como uma **"Fonte Volátil"** (*Volatile Source*) de fluxo PDC em *Low Gamma*, e a Área 18 (A18) funciona como um **"Sumidouro Estável"** (*Stable Sink*), servindo adicionalmente como um *hub* de correlação robusto e dinamicamente estável.
+A aplicação validou o NECTA como um dissecador granular do mesoconectoma. Ao invés de apenas uma foto estática, obtivemos um **"Conectoma Cronológico"**. O NECTA revelou como o cérebro preserva uma espinha dorsal anatômica estável (as comunidades A17/TZ/A18) enquanto orquestra flutuações rápidas de eficiência de rede (picos de *Small-Worldness* sob estímulo) e revezamento hierárquico causal (TZ modulando o eixo A17 -> A18).

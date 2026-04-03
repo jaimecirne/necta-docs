@@ -24,11 +24,31 @@ To infer causal interactions and hierarchical information flow, NECTA implements
 2.  **Automated Order Selection:** Instead of imposing a static model order, the Dask workers dynamically fit Multivariate Autoregressive (MVAR) models using Ordinary Least Squares (OLS). The algorithm iterates through orders (up to `max_order=20`) and selects the optimal $p$ that minimizes the Bayesian Information Criterion (BIC), balancing model fit against parametric complexity.
 3.  **Frequency Transformation:** Autoregressive coefficients $A_r$ are transformed into the frequency domain $A(f)$ using Fast Fourier Transforms accelerated via `Numba` (FastMath), yielding the normalized PDC matrices.
 
-## 3.6 Graph Theory and Statistical Validation
-A crucial aspect of NECTA is its rigorous statistical and topological validation.
-*   **Surrogate Data & FDR Correction:** For connectivity edges (e.g., PDC), significance is established by generating 100 phase-randomized surrogate datasets. Edge-wise p-values are computed and subjected to False Discovery Rate (FDR) correction (Benjamini-Hochberg procedure, $\alpha = 0.05$). Non-significant connections are mathematically zeroed.
-*   **Topological Metrics:** The framework extracts core graph properties including Modularity (Louvain heuristic), Efficiency, and Assortativity (the tendency of nodes to connect with similar-degree nodes).
-*   **Small-Worldness ($\sigma$) and Null Models:** NECTA calculates the small-world coefficient by comparing the empirical graph's clustering and path length against theoretical Erdös-Rényi models. Furthermore, macro-topology is validated against Configuration Models (via double-edge swapping) to ensure that the detected community structures preserve empirical degree distributions.
+**Table 1: Methodological Rationale for Connectivity Estimator Selection in NECTA**
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{0.3\linewidth}|p{0.2\linewidth}|p{0.25\linewidth}|p{0.2\linewidth}|}
+\hline
+\textbf{Algorithm Family} & \textbf{Examples} & \textbf{Vulnerability to Volume Conduction} & \textbf{Directionality} \\ \hline
+\textit{Traditional Parametric Time-Domain} & Pearson Correlation & \textbf{Severe:} Highly contaminated by instantaneous topological artifacts. & Non-Directed \\ \hline
+\textit{Mixed Spectral Synchrony} & PLV, Magnitude Coherence & \textbf{High:} Latent topological interference in mixed phase-magnitude domains. & Non-Directed \\ \hline
+\textit{Instantaneous Phase-Lag Delay Modeling} & wPLI, iCoh & \textbf{Low:} Extreme robustness via strict subtraction of zero-lag real projections. & Non-Directed \\ \hline
+\textit{Multivariate Regressive Causal Modeling} & PDC, DTF & \textbf{Moderate to Low:} Shielded by dynamic order selection (BIC) and surrogate thresholding. & \textbf{Causal (Driver/Sink)} \\ \hline
+\end{tabular}
+\end{table}
 
-## 3.7 Interactive Visualization Dashboard
-The final tier of NECTA is a Single Page Application (SPA) built with `Dash` and `Cytoscape`. The interface does not process raw signals; it performs on-the-fly slicing of the pre-computed `Zarr` cache using `xarray.sel()`. Changes in the global state (e.g., sliding the temporal window) trigger instantaneous callbacks that serialize exact data slices into JSON, seamlessly re-rendering complex Connectome Matrices, Temporal Integration scatter plots, and anatomical Information Flow graphs.
+## 3.6 In Silico Validation: Ground Truth Modeling and Stress Testing
+To irrefutably prove the causal extraction capabilities of NECTA, the platform was subjected to *in silico* validation using controlled synthetic matrices. 
+*   **Neural Mass Models (Ground Truth):** Theoretical multivariate LFP arrays were generated utilizing coupled Neural Mass Models with pre-programmed structural connections, known delays, and specific oscillatory gamma bursts (30-90Hz), establishing an exact biological ground truth.
+*   **Noise Induction and Volume Conduction:** These synthetic matrices were progressively corrupted. The *Signal-to-Noise Ratio (SNR)* was degraded using pink and white noise, and severe instantaneous spatial mixing was modeled to emulate electrical cross-talk (Volume Conduction) in real biological tissue. The NECTA extraction pipeline (wPLI and BIC-optimized PDC) was applied blindly. Evaluation using Receiver Operating Characteristic (ROC) and Area Under the Curve (AUC) metrics confirmed the platform’s capacity to filter noise and retrieve the underlying ground truth causal graphs reliably.
+
+Furthermore, an exhaustive hardware **Stress Test (Benchmarking)** evaluated the Dask orchestrator. The computational scale of processing multivariate combinatorics (FDR surrogate validations and MVAR scaling) was timed systematically across 1, 2, 4, 8, and 16 active worker threads. These benchmarks proved the exponential operational efficiency of NECTA's chunked Zarr loading compared to traditional monolithic Python pipelines (e.g., MNE), effectively overcoming the Out-Of-Memory (OOM) limits of big-data electrophysiology.
+
+## 3.7 Graph Theory, Statistical Validation, and Open Science
+A crucial aspect of NECTA is its rigorous statistical and topological validation.
+*   **Surrogate Data & FDR Correction:** For connectivity edges, significance is established by generating 100 phase-randomized surrogate datasets. Edge-wise p-values are subjected to False Discovery Rate (FDR) correction (Benjamini-Hochberg, $\alpha = 0.05$).
+*   **Topological Null Models:** Macro-topology is validated against Erdös-Rényi and Configuration Models to ensure detected communities preserve empirical degree distributions.
+*   **Open Science and Reproducibility:** Complying with open-source global standards, the NECTA framework ensures transparency. All algorithms, Dask partition logs, and dependencies are containerized, version-controlled, and openly hosted on digital repositories (GitHub/CodeMeta), allowing independent researchers to audit, reproduce, and expand the methodological codebase.
+
+## 3.8 Interactive Visualization Dashboard
+The final tier of NECTA is a Single Page Application (SPA) built with `Dash` and `Cytoscape`. The interface performs on-the-fly slicing of the pre-computed `Zarr` cache using `xarray.sel()`. Changes in the global state trigger instantaneous callbacks that serialize exact data slices into JSON, seamlessly re-rendering complex Connectome Matrices, Temporal Integration scatter plots, and anatomical Information Flow graphs.

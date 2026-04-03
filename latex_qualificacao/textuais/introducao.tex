@@ -26,76 +26,116 @@ Consequently, there is a critical need for a modern, high-performance computing 
 
 \vspace{1cm}
 
-% --- VISUAL INSERTION USING TIKZ ---
+% --- VISUAL INSERTION 1 USING TIKZ ---
 \begin{figure}[htbp]
     \centering
     \begin{tikzpicture}[
-        box/.style={draw, rounded corners, minimum width=2.5cm, minimum height=1cm, align=center, fill=blue!5, font=\sffamily\small},
-        circ/.style={draw, circle, minimum size=1.5cm, align=center, fill=red!5, font=\sffamily\small},
-        >={Stealth},
+        >=Stealth,
+        sensor/.style={draw, rounded corners, fill=blue!10, minimum width=1.4cm, minimum height=0.8cm, font=\sffamily\scriptsize\bfseries, thick},
+        clean_node/.style={draw, circle, fill=green!10, minimum size=0.9cm, font=\sffamily\scriptsize\bfseries, thick},
+        state_box/.style={draw, rounded corners, fill=gray!10, minimum width=2.5cm, minimum height=0.8cm, font=\sffamily\scriptsize, thick},
+        engram_bg/.style={draw, circle, fill=green!5, minimum size=2.2cm, thick},
         thick
     ]
         
         % ================= PANEL A =================
-        \node[font=\bfseries\sffamily] at (0, 0) {Painel A: Condução de Volume vs. Resolução Analítica};
+        \node[font=\bfseries\sffamily\large, anchor=west] at (-4, 6.5) {Painel A: Condução de Volume e Resolução Analítica};
         
-        % Volume Conduction Side
-        \node[circ] (dipole) at (-4, -2) {Deep\\Dipole};
-        \node[box] (e1) at (-7, -5) {CH 1};
-        \node[box] (e2) at (-4.5, -5) {CH 2};
-        \node[box] (e3) at (-2, -5) {CH 3};
-        \node[box] (e4) at (0.5, -5) {CH 4};
+        % 1. Modelagem Biofísica e Corrupção
+        \node[draw, circle, fill=red!10, minimum size=1.5cm, align=center, font=\sffamily\scriptsize\bfseries, thick] (dipole) at (0, 0) {Dipolo\\Profundo};
         
-        \draw[->, dashed] (dipole) -- (e1);
-        \draw[->, dashed] (dipole) -- (e2);
-        \draw[->, dashed] (dipole) -- (e3);
-        \draw[->, dashed] (dipole) -- (e4);
+        \node[sensor] (e1) at (-2.5, 3) {CH 1};
+        \node[sensor] (e2) at (-0.8, 3) {CH 2};
+        \node[sensor] (e3) at (0.8, 3) {CH 3};
+        \node[sensor] (e4) at (2.5, 3) {CH 4};
         
-        \draw[<->, red] (e1) to[bend right=25] node[below, font=\scriptsize\sffamily] {Zero-lag} (e2);
-        \draw[<->, red] (e2) to[bend right=25] (e3);
-        \draw[<->, red] (e3) to[bend right=25] (e4);
-        \draw[<->, red] (e1) to[bend right=40] (e4);
+        % Linhas de campo elétrico (instantâneas)
+        \draw[->, dashed, color=gray, thick] (dipole) -- (e1.south);
+        \draw[->, dashed, color=gray, thick] (dipole) -- (e2.south);
+        \draw[->, dashed, color=gray, thick] (dipole) -- (e3.south);
+        \draw[->, dashed, color=gray, thick] (dipole) -- (e4.south);
         
-        % Filter Side
-        \node[box, fill=orange!10, minimum height=1.5cm] (filter) at (4, -2.5) {Complex Domain\\Filter\\(wPLI / iCoh)};
+        % Matriz Corrompida (Zero-lag red arcs)
+        \draw[<->, color=red!70, thick] (e1.north) to[bend left=35] (e2.north);
+        \draw[<->, color=red!70, thick] (e2.north) to[bend left=35] (e3.north);
+        \draw[<->, color=red!70, thick] (e3.north) to[bend left=35] (e4.north);
+        \draw[<->, color=red!70, thick] (e1.north) to[bend left=50] (e3.north);
+        \draw[<->, color=red!70, thick] (e2.north) to[bend left=50] (e4.north);
+        \draw[<->, color=red!70, thick] (e1.north) to[bend left=65] (e4.north);
         
-        \node[circ, fill=green!10] (n1) at (2.5, -5) {Node 1};
-        \node[circ, fill=green!10] (n3) at (5.5, -5) {Node 3};
+        \node[font=\sffamily\scriptsize\bfseries, text=red!80!black, align=center] at (0, 5.4) {Matriz Topológica Corrompida\\(Múltiplas Falsas Arestas de Zero-lag)};
         
-        \draw[->, ultra thick] (e4.east) to[out=0, in=180] (filter.west);
-        \draw[->, ultra thick] (filter.south) -- (4, -3.8) -| (n1.north);
-        \draw[->, ultra thick] (filter.south) -- (4, -3.8) -| (n3.north);
+        % 2. Transição Analítica (Filtro)
+        \draw[->, line width=3pt, draw=orange!80!black] (3.8, 3) -- node[above, font=\sffamily\scriptsize\bfseries, align=center] {Filtro Complexo} node[below, font=\sffamily\scriptsize, align=center] {(wPLI / iCoh)} (6.2, 3);
         
-        \draw[<->, ultra thick, green!50!black] (n1) -- node[above, font=\scriptsize\sffamily] {Valid Edge} (n3);
+        % 3. Resolução Analítica (Grafo Esparso)
+        \node[clean_node] (n1) at (7.5, 3) {N 1};
+        \node[clean_node] (n2) at (9.0, 3) {N 2};
+        \node[clean_node] (n3) at (10.5, 3) {N 3};
+        \node[clean_node] (n4) at (12.0, 3) {N 4};
         
+        \draw[<->, color=green!60!black, ultra thick] (n1.south) to[bend right=40] node[below=0.1cm, font=\sffamily\scriptsize\bfseries] {Aresta Fidedigna} (n3.south);
+        \draw[<->, color=green!60!black, ultra thick] (n2.south) to[bend right=40] (n4.south);
         
+        \node[font=\sffamily\scriptsize\bfseries, text=green!60!black, align=center] at (9.75, 1.2) {Resolução Analítica\\(Grafo Esparso Real)};
+
+
         % ================= PANEL B =================
-        \node[font=\bfseries\sffamily] at (0, -8.5) {Painel B: Colapso Temporal vs. Dinoma Transiente};
+        \draw[thick, dashed, draw=gray!40] (-4, -1) -- (13, -1); % Divisória visual
+        \node[font=\bfseries\sffamily\large, anchor=west] at (-4, -2) {Painel B: Colapso Temporal vs. Dinoma Transiente};
         
-        % Static Approach
-        \node[box] (t1) at (-5.5, -10) {State 1};
-        \node[box] (t2) at (-2.5, -10) {State 2};
-        \node[box] (t3) at (0.5, -10) {State 3};
+        % 1. Abordagem Estática (Colapso)
+        \node[state_box] (t1) at (-1.5, -4) {Estado Cerebral $T_1$};
+        \node[state_box] (t2) at (-1.5, -5) {Estado Cerebral $T_2$};
+        \node[state_box] (t3) at (-1.5, -6) {Estado Cerebral $T_3$};
         
-        \node[circ, fill=orange!10] (avg) at (-2.5, -12.5) {Long Window\\Average};
-        \draw[->] (t1) -- (avg);
-        \draw[->] (t2) -- (avg);
-        \draw[->] (t3) -- (avg);
+        \draw[thick, gray] (t1.east) -- (0.5, -4);
+        \draw[thick, gray] (t2.east) -- (0.5, -5);
+        \draw[thick, gray] (t3.east) -- (0.5, -6);
+        \draw[thick, gray] (0.5, -4) -- (0.5, -6);
+        \draw[->, thick, gray] (0.5, -5) -- node[above, font=\sffamily\tiny, align=center] {Cálculo em\\Janela Longa} (2, -5);
         
-        \node[box, fill=red!10, minimum width=4cm] (dense) at (-2.5, -15) {Dense, Unrealistic\\Static Graph};
-        \draw[->] (avg) -- (dense);
+        % Grafo Denso (Mini-rede interligada)
+        \node[draw, circle, fill=red!5, minimum size=2.8cm, align=center, thick] (dense) at (3.8, -5) {};
+        \coordinate (d1) at (3.3, -4.5); \coordinate (d2) at (4.3, -4.5);
+        \coordinate (d3) at (3.0, -5.3); \coordinate (d4) at (4.6, -5.3);
+        \coordinate (d5) at (3.8, -5.8);
+        \foreach \i in {1,...,5} {
+            \foreach \j in {\i,...,5} {
+                \draw[red!40, thin] (d\i) -- (d\j);
+            }
+            \filldraw[black!70] (d\i) circle (1.5pt);
+        }
+        \node[font=\sffamily\scriptsize\bfseries, text=red!80!black, align=center] at (3.8, -3.2) {Teia Conectiva Densa\\(Irrealista / Estática)};
         
-        % Dynamic Approach
-        \node[circ, fill=green!10] (g1) at (4.5, -10) {Engram 1};
-        \node[circ, fill=green!10] (g2) at (4.5, -12.5) {Engram 2};
-        \node[circ, fill=green!10] (g3) at (4.5, -15) {Engram 3};
+        % 2. Abordagem Dinâmica (Dinoma)
+        % Engrama 1
+        \node[engram_bg] (g1) at (8, -4) {};
+        \node[font=\sffamily\scriptsize\bfseries, text=green!50!black, above] at (8, -2.8) {Engrama 1};
+        \coordinate (s1) at (7.6, -3.8); \coordinate (s2) at (8.4, -4.2);
+        \draw[green!60!black, thick] (s1) -- (s2);
+        \filldraw[black!70] (s1) circle (1.5pt); \filldraw[black!70] (s2) circle (1.5pt);
         
-        \draw[->, blue, dashed, ultra thick] (g1) -- node[right, font=\scriptsize\sffamily] {Temporal flexibility} (g2);
-        \draw[->, blue, dashed, ultra thick] (g2) -- (g3);
+        % Engrama 2
+        \node[engram_bg] (g2) at (10.5, -6.5) {};
+        \node[font=\sffamily\scriptsize\bfseries, text=green!50!black, below] at (10.5, -7.7) {Engrama 2};
+        \coordinate (s3) at (10.1, -6.3); \coordinate (s4) at (10.9, -6.3); \coordinate (s5) at (10.5, -6.9);
+        \draw[green!60!black, thick] (s3) -- (s5) -- (s4);
+        \filldraw[black!70] (s3) circle (1.5pt); \filldraw[black!70] (s4) circle (1.5pt); \filldraw[black!70] (s5) circle (1.5pt);
         
-        % connecting visual
-        \draw[->, dotted, thick, gray] (t3.east) to[out=0, in=180] node[above, font=\scriptsize\sffamily] {Dynome View} (g1.west);
+        % Engrama 3
+        \node[engram_bg] (g3) at (13, -4) {};
+        \node[font=\sffamily\scriptsize\bfseries, text=green!50!black, above] at (13, -2.8) {Engrama 3};
+        \coordinate (s6) at (12.6, -3.8); \coordinate (s7) at (13.4, -4.2); \coordinate (s8) at (13.0, -4.5);
+        \draw[green!60!black, thick] (s6) -- (s8);
+        \filldraw[black!70] (s6) circle (1.5pt); \filldraw[black!70] (s7) circle (1.5pt); \filldraw[black!70] (s8) circle (1.5pt);
         
+        % Flow arrows
+        \draw[->, ultra thick, dashed, draw=blue!60] (g1) -- node[above right, font=\sffamily\scriptsize, align=center] {Flexibilidade\\Temporal} (g2);
+        \draw[->, ultra thick, dashed, draw=blue!60] (g2) -- node[above left, font=\sffamily\scriptsize, align=center] {Reorganização} (g3);
+        
+        \node[font=\sffamily\scriptsize\bfseries, text=blue!80!black, align=center] at (10.5, -3.5) {Exploração do Dinoma\\(Transições de Rede Preservadas)};
+
     \end{tikzpicture}
     
     \caption[Esquematização dos gargalos metodológicos]{\textbf{Esquematização dos principais gargalos metodológicos em conectômica eletrofisiológica e suas respectivas resoluções no framework proposto.} \textbf{(Painel A)} Representação biofísica da Condução de Volume: as linhas de campo elétrico de um único dipolo profundo atingem instantaneamente múltiplos microeletrodos, criando anomalias de \textit{zero-lag} e gerando matrizes topológicas falsamente densas. À direita, a resolução analítica utilizando índices de fase complexa (wPLI/iCoh), que filtra os artefatos e recupera um grafo esparso e fidedigno. \textbf{(Painel B)} Representação abstrata do colapso temporal: o cálculo de correlações através de janelas demasiadamente longas funde diferentes estados cerebrais transitórios, resultando numa rede artificial estática. Em contraste, a exploração focada no ``Dinoma'' preserva a flexibilidade sequencial e as rápidas reorganizações dos engramas funcionais de integração.}

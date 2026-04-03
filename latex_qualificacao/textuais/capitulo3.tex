@@ -18,6 +18,63 @@ Analyzing dynamic connectivity across continuous recordings poses a severe combi
 \item \textbf{Fingerprinting and Cache Versioning:} To ensure data integrity, the orchestrator implements a cryptographic fingerprinting mechanism. Any modification to analytical parameters (e.g., altering variance thresholds or VAR criteria) alters the global hash, safely invalidating obsolete `Zarr` caches.
 \end{itemize}
 
+\vspace{0.5cm}
+
+% --- VISUAL INSERTION 2 USING TIKZ ---
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}[
+        >=Stealth,
+        box/.style={draw, rounded corners, minimum width=3.2cm, minimum height=1.2cm, align=center, font=\sffamily\small, thick},
+        db/.style={draw, cylinder, shape border rotate=90, aspect=0.25, minimum width=3cm, minimum height=1.6cm, align=center, font=\sffamily\small, thick},
+        worker/.style={draw, rounded corners, minimum width=2.8cm, minimum height=0.8cm, align=center, fill=orange!10, font=\sffamily\scriptsize, thick},
+        thick
+    ]
+
+    % --- LEVEL 1: INGESTION (Top, Left to Right) ---
+    \node[box, fill=gray!10, dashed] (raw) at (0, 0) {Pacotes Brutos LFP\\(Binários SPASS)};
+    \node[box, fill=blue!10] (ingest) at (5, 0) {Ingestão Modular\\Assíncrona};
+    \node[db, fill=green!10] (zarr) at (10.5, 0) {Datacubes N-Dim\\(Xarray / Zarr)};
+
+    \draw[->] (raw) -- node[above, font=\sffamily\scriptsize] {Parsing} (ingest);
+    \draw[->] (ingest) -- node[above, font=\sffamily\scriptsize] {Conversão Semântica} (zarr);
+
+    % --- LEVEL 2: DASK ENGINE (Middle, Right to Left Flow via orchestration) ---
+    % Background layer for Dask environment
+    \draw[draw=purple!80, thick, dashed, fill=purple!5, rounded corners] (-1, -1.8) rectangle (12.5, -6.5);
+    \node[font=\sffamily\bfseries\small, purple!80!black] at (5.75, -2.1) {Infraestrutura de Orquestração (Agendador Estocástico Dask)};
+
+    \node[box, fill=white] (graphs) at (9.5, -4.5) {Particionamento em\\Task Graphs};
+    
+    \node[worker] (w1) at (3.5, -3.5) {Worker Node 1};
+    \node[worker] (w2) at (3.5, -4.5) {Worker Node 2};
+    \node[worker] (w3) at (3.5, -5.5) {Worker Node N};
+
+    \draw[->] (zarr.south) -- node[right, font=\sffamily\scriptsize] {Lazy Loading Iterativo} (graphs.north);
+    
+    \draw[->] (graphs.west) -- (w1.east);
+    \draw[->] (graphs.west) -- (w2.east);
+    \draw[->] (graphs.west) -- (w3.east);
+
+    % --- LEVEL 3: FRONTEND (Bottom, Flow down to Bus, then Right) ---
+    \node[box, fill=orange!15, minimum width=4cm] (bus) at (3.5, -8) {Barramento de Dados\\Serialização Interativa};
+    \node[box, fill=red!10, ultra thick, draw=red!50!black, minimum width=4cm] (front) at (10, -8) {Frontend Reativo\\(Cytoscape / Dash)};
+
+    % Routing output from workers to bus
+    \draw[->] (w1.west) -| (0.5, -4.5) |- (bus.west);
+    \draw[->] (w2.west) -| (0.5, -4.5) |- (bus.west);
+    \draw[->] (w3.west) -| (0.5, -4.5) |- (bus.west);
+
+    \draw[->, ultra thick, draw=blue!70] (bus.east) -- node[above, font=\sffamily\scriptsize] {Exportação de Estado JSON} (front.west);
+
+    \end{tikzpicture}
+    
+    \caption[Arquitetura Distribuída e Orientada a Nuvens]{\textbf{Topologia de Sistemas e Fluxo de Processamento de Dados da Plataforma NECTA.} O diagrama rastreia as engrenagens de abstração metodológica: a leitura de pacotes brutos desestruturados provenientes de matrizes LFP (binários legados SPASS), seguida pela ingestão assíncrona e conversão modular em \textit{Datacubes} fragmentados via Xarray/Zarr. Através de uso semântico e \textit{lazy loading}, os cálculos são submetidos a particionamento em Grafos de Tarefas (\textit{Task Graphs}) no orquestrador Dask, que aloca nós de processamento (\textit{Workers}) independentes sob seu agendador estocástico. Finalmente, os dados processados fluem por um barramento de serialização até a exportação interativa de estado em um pacote web reativo renderizado via JavaScript (Cytoscape/Dash).}
+    \label{fig:necta_architecture}
+\end{figure}
+
+\vspace{0.5cm}
+
 \section{Spectral Connectivity and Phase Analysis}
 To mitigate the artifacts of volume conduction inherent to LFP recordings, NECTA expands upon classical Magnitude Squared Coherence by employing phase-based estimators.
 \begin{itemize}
@@ -37,7 +94,7 @@ To infer causal interactions and hierarchical information flow, NECTA implements
 \end{enumerate}
 
 \textbf{Table 1: Methodological Rationale for Connectivity Estimator Selection in NECTA}
-\begin{table}[h]
+\begin{table}[htbp]
 \centering
 \begin{tabular}{|p{0.3\linewidth}|p{0.2\linewidth}|p{0.25\linewidth}|p{0.2\linewidth}|}
 \hline

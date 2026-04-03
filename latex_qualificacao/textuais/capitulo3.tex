@@ -98,12 +98,16 @@ To infer causal interactions and hierarchical information flow, NECTA implements
 \centering
 \begin{tabular}{|p{0.3\linewidth}|p{0.2\linewidth}|p{0.25\linewidth}|p{0.2\linewidth}|}
 \hline
+\multicolumn{4}{|c|}{Table 1: Methodological Rationale for Connectivity Estimator Selection in NECTA} \\
+\hline
 \textbf{Algorithm Family} & \textbf{Examples} & \textbf{Vulnerability to Volume Conduction} & \textbf{Directionality} \\ \hline
 \textit{Traditional Parametric Time-Domain} & Pearson Correlation & \textbf{Severe:} Highly contaminated by instantaneous topological artifacts. & Non-Directed \\ \hline
 \textit{Mixed Spectral Synchrony} & PLV, Magnitude Coherence & \textbf{High:} Latent topological interference in mixed phase-magnitude domains. & Non-Directed \\ \hline
 \textit{Instantaneous Phase-Lag Delay Modeling} & wPLI, iCoh & \textbf{Low:} Extreme robustness via strict subtraction of zero-lag real projections. & Non-Directed \\ \hline
 \textit{Multivariate Regressive Causal Modeling} & PDC, DTF & \textbf{Moderate to Low:} Shielded by dynamic order selection (BIC) and surrogate thresholding. & \textbf{Causal (Driver/Sink)} \\ \hline
 \end{tabular}
+\caption{Methodological Rationale for Connectivity Estimator Selection in NECTA.}
+\label{table:1}
 \end{table}
 
 \section{In Silico Validation: Ground Truth Modeling and Stress Testing}

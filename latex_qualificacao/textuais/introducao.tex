@@ -2,12 +2,16 @@
 
 \section{The Primary Visual Cortex and the Limits of Static Topologies}
 The primary visual cortex has long served as the canonical model for understanding cortical microcircuitry, sensory processing, and the brain's \textbf{neural networks}. Historically, the architectural and functional parcellation of visual areas---such as Area 17 (A17), Area 18 (A18), and their Transition Zone (TZ) in the feline model---has been extensively mapped using single-unit recordings and static receptive field analyses (Wunderle et al., 2013; Schmidt et al., 2023). These classical approaches have established the foundational \textbf{static connectome}---a rigid, structural blueprint of the visual system detailing how intra- and inter-hemispheric neural networks form clustered functional communities. 
+
+\vspace{1cm}
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\linewidth]{./figuras/Intro/Figura01.pdf}
     \caption[Mapping directly to the anatomically separated electrode matrixes]{\textbf{Mapping directly to the anatomically separated electrode matrixes | (Coherence (Low Gamma)) | Density: 15\%: Coherence clusters}}
     \label{fig:cortical_model}
 \end{figure}
+\vspace{1cm}
+
 However, relying exclusively on these stationary statistical relationships collapses the true, living matrix of cortical connections. Averaging neural interactions over long temporal windows (e.g., minutes of recording) treats the neural network as a fixed roadmap, inevitably obscuring sub-second synaptic recruitment and leading to a severe loss of organic causality resolution. Cognitive processes, particularly visual feature binding, do not operate in a stationary state; they evolve dynamically and transiently as stimuli move across and between receptive fields. Consequently, \textbf{static topologies}---while accurately describing the anatomical constraints and the baseline connectome of neural communication---completely mask the rapid, transient fluctuations in functional integration that are the actual hallmark of active sensory processing.
 
 
@@ -31,7 +35,7 @@ Consequently, there is a critical need for a modern, high-performance computing 
 
 % --- VISUAL INSERTION 1 USING TIKZ ---
 \begin{figure}[htbp]
-    \centering
+    \leftskip=0cm
     \begin{tikzpicture}[
         >=Stealth,
         sensor/.style={draw, rounded corners, fill=blue!10, minimum width=1.4cm, minimum height=0.8cm, font=\sffamily\scriptsize\bfseries, thick},

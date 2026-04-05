@@ -25,51 +25,57 @@ Analyzing dynamic connectivity across continuous recordings poses a severe combi
     \centering
     \begin{tikzpicture}[
         >=Stealth,
-        box/.style={draw, rounded corners, minimum width=3.5cm, minimum height=1.2cm, align=center, font=\sffamily\small, thick},
-        db/.style={draw, cylinder, shape border rotate=90, aspect=0.25, minimum width=3cm, minimum height=1.6cm, align=center, font=\sffamily\small, thick},
-        worker/.style={draw, rounded corners, minimum width=2.8cm, minimum height=1cm, align=center, fill=orange!10, font=\sffamily\scriptsize\bfseries, thick},
-        thick
+        block/.style={rectangle, draw, rounded corners, minimum width=3.2cm, minimum height=1.2cm, align=center, font=\sffamily\scriptsize\bfseries, thick},
+        db/.style={cylinder, shape border rotate=90, draw, aspect=0.25, minimum width=2.5cm, minimum height=1.5cm, align=center, font=\sffamily\scriptsize\bfseries, thick, fill=green!10},
+        worker/.style={rectangle, draw, rounded corners, minimum width=2.5cm, minimum height=1cm, align=center, fill=orange!10, font=\sffamily\scriptsize\bfseries, thick},
+        arrow/.style={thick, ->, >=Stealth}
     ]
 
-    % --- LAYER 1: INGESTION ---
-    \node[box, fill=gray!10, dashed] (raw) at (-5, 0) {Pacotes Brutos LFP\\(Binários SPASS)};
-    \node[box, fill=blue!10] (ingest) at (0, 0) {Ingestão Modular\\Assíncrona};
-    \node[db, fill=green!10] (zarr) at (5, 0) {Datacubes N-Dim\\(Xarray / Zarr)};
+    % --- LAYER 1: INGESTION (XARRAY / ZARR) ---
+    \node[block, fill=gray!10, dashed] (spass) at (-4.5, 0) {Legacy Binaries\\(SPASS LFP)};
+    \node[block, fill=blue!10] (parser) at (0, 0) {Isaac Pipeline\\(Data Ingestion)};
+    \node[db] (zarr) at (4.5, 0.6) {Zarr Store\\(Data Chunks)};
+    \node[block, fill=green!5] (xarray) at (4.5, -1.2) {Xarray Dataset\\(Metadata / Lazy)};
 
-    \draw[->] (raw) -- node[above, font=\sffamily\scriptsize] {Parsing} (ingest);
-    \draw[->] (ingest) -- node[above, font=\sffamily\scriptsize] {Conversão Semântica} (zarr);
+    \draw[arrow] (spass) -- node[above, font=\sffamily\tiny] {Parsing} (parser);
+    \draw[arrow] (parser.east) -- (4.5, 0) -- (zarr.south);
+    \draw[arrow] (parser.east) -- (4.5, 0) -- (xarray.north);
+    \draw[<->, dashed, thick, color=green!50!black] (zarr.south) -- node[right, font=\sffamily\tiny] {Mapping} (xarray.north);
 
-    % --- DASK BACKGROUND ---
-    \draw[draw=purple!80, thick, dashed, fill=purple!5, rounded corners] (-6.5, -2) rectangle (6.5, -7.5);
-    \node[font=\sffamily\bfseries, purple!80!black] at (0, -2.4) {Infraestrutura de Orquestração (Agendador Estocástico Dask)};
+    % --- LAYER 2: DASK ORCHESTRATION ---
+    \draw[draw=purple!80, thick, dashed, fill=purple!5, rounded corners] (-6, -3) rectangle (6, -8);
+    \node[font=\sffamily\bfseries\scriptsize, purple!80!black, anchor=north] at (0, -3.1) {Dask Orchestration Infrastructure};
 
-    % --- LAYER 2: SCHEDULER & WORKERS ---
-    \node[box, fill=white] (graphs) at (0, -3.8) {Particionamento em\\Task Graphs};
+    \node[block, fill=white, draw=purple] (taskgraph) at (3.5, -4.5) {Task Graphs\\(Acyclic Graphs)};
+    \node[block, fill=purple!10] (scheduler) at (-1.5, -4.5) {Dask Scheduler\\(Central Scheduler)};
+
+    % Conexão Xarray -> Task Graph -> Scheduler
+    \draw[arrow, ultra thick, color=green!60!black] (xarray.south) |- node[above right, font=\sffamily\tiny] {Trigger (Compute)} (taskgraph.north);
+    \draw[arrow] (taskgraph.west) -- node[above, font=\sffamily\tiny] {Submission} (scheduler.east);
+
+    % Workers
+    \node[worker] (w1) at (-4, -6.5) {Worker Node 1\\(Chunk A)};
+    \node[worker] (w2) at (0, -6.5) {Worker Node 2\\(Chunk B)};
+    \node[worker] (w3) at (4, -6.5) {Worker Node N\\(Chunk N)};
+
+    \draw[arrow] (scheduler.south) -- (-1.5, -5.5) -| (w1.north);
+    \draw[arrow] (scheduler.south) -- (-1.5, -5.5) -| (w2.north);
+    \draw[arrow] (scheduler.south) -- (-1.5, -5.5) -| (w3.north);
+
+    % --- LAYER 3: AGGREGATION & FRONTEND ---
+    \node[block, fill=orange!15, minimum width=6cm] (bus) at (0, -9.5) {Aggregation Bus\\(Results Synchronization)};
+    \node[block, fill=red!10, draw=red!50!black, ultra thick, minimum width=6cm] (front) at (0, -11.5) {Reactive Frontend\\(Cytoscape / Dash)};
+
+    % Routing from workers to bus
+    \draw[arrow] (w1.south) |- (bus.west);
+    \draw[arrow] (w2.south) -- (bus.north);
+    \draw[arrow] (w3.south) |- (bus.east);
     
-    \draw[->, ultra thick, draw=green!60!black] (zarr.south) -- (5, -1.2) -| node[above right, font=\sffamily\scriptsize] {Lazy Loading Iterativo} (graphs.north);
-
-    \node[worker] (w1) at (-4, -6) {Worker Node 1};
-    \node[worker] (w2) at (0, -6) {Worker Node 2};
-    \node[worker] (w3) at (4, -6) {Worker Node N};
-
-    \draw[->] (graphs.south) -- (0, -4.8) -| (w1.north);
-    \draw[->] (graphs.south) -- (w2.north);
-    \draw[->] (graphs.south) -- (0, -4.8) -| (w3.north);
-
-    % --- LAYER 3: FRONTEND ---
-    \node[box, fill=orange!15, minimum width=5cm] (bus) at (0, -9.5) {Barramento de Dados\\Serialização Interativa};
-    \node[box, fill=red!10, ultra thick, draw=red!50!black, minimum width=5cm] (front) at (0, -11.5) {Frontend Reativo\\(Cytoscape / Dash)};
-
-    % Routing from workers to bus using orthogonal paths
-    \draw[->] (w1.south) |- (bus.west);
-    \draw[->] (w2.south) -- (bus.north);
-    \draw[->] (w3.south) |- (bus.east);
-    
-    \draw[->, ultra thick, draw=blue!70] (bus.south) -- node[right, font=\sffamily\scriptsize] {Exportação de Estado JSON} (front.north);
+    \draw[arrow, ultra thick, draw=blue!70] (bus.south) -- node[right, font=\sffamily\scriptsize] {JSON Serialization} (front.north);
 
     \end{tikzpicture}
     
-    \caption[Arquitetura Distribuída e Orientada a Nuvens]{\textbf{Topologia de Sistemas e Fluxo de Processamento de Dados da Plataforma NECTA.} O diagrama rastreia as engrenagens de abstração metodológica: a leitura de pacotes brutos desestruturados provenientes de matrizes LFP (binários legados SPASS), seguida pela ingestão assíncrona e conversão modular em \textit{Datacubes} fragmentados via Xarray/Zarr. Através de uso semântico e \textit{lazy loading}, os cálculos são submetidos a particionamento em Grafos de Tarefas (\textit{Task Graphs}) no orquestrador Dask, que aloca nós de processamento (\textit{Workers}) independentes sob seu agendador estocástico. Finalmente, os dados processados fluem por um barramento de serialização até a exportação interativa de estado em um pacote web reativo renderizado via JavaScript (Cytoscape/Dash).}
+    \caption[Distributed and Cloud-Oriented Architecture]{\textbf{Block Diagram of Data Ingestion and Distribution in Dask.} The schematic details the architecture of the NECTA ecosystem: \textbf{(1)} Raw binaries are converted by the \textit{Isaac Pipeline} into a chunked format, where heavy data resides in a \textit{Zarr Store} and the semantic structure (\textit{Metadata}) in an \textit{Xarray Dataset} that supports \textit{lazy loading}. \textbf{(2)} Upon requesting the computation, Xarray generates \textit{Task Graphs} (directed acyclic graphs) submitted to the \textit{Dask Scheduler}. \textbf{(3)} The scheduler stochastically distributes tasks (e.g., independent data \textit{Chunks}) across multiple \textit{Worker Nodes}. \textbf{(4)} The results computed in parallel are synchronized on a bus and exported via JSON to the interactive visualization layer of the \textit{Frontend}.}
     \label{fig:necta_architecture}
 \end{figure}
 

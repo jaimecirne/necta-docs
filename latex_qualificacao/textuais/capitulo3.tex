@@ -97,28 +97,29 @@ To infer causal interactions and hierarchical information flow, NECTA implements
 To irrefutably prove the causal extraction capabilities of NECTA, the platform was subjected to \textit{in silico} validation using controlled synthetic matrices. 
 \begin{itemize}
 \item \textbf{Neural Mass Models (Ground Truth):} Theoretical multivariate LFP arrays were generated utilizing coupled Neural Mass Models with pre-programmed structural connections, known delays, and specific oscillatory gamma bursts (30-90Hz), establishing an exact biological ground truth.
+
+\item \textbf{Noise Induction and Volume Conduction:} These synthetic matrices were progressively corrupted. The Signal-to-Noise Ratio (SNR) was degraded using pink and white noise, and severe instantaneous spatial mixing was modeled to emulate electrical cross-talk (Volume Conduction) in real biological tissue. The NECTA extraction pipeline (wPLI and BIC-optimized PDC) was applied blindly. Evaluation using Receiver Operating Characteristic (ROC) and Area Under the Curve (AUC) metrics confirmed the platform’s capacity to filter noise and retrieve the underlying ground truth causal graphs reliably.
 \end{itemize}
-\textit{   \textbf{Noise Induction and Volume Conduction:} These synthetic matrices were progressively corrupted. The }Signal-to-Noise Ratio (SNR)* was degraded using pink and white noise, and severe instantaneous spatial mixing was modeled to emulate electrical cross-talk (Volume Conduction) in real biological tissue. The NECTA extraction pipeline (wPLI and BIC-optimized PDC) was applied blindly. Evaluation using Receiver Operating Characteristic (ROC) and Area Under the Curve (AUC) metrics confirmed the platform’s capacity to filter noise and retrieve the underlying ground truth causal graphs reliably.
 
 Furthermore, an exhaustive hardware \textbf{Stress Test (Benchmarking)} evaluated the Dask orchestrator. The computational scale of processing multivariate combinatorics (FDR surrogate validations and MVAR scaling) was timed systematically across 1, 2, 4, 8, and 16 active worker threads. These benchmarks proved the exponential operational efficiency of NECTA's chunked Zarr loading compared to traditional monolithic Python pipelines (e.g., MNE), effectively overcoming the Out-Of-Memory (OOM) limits of big-data electrophysiology.
 
 \section{Graph Theory, Statistical Validation, and Open Science}
 A crucial aspect of NECTA is its rigorous statistical and topological validation.
 
-\textbf{Table 1: Methodological Rationale for Connectivity Estimator Selection in NECTA}
-\begin{table}[htbp]
+\begin{table}[hbtp]
 \centering
-\begin{tabular}{|p{0.3\linewidth}|p{0.2\linewidth}|p{0.25\linewidth}|p{0.2\linewidth}|}
-%\multicolumn{4}{|c|}{Table 1: Methodological Rationale for Connectivity Estimator Selection in NECTA} \\
+\renewcommand{\arraystretch}{1.4} % Melhor espaçamento vertical para leitura
+\footnotesize % Fonte menor para acomodar as 5 colunas de forma legível
+\begin{tabular}{|>{\raggedright\arraybackslash}p{0.15\linewidth}|>{\raggedright\arraybackslash}p{0.16\linewidth}|>{\raggedright\arraybackslash}p{0.22\linewidth}|>{\raggedright\arraybackslash}p{0.18\linewidth}|>{\raggedright\arraybackslash}p{0.19\linewidth}|}
 \hline
-\textbf{Algorithm Family} & \textbf{Examples} & \textbf{Vulnerability to Volume Conduction} & \textbf{Directionality} \\ \hline
-\textit{Traditional Parametric Time-Domain} & Pearson Correlation & \textbf{Severe:} Highly contaminated by instantaneous topological artifacts. & Non-Directed \\ \hline
-\textit{Mixed Spectral Synchrony} & PLV, Magnitude Coherence & \textbf{High:} Latent topological interference in mixed phase-magnitude domains. & Non-Directed \\ \hline
-\textit{Instantaneous Phase-Lag Delay Modeling} & wPLI, iCoh & \textbf{Low:} Extreme robustness via strict subtraction of zero-lag real projections. & Non-Directed \\ \hline
-\textit{Multivariate Regressive Causal Modeling} & PDC, DTF & \textbf{Moderate to Low:} Shielded by dynamic order selection (BIC) and surrogate thresholding. & \textbf{Causal (Driver/Sink)} \\ \hline
+\textbf{Algorithmic Family} & \textbf{Representative Examples} & \textbf{Vulnerability to Instantaneous Spread (Volume Conduction)} & \textbf{Dimensionality of Causal Informational Direction} & \textbf{Justification Employed in NECTA Study} \\ \hline
+\textit{Traditional Parametric Time-Domain Correlations} & Pearson Coefficient, Zero-lag covariance Cross-correlation & \textbf{Severe Level.} Extreme analytical contamination due to the systematic generation of false instantaneous topological interactions. & Exclusively Symmetric and Non-Directed & Unfeasible for high-density mesoscopic analysis; method entirely suppressed from the Framework. \\ \hline
+\textit{Mixed Spectral Synchrony} & Phase Locking Value (PLV), Classical Magnitude Squared Coherence & \textbf{High Level.} Latent topological interference in combined phase-magnitude domains. & Essentially Non-Directed & Baseline use restricted only for primary macro-anatomical recognition and historical comparison. \\ \hline
+\textit{Analytical Modeling Delayed by Instantaneous Phase Shifts} & Weighted Phase Lag Index (wPLI), Strict Imaginary Coherence (iCoh) & \textbf{Low Sensitivity.} Extreme robustness arising from strict subtraction in complex domains of null real projection (strict delay $>0$). & Non-Directed & Validated fundamental basis for clean extraction of network modularity sub-windows and artifact-free small-world coefficients. \\ \hline
+\textit{Multi-Regressive Equation Models for Mathematical Causality} & Partial Directed Coherence (PDC), Directed Transfer Function (DTF) & \textbf{Medium to Low.} Attenuated and shielded in association and thresholding against non-null interactions via surrogate validation. & Exploratory Causal Asymmetry (Allows stipulating Driver/Source and Receiver/Sink) & Responsible architecture, coupled with optimized window processing via BIC, to track dynamic feline temporal hierarchical Feedforward/Feedback oscillation. \\ \hline
 \end{tabular}
-\caption{Methodological Rationale for Connectivity Estimator Selection in NECTA.}
-\label{table:1}
+\caption{\textbf{Table of Methodological Synthesis of Connectivity Estimation.} Comparison of state-of-the-art metrics against the fundamental needs and physiological challenges faced by the NECTA framework.}
+\label{tab:estimators}
 \end{table}
 
 

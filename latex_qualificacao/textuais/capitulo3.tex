@@ -93,6 +93,18 @@ To infer causal interactions and hierarchical information flow, NECTA implements
 \item \textbf{Frequency Transformation:} Autoregressive coefficients $A_r$ are transformed into the frequency domain $A(f)$ using Fast Fourier Transforms accelerated via `Numba` (FastMath), yielding the normalized PDC matrices.
 \end{enumerate}
 
+\section{In Silico Validation: Ground Truth Modeling and Stress Testing}
+To irrefutably prove the causal extraction capabilities of NECTA, the platform was subjected to \textit{in silico} validation using controlled synthetic matrices. 
+\begin{itemize}
+\item \textbf{Neural Mass Models (Ground Truth):} Theoretical multivariate LFP arrays were generated utilizing coupled Neural Mass Models with pre-programmed structural connections, known delays, and specific oscillatory gamma bursts (30-90Hz), establishing an exact biological ground truth.
+\end{itemize}
+\textit{   \textbf{Noise Induction and Volume Conduction:} These synthetic matrices were progressively corrupted. The }Signal-to-Noise Ratio (SNR)* was degraded using pink and white noise, and severe instantaneous spatial mixing was modeled to emulate electrical cross-talk (Volume Conduction) in real biological tissue. The NECTA extraction pipeline (wPLI and BIC-optimized PDC) was applied blindly. Evaluation using Receiver Operating Characteristic (ROC) and Area Under the Curve (AUC) metrics confirmed the platform’s capacity to filter noise and retrieve the underlying ground truth causal graphs reliably.
+
+Furthermore, an exhaustive hardware \textbf{Stress Test (Benchmarking)} evaluated the Dask orchestrator. The computational scale of processing multivariate combinatorics (FDR surrogate validations and MVAR scaling) was timed systematically across 1, 2, 4, 8, and 16 active worker threads. These benchmarks proved the exponential operational efficiency of NECTA's chunked Zarr loading compared to traditional monolithic Python pipelines (e.g., MNE), effectively overcoming the Out-Of-Memory (OOM) limits of big-data electrophysiology.
+
+\section{Graph Theory, Statistical Validation, and Open Science}
+A crucial aspect of NECTA is its rigorous statistical and topological validation.
+
 \textbf{Table 1: Methodological Rationale for Connectivity Estimator Selection in NECTA}
 \begin{table}[htbp]
 \centering
@@ -109,17 +121,7 @@ To infer causal interactions and hierarchical information flow, NECTA implements
 \label{table:1}
 \end{table}
 
-\section{In Silico Validation: Ground Truth Modeling and Stress Testing}
-To irrefutably prove the causal extraction capabilities of NECTA, the platform was subjected to \textit{in silico} validation using controlled synthetic matrices. 
-\begin{itemize}
-\item \textbf{Neural Mass Models (Ground Truth):} Theoretical multivariate LFP arrays were generated utilizing coupled Neural Mass Models with pre-programmed structural connections, known delays, and specific oscillatory gamma bursts (30-90Hz), establishing an exact biological ground truth.
-\end{itemize}
-\textit{   \textbf{Noise Induction and Volume Conduction:} These synthetic matrices were progressively corrupted. The }Signal-to-Noise Ratio (SNR)* was degraded using pink and white noise, and severe instantaneous spatial mixing was modeled to emulate electrical cross-talk (Volume Conduction) in real biological tissue. The NECTA extraction pipeline (wPLI and BIC-optimized PDC) was applied blindly. Evaluation using Receiver Operating Characteristic (ROC) and Area Under the Curve (AUC) metrics confirmed the platform’s capacity to filter noise and retrieve the underlying ground truth causal graphs reliably.
 
-Furthermore, an exhaustive hardware \textbf{Stress Test (Benchmarking)} evaluated the Dask orchestrator. The computational scale of processing multivariate combinatorics (FDR surrogate validations and MVAR scaling) was timed systematically across 1, 2, 4, 8, and 16 active worker threads. These benchmarks proved the exponential operational efficiency of NECTA's chunked Zarr loading compared to traditional monolithic Python pipelines (e.g., MNE), effectively overcoming the Out-Of-Memory (OOM) limits of big-data electrophysiology.
-
-\section{Graph Theory, Statistical Validation, and Open Science}
-A crucial aspect of NECTA is its rigorous statistical and topological validation.
 \begin{itemize}
 \item \textbf{Surrogate Data \& FDR Correction:} For connectivity edges, significance is established by generating 100 phase-randomized surrogate datasets. Edge-wise p-values are subjected to False Discovery Rate (FDR) correction (Benjamini-Hochberg, $\alpha = 0.05$).
 

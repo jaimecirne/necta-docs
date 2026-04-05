@@ -8,7 +8,7 @@
 
 ## ESTRUTURA DO DOCUMENTO E ÍNDICE
 
-O formato abaixo espelha o padrão institucional observado em trabalhos egressos do laboratório (e.g., Ferreiro 2018, Conde 2014, Moura 2021). As seções preenchidas integram a pesquisa teórica, as bases computacionais da plataforma (NECTA/Isaac) e as descobertas biológicas do pôster "BNF 2025" (Dynome no modelo felino).
+O formato abaixo espelha o padrão institucional observado em trabalhos egressos do laboratório (e.g., Ferreiro 2018, Conde 2014, Moura 2021). As seções preenchidas integram a pesquisa teórica, as bases computacionais da plataforma (NECTA/Isaac) e as descobertas biológicas do pôster "BNF 2025" (Evolução Dinâmica da Rede no modelo felino).
 
 ---
 
@@ -17,14 +17,14 @@ O formato abaixo espelha o padrão institucional observado em trabalhos egressos
 - **Folha de Rosto & Catalogação SISBI**
 - **Banca Examinadora (Comitê de Acompanhamento)**
 - **Agradecimentos (Opcional para qualificação, obrigatório na tese)**
-- **Abstract / Resumo:** Resumo abrangendo o problema (estudo estático vs. Dynome), a ferramenta computacional (HPC/Dask/Zarr), as métricas (wPLI, iCoh, PDC) e os achados biológicos em Low Gamma (Hierarquia A17 -> TZ -> A18).
+- **Abstract / Resumo:** Resumo abrangendo o problema (estudo estático vs. Redes Dinâmicas), a ferramenta computacional (HPC/Dask/Zarr), as métricas (wPLI, iCoh, PDC) e os achados biológicos em Low Gamma (Hierarquia A17 -> TZ -> A18).
 
 ---
 
 ### 1. INTRODUCTION (INTRODUÇÃO)
 **Objetivo da seção:** Apresentar a evolução dos conectomas e o problema biológico no córtex visual.
 - **1.1 The Primary Visual Cortex and Mesoscopic Networks:** Histórico dos estudos em V1, layout espacial, colunas e áreas de transição (Referenciando Schmidt et al., 2023; Wunderle et al., 2013).
-- **1.2 From Static Topologies to the "Dynome":** A transição de conectomas anatômicos estáticos para análises da neurodinâmica com resolução de milissegundos (Kopell et al., 2014; Allen et al., 2014).
+- **1.2 The Paradigm Shift to Time-Resolved Network Evolution:** A transição de conectomas anatômicos estáticos para análises da neurodinâmica com resolução de milissegundos (Kopell et al., 2014; Allen et al., 2014).
 - **1.3 Rhythmic Oscillations and Gamma Synchronization:** O papel cardinal das oscilações de alta frequência (Low/High Gamma) na sincronização das redes retinogeniculadas e integração cortical (Neuenschwander et al., 2023; Moura, 2021).
 - **1.4 The Methodological Bottleneck in Electrophysiology:** A barreira de *Big Data* em eletrofisiologia de múltiplos canais (LFP/Spikes), os riscos de Falsos Positivos na matriz devido a *Volume Conduction* e as limitações dos scripts analíticos lentos e mononucleares.
 
@@ -75,7 +75,7 @@ O formato abaixo espelha o padrão institucional observado em trabalhos egressos
 ### 5. DISCUSSION
 **Objetivo da seção:** Inserir a tese na literatura. [Nota: Este texto incorpora o rascunho de discussão focado na literatura do lab e bases clássicas].
 
-A transição dos estudos puramente estáticos da percepção cortical (Wunderle et al., 2013; Schmidt et al., 2023) para a modelagem dinâmica do *Dynome* (Kopell et al., 2014) exige plataformas HPC robustas. O NECTA demonstrou, no conjunto `c1608a01`, que a estrutura topológica (*Small-Worldness*) sob estado de anestesia reage organicamente ao estímulo.
+A transição dos estudos puramente estáticos da percepção cortical (Wunderle et al., 2013; Schmidt et al., 2023) para a modelagem dinâmica temporal (Kopell et al., 2014) exige plataformas HPC robustas. O NECTA demonstrou, no conjunto `c1608a01`, que a estrutura topológica (*Small-Worldness*) sob estado de anestesia reage organicamente ao estímulo.
 
 Superar a interferência metodológica, notadamente a Condução de Volume (*zero-phase lag*, Bastos & Schoffelen, 2015), foi possível devido à implementação arquitetural rigorosa do *wPLI* e Coerência Imaginária (*iCoh*). Ao aliar isso à Busca Auto-Otimizada do PDC pelo Critério de Informação Bayesiana (BIC), a ferramenta expurgou viés e reconstruiu as vias ascendentes visuais (Vezoli et al., 2021). A consolidação da sincronia Gamma como roteadora funcional da informação entre A17 e A18 expande o escopo delineado pelo Laboratório nas vias retinogeniculadas (Neuenschwander et al., 2023). Sob o viés técnico, fatiar matrizes Dask/Zarr de forma síncrona aos painéis do Cytoscape representa a quebra do atual gargalo biológico do "Big Data Eletrofisiológico".
 

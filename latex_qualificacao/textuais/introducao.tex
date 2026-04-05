@@ -1,28 +1,15 @@
 \chapter{INTRODUCTION}
 
 \section{The Primary Visual Cortex and the Limits of Static Topologies}
-The primary visual cortex has long served as the canonical model for understanding cortical microcircuitry, sensory processing, and the brain's \textbf{neural networks}. Historically, the architectural and functional parcellation of visual areas---such as Area 17 (A17), Area 18 (A18), and their Transition Zone (TZ) in the feline model---has been extensively mapped using single-unit recordings and static receptive field analyses (Wunderle et al., 2013; Schmidt et al., 2023). These classical approaches have established the foundational \textbf{static connectome}---a rigid, structural blueprint of the visual system detailing how intra- and inter-hemispheric neural networks form clustered functional communities. 
+The primary visual cortex has long served as the canonical model for understanding cortical microcircuitry, sensory processing, and network topology. Historically, the architectural and functional parcellation of visual areas—such as Area 17 (A17), Area 18 (A18), and their Transition Zone (TZ) in the feline model—has been extensively mapped using single-unit recordings and static receptive field analyses (Wunderle et al., 2013; Schmidt et al., 2023). These classical approaches have provided the fundamental "structural backbone" of the visual system, detailing how intra- and inter-hemispheric connections form clustered functional communities. 
 
-\vspace{1cm}
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=\linewidth]{./figuras/Intro/Figura01.pdf}
-    \caption[Mapping directly to the anatomically separated electrode matrixes]{\textbf{Mapping directly to the anatomically separated electrode matrixes | (Coherence (Low Gamma)) | Density: 15\%: Coherence clusters}}
-    \label{fig:cortical_model}
-\end{figure}
-\vspace{1cm}
-
-However, relying exclusively on these stationary statistical relationships collapses the true, living matrix of cortical connections. Averaging neural interactions over long temporal windows (e.g., minutes of recording) treats the neural network as a fixed roadmap, inevitably obscuring sub-second synaptic recruitment and leading to a severe loss of organic causality resolution. Cognitive processes, particularly visual feature binding, do not operate in a stationary state; they evolve dynamically and transiently as stimuli move across and between receptive fields. Consequently, \textbf{static topologies}---while accurately describing the anatomical constraints and the baseline connectome of neural communication---completely mask the rapid, transient fluctuations in functional integration that are the actual hallmark of active sensory processing.
-
+However, relying exclusively on stationary statistical relationships collapses the true matrix of cortical connections. Averaging neural interactions over long temporal windows (e.g., minutes of recording) inevitably obscures sub-second synaptic recruitment, leading to a severe loss of organic causality resolution. Cognitive processes, particularly visual feature binding, do not operate in a stationary state; they evolve dynamically and transiently as stimuli move across and between receptive fields. Consequently, static topologies, while accurately describing the anatomical constraints of neural communication, completely mask the rapid, transient fluctuations in functional integration that are the actual hallmark of active sensory processing.
 
 \section{The Paradigm Shift to the "Dynome"}
 To overcome the limitations of static connectomics, the neuroscientific community has begun shifting its focus toward the exploration of the "Dynome"—the millisecond-scale evolution of functional networks and their temporal dynamics \cite{kopell2014}. Capturing the Dynome requires shifting the analytical framework from time-averaged correlations to time-resolved state transitions, often achieved through sliding-window approaches \cite{allen2014}. By dissecting the continuous data stream into granular temporal epochs, it becomes possible to observe how network metrics, such as \textit{Small-Worldness} and modularity, adapt and evolve. This time-varying perspective provides a much more accurate representation of the brain's real-time functional state, revealing that macroscopic efficiency is not fixed but reacts continuously to ongoing sensory integration.
 
-\section{Cytoarchitecture and Callosal Integration at the 17/18 Transition Zone}
-The primary visual cortex is highly organized into functional maps, including orientation columns arranged around singularity points known as pinwheels \cite{schmidt2023}. The boundary between Area 17 and Area 18 (the Transition Zone, TZ) is of particular functional significance, as it maps the vertical meridian of the visual field. To achieve a seamless representation of the visual world, this region is densely innervated by interhemispheric transcallosal projections. These pathways are not diffuse; rather, they form highly specific, patch-like networks that preferentially connect iso-orientation domains and binocular cells across the hemispheres \cite{wunderle2013}. This intricate microcircuitry enables the transient, plastic binding of sensory features, transitioning from isolated static anatomical hubs into highly active, dynamic processing relays when stimulated.
-
 \section{Rhythmic Oscillations, Predictive Coding, and Gamma Synchronization}
-At the mesoscopic scale, rhythmic neural oscillations mediate the dynamic routing of information. The predictive coding framework posits that sensory processing relies on a delicate balance between top-down predictions and bottom-up prediction errors. Oscillatory dynamics inherently govern this balance: feedforward (bottom-up) signaling is predominantly conveyed through synchronization in the gamma frequency band (30–90 Hz), whereas feedback (top-down) predictions are mediated by slower rhythms \cite{vezoli2021}. Within the feline visual cortex, stimulus-dependent gamma synchronization plays a cardinal role in grouping distributed neuronal responses and effectively driving downstream targets \cite{neuenschwander2023}. Consequently, tracking the directionality of gamma oscillations across the mesoscopic network—specifically traversing the callosal integration hubs at the TZ—is critical for deciphering the feedforward integration of peripheral binocular stimuli.
+At the mesoscopic scale, rhythmic neural oscillations—specifically in the Gamma frequency band (30–90 Hz)—act as a fundamental mechanism for cortical communication and information routing. Under the predictive coding framework, the synchronized engagement of neuronal populations in the gamma band provides a fast transmission channel for feedforward visual processing, carrying sensory "prediction errors" from primary areas (A17) to higher-order regions (A18) \cite{vezoli2021}. Furthermore, the Transition Zone (TZ) acts not merely as a geographic boundary, but as a highly specialized region densely innervated by transcallosal projections, facilitating massive interhemispheric coordination essential for integrating visual stimuli across the vertical meridian \cite{schmidt2023}. Thus, mapping the directionality of gamma synchronization across A17, TZ, and A18 is crucial for deciphering the causal architecture and dynamic modulation of the visual cortex.
 
 \section{The Methodological Bottleneck in Electrophysiology}
 Despite the theoretical necessity of time-resolved, directed connectivity analysis, extracting these networks from dense multi-electrode arrays poses severe methodological and computational challenges. The primary analytical bottleneck in Local Field Potential (LFP) analysis is \textit{volume conduction}—the instantaneous spread of electrical fields through cortical tissue. This phenomenon causes multiple electrodes to record a single biological source simultaneously, generating spurious zero-phase lag correlations that heavily contaminate graph topologies with false-positive edges \cite{bastos2015}.
@@ -30,121 +17,3 @@ Despite the theoretical necessity of time-resolved, directed connectivity analys
 Furthermore, the transition to high-density electrophysiology (e.g., 32-64 channel matrices) creates a "Big Data" computational crisis. Calculating dynamic, non-linear connectivity metrics (such as Partial Directed Coherence or phase-based indices), generating hundreds of surrogate networks for statistical validation, and tracking graph properties over moving time windows inevitably lead to combinatorial explosions. Traditional, single-threaded analytical scripts are inherently incapable of managing such stochastic, multidimensional loads, often resulting in Out-of-Memory (OOM) failures or prohibitive processing times. 
 
 Consequently, there is a critical need for a modern, high-performance computing (HPC) framework capable of mitigating volume conduction artifacts through advanced phase-based estimators while leveraging distributed parallel processing to interactively render the mesoscopic Dynome.
-
-\vspace{1cm}
-
-% --- VISUAL INSERTION 1 USING TIKZ ---
-\begin{figure}[htbp]
-    \leftskip=0cm
-    \begin{tikzpicture}[
-        >=Stealth,
-        sensor/.style={draw, rounded corners, fill=blue!10, minimum width=1.4cm, minimum height=0.8cm, font=\sffamily\scriptsize\bfseries, thick},
-        clean_node/.style={draw, circle, fill=green!10, minimum size=0.9cm, font=\sffamily\scriptsize\bfseries, thick},
-        state_box/.style={draw, rounded corners, fill=gray!10, minimum width=2.5cm, minimum height=0.8cm, font=\sffamily\scriptsize, thick},
-        engram_bg/.style={draw, circle, fill=green!5, minimum size=2.2cm, thick},
-        thick
-    ]
-        
-        % ================= PANEL A =================
-        \node[font=\bfseries\sffamily\large, anchor=west] at (-4, 6.5) {Panel A: Volume Conduction and Analytical Resolution};
-        
-        % 1. Modelagem Biofísica e Corrupção
-        \node[draw, circle, fill=red!10, minimum size=1.5cm, align=center, font=\sffamily\scriptsize\bfseries, thick] (dipole) at (0, 0) {Deep\\Dipole};
-        
-        \node[sensor] (e1) at (-2.5, 3) {CH 1};
-        \node[sensor] (e2) at (-0.8, 3) {CH 2};
-        \node[sensor] (e3) at (0.8, 3) {CH 3};
-        \node[sensor] (e4) at (2.5, 3) {CH 4};
-        
-        % Linhas de campo elétrico (instantâneas)
-        \draw[->, dashed, color=gray, thick] (dipole) -- (e1.south);
-        \draw[->, dashed, color=gray, thick] (dipole) -- (e2.south);
-        \draw[->, dashed, color=gray, thick] (dipole) -- (e3.south);
-        \draw[->, dashed, color=gray, thick] (dipole) -- (e4.south);
-        
-        % Matriz Corrompida (Zero-lag red arcs)
-        \draw[<->, color=red!70, thick] (e1.north) to[bend left=35] (e2.north);
-        \draw[<->, color=red!70, thick] (e2.north) to[bend left=35] (e3.north);
-        \draw[<->, color=red!70, thick] (e3.north) to[bend left=35] (e4.north);
-        \draw[<->, color=red!70, thick] (e1.north) to[bend left=50] (e3.north);
-        \draw[<->, color=red!70, thick] (e2.north) to[bend left=50] (e4.north);
-        \draw[<->, color=red!70, thick] (e1.north) to[bend left=65] (e4.north);
-        
-        \node[font=\sffamily\scriptsize\bfseries, text=red!80!black, align=center] at (0, 5.4) {Corrupted Topological Matrix\\(Multiple False Zero-lag Edges)};
-        
-        % 2. Transição Analítica (Filtro)
-        \draw[->, line width=3pt, draw=orange!80!black] (3.8, 3) -- node[above, font=\sffamily\scriptsize\bfseries, align=center] {Complex Filter} node[below, font=\sffamily\scriptsize, align=center] {(wPLI / iCoh)} (6.2, 3);
-        
-        % 3. Resolução Analítica (Grafo Esparso)
-        \node[clean_node] (n1) at (7.5, 3) {N 1};
-        \node[clean_node] (n2) at (9.0, 3) {N 2};
-        \node[clean_node] (n3) at (10.5, 3) {N 3};
-        \node[clean_node] (n4) at (12.0, 3) {N 4};
-        
-        \draw[<->, color=green!60!black, ultra thick] (n1.south) to[bend right=40] node[below=0cm, font=\sffamily\scriptsize\bfseries] {True Edge} (n3.south);
-        \draw[<->, color=green!60!black, ultra thick] (n2.south) to[bend right=40] (n4.south);
-        
-        \node[font=\sffamily\scriptsize\bfseries, text=green!60!black, align=center] at (9.75, 1.2) {Analytical Resolution\\(True Sparse Graph)};
-
-
-        % ================= PANEL B =================
-        \draw[thick, dashed, draw=gray!40] (-4, -1) -- (13, -1); % Divisória visual
-        \node[font=\bfseries\sffamily\large, anchor=west] at (-4, -2) {Panel B: Temporal Collapse vs. Transient Dynome};
-        
-        % 1. Abordagem Estática (Colapso)
-        \node[state_box] (t1) at (-1.5, -4) {Brain State $T_1$};
-        \node[state_box] (t2) at (-1.5, -5) {Brain State $T_2$};
-        \node[state_box] (t3) at (-1.5, -6) {Brain State $T_3$};
-        
-        \draw[thick, gray] (t1.east) -- (0.5, -4);
-        \draw[thick, gray] (t2.east) -- (0.5, -5);
-        \draw[thick, gray] (t3.east) -- (0.5, -6);
-        \draw[thick, gray] (0.5, -4) -- (0.5, -6);
-        \draw[->, thick, gray] (0.5, -5) -- node[above, font=\sffamily\tiny, align=center] {Long-Window\\Computation} (2, -5);
-        
-        % Grafo Denso (Mini-rede interligada)
-        \node[draw, circle, fill=red!5, minimum size=2.8cm, align=center, thick] (dense) at (3.8, -5) {};
-        \coordinate (d1) at (3.3, -4.5); \coordinate (d2) at (4.3, -4.5);
-        \coordinate (d3) at (3.0, -5.3); \coordinate (d4) at (4.6, -5.3);
-        \coordinate (d5) at (3.8, -5.8);
-        \foreach \i in {1,...,5} {
-            \foreach \j in {\i,...,5} {
-                \draw[red!40, thin] (d\i) -- (d\j);
-            }
-            \filldraw[black!70] (d\i) circle (1.5pt);
-        }
-        \node[font=\sffamily\scriptsize\bfseries, text=red!80!black, align=center] at (3.8, -3.2) {Dense Connective Web\\(Unrealistic / Static)};
-        
-        % 2. Abordagem Dinâmica (Dinoma)
-        % Engrama 1
-        \node[engram_bg] (g1) at (8, -4) {};
-        \node[font=\sffamily\scriptsize\bfseries, text=green!50!black, above] at (8, -2.8) {Engram 1};
-        \coordinate (s1) at (7.6, -3.8); \coordinate (s2) at (8.4, -4.2);
-        \draw[green!60!black, thick] (s1) -- (s2);
-        \filldraw[black!70] (s1) circle (1.5pt); \filldraw[black!70] (s2) circle (1.5pt);
-        
-        % Engrama 2
-        \node[engram_bg] (g2) at (10.5, -6.5) {};
-        \node[font=\sffamily\scriptsize\bfseries, text=green!50!black, below] at (10.5, -7.7) {Engram 2};
-        \coordinate (s3) at (10.1, -6.3); \coordinate (s4) at (10.9, -6.3); \coordinate (s5) at (10.5, -6.9);
-        \draw[green!60!black, thick] (s3) -- (s5) -- (s4);
-        \filldraw[black!70] (s3) circle (1.5pt); \filldraw[black!70] (s4) circle (1.5pt); \filldraw[black!70] (s5) circle (1.5pt);
-        
-        % Engrama 3
-        \node[engram_bg] (g3) at (13, -4) {};
-        \node[font=\sffamily\scriptsize\bfseries, text=green!50!black, above] at (13, -2.8) {Engram 3};
-        \coordinate (s6) at (12.6, -3.8); \coordinate (s7) at (13.4, -4.2); \coordinate (s8) at (13.0, -4.5);
-        \draw[green!60!black, thick] (s6) -- (s8);
-        \filldraw[black!70] (s6) circle (1.5pt); \filldraw[black!70] (s7) circle (1.5pt); \filldraw[black!70] (s8) circle (1.5pt);
-        
-        % Flow arrows
-        \draw[->, ultra thick, dashed, draw=blue!60] (g1) -- node[above right, font=\sffamily\scriptsize, align=center] {Temporal\\Flexibility} (g2);
-        \draw[->, ultra thick, dashed, draw=blue!60] (g2) -- node[above left, font=\sffamily\scriptsize, align=center] {Reorganization} (g3);
-        
-        \node[font=\sffamily\scriptsize\bfseries, text=blue!80!black, align=center] at (10.5, -3.5) {Dynome Exploration\\(Preserved Network Transitions)};
-
-    \end{tikzpicture}
-    
-    \caption[Schematic of the primary methodological bottlenecks]{\textbf{Schematic of the primary methodological bottlenecks in electrophysiological connectomics and their respective resolutions within the proposed framework.} \textbf{(Panel A)} Biophysical representation of Volume Conduction: electric field lines from a single deep dipole instantaneously reach multiple microelectrodes, creating \textit{zero-lag} anomalies and generating falsely dense topological matrices. On the right, the analytical resolution using complex phase indices (wPLI/iCoh) filters out artifacts and recovers a reliable, sparse graph. \textbf{(Panel B)} Abstract representation of temporal collapse: computing correlations over excessively long windows merges distinct transient brain states, resulting in an artificial static network. In contrast, Dynome-focused exploration preserves the sequential flexibility and rapid reorganizations of functional integration engrams.}
-    \label{fig:methodological_bottlenecks}
-\end{figure}

@@ -10,67 +10,12 @@ To establish a baseline structural framework, static functional connectivity was
 
 \section{Hierarchical Information Flow (Directed Connectivity)}
 To decode the causal relationships within this structural backbone, Partial Directed Coherence (PDC) was applied using the BIC-optimized MVAR models. The static PDC analysis in the Low Gamma band revealed a highly asymmetrical and hierarchical information flow across the visual cortex. 
-By calculating the Net Flow for each region, A17 emerged as the dominant persistent \textit{Driver} (Source) of the network (+1.10 net flow). In contrast, A18 functioned as the primary \textit{Receiver} (Sink) (-1.36 net flow). These results establish a clear directional pathway extending from A17 through the TZ and terminating in A18 (A17 \&rarr; TZ \&rarr; A18), consistent with canonical feedforward processing hierarchies.
+By calculating the Net Flow for each region, A17 emerged as the dominant persistent \textit{Driver} (Source) of the network (+1.10 net flow). In contrast, A18 functioned as the primary \textit{Receiver} (Sink) (-1.36 net flow). These results establish a clear directional pathway extending from A17 through the TZ and terminating in A18 (A17 &rarr; TZ &rarr; A18), consistent with canonical feedforward processing hierarchies.
 
 \section{Dynamic Topology and Temporal Integration}
 The core capability of NECTA lies in capturing the "Dynome"—the transition from static networks to chronological connectomes. Connectivity was recalculated using a sliding-window approach ($W = 500$ ms, 50% overlap). The Temporal Integration panel overlaid the global population spiking activity (Peri-Stimulus Time Histogram - PSTH) with the topological evolution of the network's \textit{Small-Worldness} ($\sigma$).
 
 The dynamic analysis revealed that the network's topological efficiency is not static but responds organically to visual processing phases. The network achieved its absolute peak in \textit{Small-Worldness} specifically during the moving grating stimulus phase. This transient optimization was driven primarily by a rapid surge in local clustering, indicating that the anesthetized cortical network actively reorganizes into a highly efficient state to process dynamic visual inputs.
-
-\vspace{1cm}
-
-% --- VISUAL INSERTION 3 USING TIKZ ---
-\begin{figure}[htbp]
-    \centering
-    \begin{tikzpicture}[
-        >=Stealth,
-        node distance=3.5cm,
-        area/.style={circle, draw, minimum size=1.5cm, font=\sffamily\bfseries, thick, align=center},
-        source/.style={fill=red!20, draw=red!80!black},
-        sink/.style={fill=blue!20, draw=blue!80!black},
-        mod/.style={fill=purple!20, draw=purple!80!black},
-        neutral/.style={fill=gray!10, draw=gray},
-        strongflow/.style={->, ultra thick, draw=red!70!black},
-        weakflow/.style={->, thick, dashed, draw=gray},
-        activeflow/.style={->, line width=2.5pt, draw=orange!90!black}
-    ]
-
-    % --- PANEL A: Baseline ---
-    \node[font=\sffamily\bfseries] at (0, 3) {Painel A: Período Basal (Pré-Estímulo Silencioso)};
-    
-    \node[area, source] (A17_A) at (-3, 0) {A17\\(+ Net)};
-    \node[area, neutral] (TZ_A) at (0, -2) {TZ\\(Neutro)};
-    \node[area, sink] (A18_A) at (3, 0) {A18\\(- Net)};
-    
-    % Flows for Panel A
-    \draw[strongflow] (A17_A) -- node[above, font=\sffamily\scriptsize] {Driver Dominante} (A18_A);
-    \draw[weakflow] (A17_A) -- (TZ_A);
-    \draw[weakflow] (TZ_A) -- (A18_A);
-    
-    \node[font=\sffamily\scriptsize, text=gray!80!black, align=center] at (0, -3.2) {Fluxo Crônico em Repouso:\\ Hierarquia A17 $\rightarrow$ A18};
-
-    % --- PANEL B: Stimulus Peak ---
-    \begin{scope}[yshift=-7.5cm]
-        \node[font=\sffamily\bfseries] at (0, 3) {Painel B: Pico Modular (Entrada do \textit{Grating})};
-        
-        \node[area, source] (A17_B) at (-3, 0) {A17\\(Fonte)};
-        \node[area, mod, fill=orange!30, draw=orange!80!black] (TZ_B) at (0, -2) {TZ\\(Ativa)};
-        \node[area, sink] (A18_B) at (3, 0) {A18\\(Sumidouro)};
-        
-        % Flows for Panel B
-        \draw[strongflow, line width=1.5pt] (A17_B) -- (A18_B);
-        \draw[activeflow] (TZ_B) -- node[left=0.2cm, font=\sffamily\scriptsize, align=right] {Inversão\\Direcional} (A17_B);
-        \draw[activeflow] (TZ_B) -- node[right=0.2cm, font=\sffamily\scriptsize, align=left] {Modulação\\Intensa} (A18_B);
-        
-        \node[font=\sffamily\scriptsize, text=orange!80!black, align=center] at (0, -3.2) {Polaridade Mutável:\\ TZ coordena a integração espacial};
-    \end{scope}
-
-    \end{tikzpicture}
-    \caption[Mapeamento Evolutivo de Net Flow]{\textbf{Mapeamento Evolutivo Topológico do Net-Flow de Informação (Banda Baixa-Gama).} Proporções de entrada (\textit{in-degree}) menos saída (\textit{out-degree}). \textbf{(A)} Durante o período basal, a rede opera numa hierarquia visual preditiva estrita, onde a Área 17 (A17) é o polo motriz primário e a Área 18 (A18) o sumidouro passivo, com a Zona de Transição (TZ) em estado neutro. \textbf{(B)} No exato momento do estímulo (inserção do \textit{grating} móvel), a topologia sofre uma remodelação ativa. A TZ reverte a sua polaridade passiva e adota dinâmicas de modulação aguda, alterando drasticamente os \textit{edge weights} (espessura das setas) e provando que a flexibilidade mesoscópica reage transitoriamente à entrada do estímulo periférico.}
-    \label{fig:netflow_evolution}
-\end{figure}
-
-\vspace{0.5cm}
 
 \section{The "Dynome" Evolution and Modulatory Nodes}
 Extracting frame-by-frame snapshots (Connectome Filmstrip) of the dynamic Low Gamma Coherence network illustrated a stable rhythmic organization over time. The hubs located in A17 and the TZ maintained cohesive clustering. Crucially, evaluating the \textit{Net Flow Evolution} uncovered a complex temporal interplay obscured by static analysis. While A17 consistently acted as a "Volatile Source" and A18 as a "Stable Sink", the Transition Zone (TZ) exhibited unique behavior. The TZ functioned as a \textit{Dynamic Modulator}, actively switching its directional role (from sink to source, or vice versa) precisely at the onset of visual stimulation. This highlights the framework's capacity to dissect the mesoconnectome chronologically, revealing dynamic hierarchical relays that coordinate sensory integration across the interhemispheric boundary.

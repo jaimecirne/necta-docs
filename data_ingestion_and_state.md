@@ -30,6 +30,6 @@ Utilitários de I/O em memória (`io.BytesIO`) e empacotamento (`zipfile`) garan
 
 ## 3. Geração de Relatórios e Auditoria (`report_generator.py`)
 
-Para democratizar os achados estatísticos e topológicos gerados, o `report_generator.py` atua na tradução das dimensões.
+Visando facilitar a interpretação dos achados estatísticos e topológicos gerados, o `report_generator.py` atua na tradução das dimensões.
 *   **Flattening:** Ele executa o "achatamento" dos tensores hiperespaçais do `xarray` convertendo-os em matrizes bidimensionais do `pandas.DataFrame`.
 *   **Auditoria de Fase:** Assegura que o cientista exporte os painéis CSV com os valores puros do wPLI, PDC ou Coerência Clássica agrupados por banda de frequência e instante temporal, preservando o valor primário gerado.

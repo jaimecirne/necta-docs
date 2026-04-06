@@ -90,7 +90,7 @@ To mitigate the artifacts of volume conduction inherent to LFP recordings, NECTA
 \end{itemize}
 
 \section{Directed Functional Connectivity (PDC)}
-To infer causal interactions and hierarchical information flow, NECTA implements an advanced Partial Directed Coherence (PDC) pipeline. Traditional PDC formulations rely on strictly causal MVAR models that forsake instantaneous effects, making them highly susceptible to the zero-lag correlations typical of volume conduction \cite{Faes2010}. To overcome this, the NECTA framework utilizes:
+To infer causal interactions and hierarchical information flow, NECTA implements an advanced Partial Directed Coherence (PDC) pipeline. Traditional PDC formulations rely on strictly causal MVAR models that forsake instantaneous effects, making them highly susceptible to the zero-lag correlations typical of volume conduction \cite{Faes_2010}. To overcome this, the NECTA framework utilizes:
 \begin{enumerate}
     \item \textbf{Stationarity Filtering:} LFP windows exceeding a predefined variance threshold are identified as artifacts and discarded, preserving the assumptions of autoregressive modeling.
     

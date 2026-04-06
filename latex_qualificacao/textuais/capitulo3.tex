@@ -90,13 +90,13 @@ To mitigate the artifacts of volume conduction inherent to LFP recordings, NECTA
 \end{itemize}
 
 \section{Directed Functional Connectivity (PDC)}
-To infer causal interactions and hierarchical information flow, NECTA implements an advanced Partial Directed Coherence (PDC) pipeline.
+To infer causal interactions and hierarchical information flow, NECTA implements an advanced Partial Directed Coherence (PDC) pipeline. Traditional PDC formulations rely on strictly causal MVAR models that forsake instantaneous effects, making them highly susceptible to the zero-lag correlations typical of volume conduction \cite{Faes2010}. To overcome this, the NECTA framework utilizes:
 \begin{enumerate}
-\item \textbf{Stationarity Filtering:} LFP windows exceeding a predefined variance threshold are identified as artifacts and discarded, preserving the assumptions of autoregressive modeling.
-
-\item \textbf{Automated Order Selection:} Instead of imposing a static model order, the Dask workers dynamically fit Multivariate Autoregressive (MVAR) models using Ordinary Least Squares (OLS). The algorithm iterates through orders (up to \verb|max_order=20|) and selects the optimal $p$ that minimizes the Bayesian Information Criterion (BIC), balancing model fit against parametric complexity.
-
-\item \textbf{Frequency Transformation:} Autoregressive coefficients $A_r$ are transformed into the frequency domain $A(f)$ using Fast Fourier Transforms accelerated via `Numba` (FastMath), yielding the normalized PDC matrices.
+    \item \textbf{Stationarity Filtering:} LFP windows exceeding a predefined variance threshold are identified as artifacts and discarded, preserving the assumptions of autoregressive modeling.
+    
+    \item \textbf{Frequency Transformation:} Autoregressive coefficients $A_r$ are transformed into the frequency domain $A(f)$ using Fast Fourier Transforms accelerated via \texttt{Numba} (FastMath), yielding the normalized PDC matrices.
+    
+    \item \textbf{Automated Order Selection:} Instead of imposing a static model order, the Dask workers dynamically fit Multivariate Autoregressive (MVAR) models using Ordinary Least Squares (OLS). The algorithm iterates through orders (up to \texttt{max\_order=20}) and selects the optimal $p$ that minimizes the Bayesian Information Criterion (BIC), balancing model fit against parametric complexity.
 \end{enumerate}
 
 \section{In Silico Validation: Ground Truth Modeling and Stress Testing}

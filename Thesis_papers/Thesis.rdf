@@ -1,0 +1,2780 @@
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:z="http://www.zotero.org/namespaces/export#"
+ xmlns:dcterms="http://purl.org/dc/terms/"
+ xmlns:bib="http://purl.org/net/biblio#"
+ xmlns:foaf="http://xmlns.com/foaf/0.1/"
+ xmlns:link="http://purl.org/rss/1.0/modules/link/"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:prism="http://prismstandard.org/namespaces/1.2/basic/">
+    <bib:Article rdf:about="https://www.nature.com/articles/nrn2575">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1471-003X,%201471-0048"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Bullmore</foaf:surname>
+                        <foaf:givenName>Ed</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Sporns</foaf:surname>
+                        <foaf:givenName>Olaf</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_1"/>
+        <dc:title>Complex brain networks: graph theoretical analysis of structural and functional systems</dc:title>
+        <dc:date>03/2009</dc:date>
+        <z:language>en</z:language>
+        <z:shortTitle>Complex brain networks</z:shortTitle>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://www.nature.com/articles/nrn2575</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2025-10-15 14:32:23</dcterms:dateSubmitted>
+        <bib:pages>186-198</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1471-003X,%201471-0048">
+        <prism:volume>10</prism:volume>
+        <dc:title>Nature Reviews Neuroscience</dc:title>
+        <dc:identifier>DOI 10.1038/nrn2575</dc:identifier>
+        <prism:number>3</prism:number>
+        <dcterms:alternative>Nat Rev Neurosci</dcterms:alternative>
+        <dc:identifier>ISSN 1471-003X, 1471-0048</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_1">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://onlinelibrary.wiley.com/doi/10.1002/hbm.24235">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1065-9471,%201097-0193"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Liao</foaf:surname>
+                        <foaf:givenName>Wei</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Li</foaf:surname>
+                        <foaf:givenName>Jiao</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Duan</foaf:surname>
+                        <foaf:givenName>Xujun</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Cui</foaf:surname>
+                        <foaf:givenName>Qian</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Chen</foaf:surname>
+                        <foaf:givenName>Heng</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Chen</foaf:surname>
+                        <foaf:givenName>Huafu</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_2"/>
+        <dc:title>Static and dynamic connectomics differentiate between depressed patients with and without suicidal ideation</dc:title>
+        <dcterms:abstract>Neural circuit dysfunction underlies the biological mechanisms of suicidal ideation (SI). However, little is known about how the brain’s “dynome” differentiate between depressed patients with and without SI. This study included depressed patients (n 5 48) with SI, without SI (NSI), and healthy controls (HC, n 5 30). All participants underwent resting-state functional magnetic resonance imaging. We constructed dynamic and static connectomics on 200 nodes using a sliding window and full-length time–series correlations, respectively. Specifically, the temporal variability of dynamic connectomic was quantified using the variance of topological properties across sliding window. The overall topological properties of both static and dynamic connectomics further differentiated between SI and NSI, and also predicted the severity of SI. The SI showed decreased overall topological properties of static connectomic relative to the HC. The SI exhibited increases in overall topological properties with regard to the dynamic connectomic when compared with the HC and the NSI. Importantly, combining the overall topological properties of dynamic and static connectomics yielded mean 75% accuracy (all p &lt; .001) with mean 71% sensitivity and mean 75% specificity in differentiating between SI and NSI. Moreover, these features may predict the severity of SI (mean r 5 .55, all p &lt; .05). The findings revealed that combining static and dynamic connectomics could differentiate between SI and NSI, offering new insight into the physiopathological mechanisms underlying SI. Furthermore, combining the brain’s connectome and dynome may be considered a neuromarker for diagnostic and predictive models in the study of SI.</dcterms:abstract>
+        <dc:date>10/2018</dc:date>
+        <z:language>en</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://onlinelibrary.wiley.com/doi/10.1002/hbm.24235</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2025-10-15 14:32:26</dcterms:dateSubmitted>
+        <bib:pages>4105-4118</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1065-9471,%201097-0193">
+        <prism:volume>39</prism:volume>
+        <dc:title>Human Brain Mapping</dc:title>
+        <dc:identifier>DOI 10.1002/hbm.24235</dc:identifier>
+        <prism:number>10</prism:number>
+        <dcterms:alternative>Human Brain Mapping</dcterms:alternative>
+        <dc:identifier>ISSN 1065-9471, 1097-0193</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_2">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://linkinghub.elsevier.com/retrieve/pii/S0896627314006916">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:08966273"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Kopell</foaf:surname>
+                        <foaf:givenName>Nancy J.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Gritton</foaf:surname>
+                        <foaf:givenName>Howard J.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Whittington</foaf:surname>
+                        <foaf:givenName>Miles A.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Kramer</foaf:surname>
+                        <foaf:givenName>Mark A.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_3"/>
+        <dc:title>Beyond the Connectome: The Dynome</dc:title>
+        <dcterms:abstract>The human connectome will provide a detailed mapping of the brain’s connectivity, with fundamental insights for health and disease. However, further understanding of brain function and dysfunction will require an integrated framework that links brain connectivity with brain dynamics, as well as the biological details that relates this connectivity more directly to function. In this Perspective, we describe such a framework for studying the brain’s “dynome” and its relationship to cognition.</dcterms:abstract>
+        <dc:date>09/2014</dc:date>
+        <z:language>en</z:language>
+        <z:shortTitle>Beyond the Connectome</z:shortTitle>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://linkinghub.elsevier.com/retrieve/pii/S0896627314006916</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2025-10-15 14:32:28</dcterms:dateSubmitted>
+        <bib:pages>1319-1328</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:08966273">
+        <prism:volume>83</prism:volume>
+        <dc:title>Neuron</dc:title>
+        <dc:identifier>DOI 10.1016/j.neuron.2014.08.016</dc:identifier>
+        <prism:number>6</prism:number>
+        <dcterms:alternative>Neuron</dcterms:alternative>
+        <dc:identifier>ISSN 08966273</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_3">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://linkinghub.elsevier.com/retrieve/pii/S2589004220310798">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:25890042"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Ferreiro</foaf:surname>
+                        <foaf:givenName>Dardo N.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Conde-Ocazionez</foaf:surname>
+                        <foaf:givenName>Sergio A.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Patriota</foaf:surname>
+                        <foaf:givenName>João H.N.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Souza</foaf:surname>
+                        <foaf:givenName>Luã C.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Oliveira</foaf:surname>
+                        <foaf:givenName>Moacir F.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Wolf</foaf:surname>
+                        <foaf:givenName>Fred</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Schmidt</foaf:surname>
+                        <foaf:givenName>Kerstin E.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_7"/>
+        <dc:title>Spatial clustering of orientation preference in primary visual cortex of the large rodent agouti</dc:title>
+        <dcterms:abstract>All rodents investigated so far possess orientation-selective neurons in the primary visual cortex (V1) but – in contrast to carnivores and primates – no evidence of periodic maps with pinwheel-like structures. Theoretical studies debating whether phylogeny or universal principles determine development of pinwheels point to V1 size as a critical constraint. Thus, we set out to study maps of agouti, a big diurnal rodent with a V1 size comparable to cats’. In electrophysiology, we detected interspersed orientation and direction-selective neurons with a bias for horizontal contours, corroborated by homogeneous activation in optical imaging. Compatible with spatial clustering at short distance, nearby neurons tended to exhibit similar orientation preference. Our results argue against V1 size as a key parameter in determining the presence of periodic orientation maps. They are consistent with a phylogenetic inﬂuence on the map layout and development, potentially reﬂecting distinct retinal traits or interspecies differences in cortical circuitry.</dcterms:abstract>
+        <dc:date>01/2021</dc:date>
+        <z:language>en</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://linkinghub.elsevier.com/retrieve/pii/S2589004220310798</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2025-10-15 14:37:48</dcterms:dateSubmitted>
+        <bib:pages>101882</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:25890042">
+        <prism:volume>24</prism:volume>
+        <dc:title>iScience</dc:title>
+        <dc:identifier>DOI 10.1016/j.isci.2020.101882</dc:identifier>
+        <prism:number>1</prism:number>
+        <dcterms:alternative>iScience</dcterms:alternative>
+        <dc:identifier>ISSN 25890042</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_7">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://linkinghub.elsevier.com/retrieve/pii/S0167278900000439">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:01672789"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Schreiber</foaf:surname>
+                        <foaf:givenName>Thomas</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Schmitz</foaf:surname>
+                        <foaf:givenName>Andreas</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:title>Surrogate time series</dc:title>
+        <dc:date>8/2000</dc:date>
+        <z:language>en</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://linkinghub.elsevier.com/retrieve/pii/S0167278900000439</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2025-10-15 14:41:48</dcterms:dateSubmitted>
+        <dc:rights>https://www.elsevier.com/tdm/userlicense/1.0/</dc:rights>
+        <bib:pages>346-382</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:01672789">
+        <prism:volume>142</prism:volume>
+        <dc:title>Physica D: Nonlinear Phenomena</dc:title>
+        <dc:identifier>DOI 10.1016/S0167-2789(00)00043-9</dc:identifier>
+        <prism:number>3-4</prism:number>
+        <dcterms:alternative>Physica D: Nonlinear Phenomena</dcterms:alternative>
+        <dc:identifier>ISSN 01672789</dc:identifier>
+    </bib:Journal>
+    <bib:Article rdf:about="https://academic.oup.com/cercor/article-lookup/doi/10.1093/cercor/bhs352">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1460-2199,%201047-3211"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Allen</foaf:surname>
+                        <foaf:givenName>Elena A.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Damaraju</foaf:surname>
+                        <foaf:givenName>Eswar</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Plis</foaf:surname>
+                        <foaf:givenName>Sergey M.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Erhardt</foaf:surname>
+                        <foaf:givenName>Erik B.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Eichele</foaf:surname>
+                        <foaf:givenName>Tom</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Calhoun</foaf:surname>
+                        <foaf:givenName>Vince D.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_10"/>
+        <dc:title>Tracking Whole-Brain Connectivity Dynamics in the Resting State</dc:title>
+        <dcterms:abstract>Spontaneous ﬂuctuations are a hallmark of recordings of neural signals, emergent over time scales spanning milliseconds and tens of minutes. However, investigations of intrinsic brain organization based on resting-state functional magnetic resonance imaging have largely not taken into account the presence and potential of temporal variability, as most current approaches to examine functional connectivity (FC) implicitly assume that relationships are constant throughout the length of the recording. In this work, we describe an approach to assess whole-brain FC dynamics based on spatial independent component analysis, sliding time window correlation, and k-means clustering of windowed correlation matrices. The method is applied to resting-state data from a large sample (n = 405) of young adults. Our analysis of FC variability highlights particularly ﬂexible connections between regions in lateral parietal and cingulate cortex, and argues against a labeling scheme where such regions are treated as separate and antagonistic entities. Additionally, clustering analysis reveals unanticipated FC states that in part diverge strongly from stationary connectivity patterns and challenge current descriptions of interactions between large-scale networks. Temporal trends in the occurrence of different FC states motivate theories regarding their functional roles and relationships with vigilance/arousal. Overall, we suggest that the study of timevarying aspects of FC can unveil ﬂexibility in the functional coordination between different neural systems, and that the exploitation of these dynamics in further investigations may improve our understanding of behavioral shifts and adaptive processes.</dcterms:abstract>
+        <dc:date>3/2014</dc:date>
+        <z:language>en</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://academic.oup.com/cercor/article-lookup/doi/10.1093/cercor/bhs352</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2025-10-15 14:42:02</dcterms:dateSubmitted>
+        <bib:pages>663-676</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1460-2199,%201047-3211">
+        <prism:volume>24</prism:volume>
+        <dc:title>Cerebral Cortex</dc:title>
+        <dc:identifier>DOI 10.1093/cercor/bhs352</dc:identifier>
+        <prism:number>3</prism:number>
+        <dc:identifier>ISSN 1460-2199, 1047-3211</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_10">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="http://link.springer.com/10.1007/s00422-010-0410-x">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:0340-1200,%201432-0770"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Takahashi</foaf:surname>
+                        <foaf:givenName>Daniel Y.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Baccalá</foaf:surname>
+                        <foaf:givenName>Luiz A.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Sameshima</foaf:surname>
+                        <foaf:givenName>Koichi</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_13"/>
+        <dc:title>Information theoretic interpretation of frequency domain connectivity measures</dc:title>
+        <dcterms:abstract>In order to provide adequate multivariate measures of information ﬂow between neural structures, modiﬁed expressions of partial directed coherence (PDC) and directed transfer function (DTF), two popular multivariate connectivity measures employed in neuroscience, are introduced and their formal relationship to mutual information rates are proved.</dcterms:abstract>
+        <dc:date>12/2010</dc:date>
+        <z:language>en</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://link.springer.com/10.1007/s00422-010-0410-x</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2025-10-15 14:44:00</dcterms:dateSubmitted>
+        <dc:rights>http://www.springer.com/tdm</dc:rights>
+        <bib:pages>463-469</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:0340-1200,%201432-0770">
+        <prism:volume>103</prism:volume>
+        <dc:title>Biological Cybernetics</dc:title>
+        <dc:identifier>DOI 10.1007/s00422-010-0410-x</dc:identifier>
+        <prism:number>6</prism:number>
+        <dcterms:alternative>Biol Cybern</dcterms:alternative>
+        <dc:identifier>ISSN 0340-1200, 1432-0770</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_13">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="http://link.springer.com/10.1007/PL00007990">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:0340-1200"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Baccalá</foaf:surname>
+                        <foaf:givenName>Luiz A.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Sameshima</foaf:surname>
+                        <foaf:givenName>Koichi</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_14"/>
+        <dc:title>Partial directed coherence: a new concept in neural structure determination</dc:title>
+        <dc:date>2001-5-11</dc:date>
+        <z:language>en</z:language>
+        <z:shortTitle>Partial directed coherence</z:shortTitle>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>http://link.springer.com/10.1007/PL00007990</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2025-10-15 14:44:03</dcterms:dateSubmitted>
+        <dc:rights>http://www.springer.com/tdm</dc:rights>
+        <bib:pages>463-474</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:0340-1200">
+        <prism:volume>84</prism:volume>
+        <dc:title>Biological Cybernetics</dc:title>
+        <dc:identifier>DOI 10.1007/PL00007990</dc:identifier>
+        <prism:number>6</prism:number>
+        <dcterms:alternative>Biol Cybern</dcterms:alternative>
+        <dc:identifier>ISSN 0340-1200</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_14">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://linkinghub.elsevier.com/retrieve/pii/S0301008221002008">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:03010082"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Innocenti</foaf:surname>
+                        <foaf:givenName>Giorgio M.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Schmidt</foaf:surname>
+                        <foaf:givenName>Kerstin</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Milleret</foaf:surname>
+                        <foaf:givenName>Chantal</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Fabri</foaf:surname>
+                        <foaf:givenName>Mara</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Knyazeva</foaf:surname>
+                        <foaf:givenName>Maria G.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Battaglia-Mayer</foaf:surname>
+                        <foaf:givenName>Alexandra</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Aboitiz</foaf:surname>
+                        <foaf:givenName>Francisco</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Ptito</foaf:surname>
+                        <foaf:givenName>Maurice</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Caleo</foaf:surname>
+                        <foaf:givenName>Matteo</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Marzi</foaf:surname>
+                        <foaf:givenName>Carlo A.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Barakovic</foaf:surname>
+                        <foaf:givenName>Muhamed</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Lepore</foaf:surname>
+                        <foaf:givenName>Franco</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Caminiti</foaf:surname>
+                        <foaf:givenName>Roberto</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_26"/>
+        <dc:title>The functional characterization of callosal connections</dc:title>
+        <dcterms:abstract>The brain operates through the synaptic interaction of distant neurons within flexible, often heterogeneous, distributed systems. Histological studies have detailed the connections between distant neurons, but their functional characterization deserves further exploration. Studies performed on the corpus callosum in animals and humans are unique in that they capitalize on results obtained from several neuroscience disciplines. Such data inspire a new interpretation of the function of callosal connections and delineate a novel road map, thus paving the way toward a general theory of cortico-cortical connectivity. Here we suggest that callosal axons can drive their post-synaptic targets preferentially when coupled to other inputs endowing the cortical network with a high degree of conditionality. This might depend on several factors, such as their pattern of convergencedivergence, the excitatory and inhibitory operation mode, the range of conduction velocities, the variety of homotopic and heterotopic projections and, finally, the state-dependency of their firing. We propose that, in addition to direct stimulation of post-synaptic targets, callosal axons often play a conditional driving or modulatory role, which depends on task contingencies, as documented by several recent studies.</dcterms:abstract>
+        <dc:date>01/2022</dc:date>
+        <z:language>en</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://linkinghub.elsevier.com/retrieve/pii/S0301008221002008</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-10 14:44:09</dcterms:dateSubmitted>
+        <bib:pages>102186</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:03010082">
+        <prism:volume>208</prism:volume>
+        <dc:title>Progress in Neurobiology</dc:title>
+        <dc:identifier>DOI 10.1016/j.pneurobio.2021.102186</dc:identifier>
+        <dcterms:alternative>Progress in Neurobiology</dcterms:alternative>
+        <dc:identifier>ISSN 03010082</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_26">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://open-research-europe.ec.europa.eu/articles/5-280/v1">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:2732-5121"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>J. N. M. Drost</foaf:surname>
+                        <foaf:givenName>Bas</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Sharma</foaf:surname>
+                        <foaf:givenName>Vivek</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Tiesinga</foaf:surname>
+                        <foaf:givenName>Paul</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_27"/>
+        <dc:title>From computational models to clinical practice: Whole brain modelling in stroke research</dc:title>
+        <dcterms:abstract>Brain injuries, particularly from stroke, cancer, or trauma, often manifest as localised lesions and remain a major global cause of mortality and disability. Understanding the broader implications of such lesions is critical for developing effective and personalised rehabilitation strategies. Whole Brain Modeling (WBM) provides a computational framework capable of simulating global brain dynamics, shedding light on how localised lesions disrupt the functional architecture of the healthy brain. This review critically examines four prominent Whole Brain Models, the Kuramoto, StuartLandau, Wilson-Cowan, and Dynamic Mean Field models, and evaluates their application in stroke research. Each model’s mathematical foundations, strengths, and limitations are discussed, highlighting how WBMs elucidate stroke-induced functional disruptions, identify mechanisms underlying neural recovery, and facilitate the discovery of predictive biomarkers. By assessing complementary features and current challenges in existing models, this review outlines a framework to advance stroke prognosis, personalise clinical interventions, and bridge computational neuroscience with clinical practice. When embedded in emerging platforms, such as eBRAINS Health or The Virtual Brain Cloud, these models can be instantiated as patient-specific ’digital twins’, enabling in-silico testing of rehabilitation or neuromodulatory strategies before they are deployed in the clinic.</dcterms:abstract>
+        <dc:date>2025-9-11</dc:date>
+        <z:language>en</z:language>
+        <z:shortTitle>From computational models to clinical practice</z:shortTitle>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://open-research-europe.ec.europa.eu/articles/5-280/v1</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-10 14:44:12</dcterms:dateSubmitted>
+        <bib:pages>280</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:2732-5121">
+        <prism:volume>5</prism:volume>
+        <dc:title>Open Research Europe</dc:title>
+        <dc:identifier>DOI 10.12688/openreseurope.21294.1</dc:identifier>
+        <dcterms:alternative>Open Res Europe</dcterms:alternative>
+        <dc:identifier>ISSN 2732-5121</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_27">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://link.springer.com/10.1007/s00429-024-02806-3">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1863-2661"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Martin</foaf:surname>
+                        <foaf:givenName>Kevan A. C.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Sägesser</foaf:surname>
+                        <foaf:givenName>Franziska D.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_28"/>
+        <dc:title>A strong direct link from the layer 3/4 border to layer 6 of cat primary visual cortex</dc:title>
+        <dcterms:abstract>The cat primary visual cortex (V1) is a cortical area for which we have one of the most detailed estimates of the connection ‘weights’ (expressed as number of synapses) between different neural populations in different layers (Binzegger et al in J Neurosci 24:8441–8453, 2004). Nevertheless, the majority of excitatory input sources to layer 6, the deepest layer in a local translaminar excitatory feedforward loop, was not accounted for by the known neuron types used to generate the quantitative Binzegger diagram. We aimed to fill this gap by using a retrograde tracer that would label neural cell bodies in and outside V1 that directly connect to layer 6 of V1. We found that more than 80% of labeled neurons projecting to layer 6 were within V1 itself. Our data indicate that a substantial fraction of the missing input is provided by a previously unidentified population of layer 3/4 border neurons, laterally distributed and connecting more strongly to layer 6 than the typical superficial layer pyramidal neurons considered by Binzegger et al. (Binzegger et al in J Neurosci 24:8441–8453, 2004). This layer 3/4 to layer 6 connection may be a parallel route to the layer 3 – layer 5 – layer 6 feedforward pathway, be associated with the fast-conducting, movement-related Y pathway and provide convergent input from distant (5–10 degrees) regions of the visual field.</dcterms:abstract>
+        <dc:date>2024-05-16</dc:date>
+        <z:language>en</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://link.springer.com/10.1007/s00429-024-02806-3</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-10 14:44:14</dcterms:dateSubmitted>
+        <bib:pages>1397-1415</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1863-2661">
+        <prism:volume>229</prism:volume>
+        <dc:title>Brain Structure and Function</dc:title>
+        <dc:identifier>DOI 10.1007/s00429-024-02806-3</dc:identifier>
+        <prism:number>6</prism:number>
+        <dcterms:alternative>Brain Struct Funct</dcterms:alternative>
+        <dc:identifier>ISSN 1863-2661</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_28">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <rdf:Description rdf:about="http://arxiv.org/abs/1907.13030">
+        <z:itemType>preprint</z:itemType>
+        <dc:publisher>
+           <foaf:Organization><foaf:name>arXiv</foaf:name></foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Dugré</foaf:surname>
+                        <foaf:givenName>Mathieu</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Hayot-Sasson</foaf:surname>
+                        <foaf:givenName>Valérie</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Glatard</foaf:surname>
+                        <foaf:givenName>Tristan</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dcterms:isReferencedBy rdf:resource="#item_71"/>
+        <link:link rdf:resource="#item_29"/>
+        <dc:subject>
+            <z:AutomaticTag>
+                <rdf:value>Computer Science - Distributed, Parallel, and Cluster Computing</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Computer Science - Performance</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:title>A performance comparison of Dask and Apache Spark for data-intensive neuroimaging pipelines</dc:title>
+        <dcterms:abstract>In the past few years, neuroimaging has entered the Big Data era due to the joint increase in image resolution, data sharing, and study sizes. However, no particular Big Data engines have emerged in this ﬁeld, and several alternatives remain available. We compare two popular Big Data engines with Python APIs, Apache Spark and Dask, for their runtime performance in processing neuroimaging pipelines. Our evaluation uses two synthetic pipelines processing the 81 GB BigBrain image, and a real pipeline processing anatomical data from more than 1,000 subjects. We benchmark these pipelines using various combinations of task durations, data sizes, and numbers of workers, deployed on an 8-node (8 cores ea.) compute cluster in Compute Canada’s Arbutus cloud. We evaluate PySpark’s RDD API against Dask’s Bag, Delayed and Futures. Results show that despite slight differences between Spark and Dask, both engines perform comparably. However, Dask pipelines risk being limited by Python’s GIL depending on task type and cluster conﬁguration. In all cases, the major limiting factor was data transfer. While either engine is suitable for neuroimaging pipelines, more effort needs to be placed in reducing data transfer time.</dcterms:abstract>
+        <dc:date>2019-10-05</dc:date>
+        <z:language>en</z:language>
+        <z:libraryCatalog>arXiv.org</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>http://arxiv.org/abs/1907.13030</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-10 14:44:17</dcterms:dateSubmitted>
+        <dc:description>arXiv:1907.13030 [cs]</dc:description>
+        <dc:identifier>DOI 10.48550/arXiv.1907.13030</dc:identifier>
+        <prism:number>arXiv:1907.13030</prism:number>
+    </rdf:Description>
+    <bib:Memo rdf:about="#item_71">
+        <rdf:value>Comment: 10 pages, 15 figures, 1 tables. To appear in the proceeding of the 14th WORKS Workshop on Topics in Workflows in Support of Large-Scale Science, 17 November 2019, Denver, CO, USA</rdf:value>
+    </bib:Memo>
+    <z:Attachment rdf:about="#item_29">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <rdf:Description rdf:about="http://biorxiv.org/lookup/doi/10.1101/2024.11.18.624059">
+        <z:itemType>preprint</z:itemType>
+        <dc:publisher>
+            <foaf:Organization>
+               <foaf:name>Neuroscience</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Akella</foaf:surname>
+                        <foaf:givenName>Shailaja</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Principe</foaf:surname>
+                        <foaf:givenName>Jose C.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_30"/>
+        <dc:title>Enhancing information extraction from field potentials in electrophysiology studies</dc:title>
+        <dcterms:abstract>Multi-channel recordings from the brain serve as the primary approach to address various mechanistic and behavioral questions about neural activity and the underlying circuitry. While electrodes can detect neural activity at a distance from their source generators, activity from other concurrently active neural sources is also volume conducted to the electrodes, thus creating linear dependencies among the channels. These dependencies pose challenges in discerning specific communication patterns between different neuronal populations, and their behavioral implications. In this study, we demonstrate the capability of a marked point process (MPP) representation of channel activity, focusing on oscillatory bursts, to curtail the effects of volume conduction noise. By characterizing the localized spectral information within oscillatory bursts, we achieved a ∼ 45% reduction in channel correlations across three recording modalities of field potentials (electroencephalography, electrocorticography, and local field potentials). We further provide evidence that the implemented sparse representation preserves both behavioral and causal information in the signal. We illustrate our findings with two examples: 1) retention of finger-level movement information in field potentials recorded from humans, demonstrated using a simple online classifier, and 2) retention of top-down connectivity information between the prefrontal and motor cortices of behaving rats. Overall, our results underscore the novelty of using a marked point process representation of oscillatory bursts to concisely encode behavioral and connectivity information while attenuating the effects of volume conduction from the causal signal sources.</dcterms:abstract>
+        <dc:date>2024-11-18</dc:date>
+        <z:language>en</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://biorxiv.org/lookup/doi/10.1101/2024.11.18.624059</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-10 14:44:20</dcterms:dateSubmitted>
+        <dc:rights>http://creativecommons.org/licenses/by/4.0/</dc:rights>
+        <dc:identifier>DOI 10.1101/2024.11.18.624059</dc:identifier>
+    </rdf:Description>
+    <z:Attachment rdf:about="#item_30">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="#item_73">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+           <bib:Journal></bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Pinotsis</foaf:surname>
+                        <foaf:givenName>Dimitrios</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_31"/>
+        <dc:title>Ephaptic coupling can explain variability in neural activity</dc:title>
+        <dcterms:abstract>The waxing and waning cortical oscillatory power correlates with function and disease. This crosstrial variability has been thought to be due to neuromodulation, uncertainty encoding, and/or changes in cortical excitability. Here, we report evidence that it is also due to fluctuations in ephaptic influences of mesoscale electric fields. We analyzed LFP data from the PFC recorded during a spatial delay saccade task. We constructed a model that describes the electric field close to the cortical patch given the neural activity that generates it. This revealed that field-to-neuron interactions (ephaptic coupling strength) was stronger that neuron-to-field and it correlated trial by trial changes in oscillatory power. This suggests a form of circular causality where neural activity and extracellular electric fields continuously shape each other. These results further suggest that mesoscale ephaptic effects help drive the formation of memory ensembles, a prediction of the cytoelectric coupling hypothesis.</dcterms:abstract>
+        <z:language>en</z:language>
+        <z:libraryCatalog>Zotero</z:libraryCatalog>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_31">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="#item_74">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+           <bib:Journal></bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Lassers</foaf:surname>
+                        <foaf:givenName>Sam</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_32"/>
+        <dc:title>Axonal theta oscillations evoke bursting in target hippocampal subregions</dc:title>
+        <dcterms:abstract>Local field potentials (LFPs) measured in the extracellular matrix of the brain are postulated to arise from the integration of synaptic ionic currents and spread by volume conduction. However, there is a lack of consensus on whether these spatiotemporal voltage gradients are just an epiphenomenon of spiking or if the LFPs play a functional role in information processing. To examine a potential functional role of LFPs in information processing, we developed a microfluidic device that allows neurons from the hippocampal formation to self-wire through microfluidic channels, effectively isolating the activity of single axons between subregions of the network. We recorded spontaneous theta-band activity (4-10 Hz) in these axons whose power spectra were independent of simultaneous spiking activity. A sparse set of axons from the CA3 into the CA1 had the highest theta amplitudes. Source neurons for the axonal theta were identified through cross correlation. Functionally, sparse axonal theta phase and amplitude correlated with target subregional spiking and more strongly with burst length. These results suggest that theta voltage oscillations in axons may contribute to activation of slow voltage-gated calcium channels to drive stronger synaptic release of transmitter to coordinate hippocampal activity between subregions. We propose that theta oscillations are controlled by specific ion channels distinct from those that generate spikes, a multiplex coding mechanism for inter-regional communication with implications for routing, executive control, disease states and artificial neural networks.</dcterms:abstract>
+        <z:language>en</z:language>
+        <z:libraryCatalog>Zotero</z:libraryCatalog>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_32">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://www.jneurosci.org/lookup/doi/10.1523/JNEUROSCI.14-05-02732.1994">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:0270-6474,%201529-2401"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Price</foaf:surname>
+                        <foaf:givenName>Dj</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Ferrer</foaf:surname>
+                        <foaf:givenName>Jm</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Blakemore</foaf:surname>
+                        <foaf:givenName>C</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Kato</foaf:surname>
+                        <foaf:givenName>N</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_33"/>
+        <dc:title>Functional organization of corticocortical projections from area 17 to area 18 in the cat's visual cortex</dc:title>
+        <dcterms:abstract>We used anatomical and physiological methods to study the functional organization of the association projection from area 17 to area 18 in the cat's visual cortex. Neurons in area 17 projecting to area 18 (revealed by retrograde transport of fluorescent tracer) tend to be clustered over regions of layer 4 receiving input from the ipsilateral eye (visualized by anterograde transneuronal tracing). Since the contralateral input overlaps these ipsilateral patches, the association cells lie preferentially in regions that are likely to be binocularly innervated. Indeed, almost all cells recorded electrophysiologically within the association clusters were strongly binocular, whereas between the clusters, many neurons were dominated by the contralateral eye. There is sufficient jitter in the retinotopic organization of area 17 for the discontinuous distribution of association cells to provide a continuous representation of the visual field. Cells in each association cluster in the rostral part of area 17 project divergently to innervate a zone extending up to 3 mm wide, anteroposteriorly, in the superficial layers of area 18. The receptive fields of cells at any point in area 18 are larger than for the corresponding point in area 17. Neurons recorded at two points in area 18, separated by a distance equal to the limit of anatomical divergence of the projection from area 17, have receptive fields that overlap by an amount similar to the region of visual field covered by the receptive fields of cells in a single association cluster in area 17 at a similar retinotopic position. Thus, area 18 receives a full and strongly binocular representation of the visual field not only from the lateral geniculate nucleus but also from area 17. The divergence of the area 17 to 18 projection compensates for the difference in receptive field size by ensuring that the receptive fields of each cluster of projecting neurons overlap fairly precisely those of the recipient neurons in area 18.</dcterms:abstract>
+        <dc:date>1994-05-01</dc:date>
+        <z:language>en</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.jneurosci.org/lookup/doi/10.1523/JNEUROSCI.14-05-02732.1994</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-10 14:44:27</dcterms:dateSubmitted>
+        <dc:rights>https://creativecommons.org/licenses/by-nc-sa/4.0/</dc:rights>
+        <bib:pages>2732-2746</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:0270-6474,%201529-2401">
+        <prism:volume>14</prism:volume>
+        <dc:title>The Journal of Neuroscience</dc:title>
+        <dc:identifier>DOI 10.1523/JNEUROSCI.14-05-02732.1994</dc:identifier>
+        <prism:number>5</prism:number>
+        <dcterms:alternative>J. Neurosci.</dcterms:alternative>
+        <dc:identifier>ISSN 0270-6474, 1529-2401</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_33">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://www.nature.com/articles/s41598-019-43272-w">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:2045-2322"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Nandi</foaf:surname>
+                        <foaf:givenName>Bijurika</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Swiatek</foaf:surname>
+                        <foaf:givenName>Peter</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Kocsis</foaf:surname>
+                        <foaf:givenName>Bernat</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Ding</foaf:surname>
+                        <foaf:givenName>Mingzhou</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_34"/>
+        <dc:title>Inferring the direction of rhythmic neural transmission via inter-regional phase-amplitude coupling (ir-PAC)</dc:title>
+        <dcterms:abstract>Abstract
+            Phase-amplitude coupling (PAC) estimates the statistical dependence between the phase of a low-frequency component and the amplitude of a high-frequency component of local field potentials (LFP). To date PAC has been mainly applied to one signal. In this work, we introduce a new application of PAC to two LFPs and suggest that it can be used to infer the direction and strength of rhythmic neural transmission between distinct brain networks. This hypothesis is based on the accumulating evidence that transmembrane currents related to action potentials contribute a broad-band component to LFP in the high-gamma band, and PAC calculated between the amplitude of high-gamma (&gt;60 Hz) in one LFP and the phase of a low-frequency oscillation (e.g., theta) in another would therefore relate the output (spiking) of one area to the input (somatic/dendritic postsynaptic potentials) of the other. We tested the hypothesis on theta-band long range communications between hippocampus and prefrontal cortex (PFC) and theta-band short range communications between dentate gyrus (DG) and the Ammon’s horn (CA1) within the hippocampus. The ground truth was provided by the known anatomical connections predicting hippocampus → PFC and DG → CA1, i.e., theta transmission is unidirectional in both cases: from hippocampus to PFC and from DG to CA1 along the tri-synaptic pathway within hippocampus. We found that (1) hippocampal high-gamma amplitude was significantly coupled to PFC theta phase, but not vice versa; (2) similarly, DG high-gamma amplitude was significantly coupled to CA1 theta phase, but not vice versa, and (3) the DG high-gamma-CA1 theta PAC was significantly correlated with DG → CA1 Granger causality, a well-established analytical measure of directional neural transmission. These results support the hypothesis that inter-regional PAC (ir-PAC) can be used to relate the output of a rhythmic “driver” network (i.e., high gamma) to the input of a rhythmic “receiver” network (i.e., theta) and thereby establish the direction and strength of rhythmic neural transmission.</dcterms:abstract>
+        <dc:date>2019-05-06</dc:date>
+        <z:language>en</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.nature.com/articles/s41598-019-43272-w</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-10 14:44:30</dcterms:dateSubmitted>
+        <bib:pages>6933</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:2045-2322">
+        <prism:volume>9</prism:volume>
+        <dc:title>Scientific Reports</dc:title>
+        <dc:identifier>DOI 10.1038/s41598-019-43272-w</dc:identifier>
+        <prism:number>1</prism:number>
+        <dcterms:alternative>Sci Rep</dcterms:alternative>
+        <dc:identifier>ISSN 2045-2322</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_34">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://www.nature.com/articles/s41598-025-95306-1">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>15</prism:volume>
+                <dc:title>Scientific Reports</dc:title>
+                <dc:identifier>DOI 10.1038/s41598-025-95306-1</dc:identifier>
+                <prism:number>1</prism:number>
+                <dcterms:alternative>Sci Rep</dcterms:alternative>
+                <dc:identifier>ISSN 2045-2322</dc:identifier>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Galindo-Leon</foaf:surname>
+                        <foaf:givenName>Edgar E.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Nolte</foaf:surname>
+                        <foaf:givenName>Guido</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Pieper</foaf:surname>
+                        <foaf:givenName>Florian</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Engler</foaf:surname>
+                        <foaf:givenName>Gerhard</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Engel</foaf:surname>
+                        <foaf:givenName>Andreas K.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_35"/>
+        <dc:title>Causal interactions between amplitude correlation and phase coupling in cortical networks</dc:title>
+        <dcterms:abstract>Abstract
+            Phase coherence and amplitude correlations across brain regions are two main mechanisms of connectivity that govern brain dynamics at multiple scales. However, despite the increasing evidence that associates these mechanisms with brain functions and cognitive processes, the relationship between these different coupling modes is not well understood. Here, we study the causal relation between both types of functional coupling across multiple cortical areas. While most of the studies adopt a definition based on pairs of electrodes or regions of interest, we here employ a multichannel approach that provides us with a time-resolved definition of phase and amplitude coupling parameters. Using data recorded with a multichannel µECoG array from the ferret brain, we found that the transmission of information between both modes can be unidirectional or bidirectional, depending on the frequency band of the underlying signal. These results were reproduced in magnetoencephalography (MEG) data recorded during resting from the human brain. We show that this transmission of information occurs in a model of coupled oscillators and may represent a generic feature of a dynamical system. Together, our findings open the possibility of a general mechanism that may govern multi-scale interactions in brain dynamics.</dcterms:abstract>
+        <dc:date>2025-04-08</dc:date>
+        <z:language>en</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.nature.com/articles/s41598-025-95306-1</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-10 14:44:33</dcterms:dateSubmitted>
+        <bib:pages>11975</bib:pages>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_35">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://pubs.aip.org/cha/article/30/12/123124/282742/Benchmarking-metrics-for-inferring-functional">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1054-1500,%201089-7682"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Yu</foaf:surname>
+                        <foaf:givenName>Meichen</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_36"/>
+        <dc:title>Benchmarking metrics for inferring functional connectivity from multi-channel EEG and MEG: A simulation study</dc:title>
+        <dcterms:abstract>I present a systematic evaluation of different types of metrics, for inferring magnitude, amplitude, or phase synchronization from the electroencephalogram (EEG) and the magnetoencephalogram (MEG). I used a biophysical model, generating EEG/MEG-like signals, together with a system of two coupled self-sustained chaotic oscillators, containing clear transitions from phase to amplitude synchronization solely modulated by coupling strength. Specifically, I compared metrics according to five benchmarks for assessing different types of reliability factors, including immunity to spatial leakage, test–retest reliability, and sensitivity to noise, coupling strength, and synchronization transition. My results delineate the heterogeneous reliability of widely used connectivity metrics, including two magnitude synchronization metrics [coherence (Coh) and imaginary part of coherence (ImCoh)], two amplitude synchronization metrics [amplitude envelope correlation (AEC) and corrected amplitude envelope correlation (AECc)], and three phase synchronization metrics [phase coherence (PCoh), phase lag index (PLI), and weighted PLI (wPLI)]. First, the Coh, AEC, and PCoh were prone to create spurious connections caused by spatial leakage. Therefore, they are not recommended to be applied to real EEG/MEG data. The ImCoh, AECc, PLI, and wPLI were less affected by spatial leakage. The PLI and wPLI showed the highest immunity to spatial leakage. Second, the PLI and wPLI showed higher test–retest reliability and higher sensitivity to coupling strength and synchronization transition than the ImCoh and AECc. Third, the AECc was less noisy than the ImCoh, PLI, and wPLI. In sum, my work shows that the choice of connectivity metric should be determined after a comprehensive consideration of the aforementioned five reliability factors.</dcterms:abstract>
+        <dc:date>2020-12-01</dc:date>
+        <z:language>en</z:language>
+        <z:shortTitle>Benchmarking metrics for inferring functional connectivity from multi-channel EEG and MEG</z:shortTitle>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://pubs.aip.org/cha/article/30/12/123124/282742/Benchmarking-metrics-for-inferring-functional</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-10 14:44:36</dcterms:dateSubmitted>
+        <bib:pages>123124</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1054-1500,%201089-7682">
+        <prism:volume>30</prism:volume>
+        <dc:title>Chaos: An Interdisciplinary Journal of Nonlinear Science</dc:title>
+        <dc:identifier>DOI 10.1063/5.0018826</dc:identifier>
+        <prism:number>12</prism:number>
+        <dc:identifier>ISSN 1054-1500, 1089-7682</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_36">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="#item_79">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+           <bib:Journal></bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Nandi</foaf:surname>
+                        <foaf:givenName>Bijurika</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Swiatek</foaf:surname>
+                        <foaf:givenName>Peter</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Kocsis</foaf:surname>
+                        <foaf:givenName>Bernat</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Ding</foaf:surname>
+                        <foaf:givenName>Mingzhou</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_37"/>
+        <dc:title>Inferring the direction of rhythmic neural transmission via inter-regional phase-amplitude coupling (ir-PAC)</dc:title>
+        <dcterms:abstract>Phase-amplitude coupling (PAC) estimates the statistical dependence between the phase of a low-frequency and the amplitude of a high-frequency component of local field potentials (LFP). Characterizing the relationship between nested oscillations in LFPs, PAC has become a powerful tool for understanding neural dynamics in both animals and humans. In this work, we introduce a new application for this measure to two LFPs to infer the direction and strength of rhythmic neural transmission between distinct networks. Based on recently accumulating evidence that transmembrane currents related to action potentials contribute a broad-band component to LFP in the highgamma band, we hypothesized that PAC calculated between high-gamma in one LFP and low-frequency oscillations in another would relate the output (spiking) of one area to the input (soma/dendritic postsynaptic potentials) of the other. We tested this hypothesis on theta-band long range communications between hippocampus and prefrontal cortex (PFC) and theta-band short range communications between different regions within the hippocampus. The results were interpreted within the known anatomical connections predicting hippocampus→PFC and DG→CA3→CA1, i.e., theta transmission is unidirectional in both cases: from hippocampus to PFC and along the tri-synaptic pathway within hippocampus. We found that (1) hippocampal highgamma amplitude was significantly coupled to theta phase in PFC, but not vice versa; (2) similarly, high-gamma amplitude in DG was significantly coupled to CA1 theta phase, but not vice versa, and (3) the DG high-gamma-CA1 theta PAC was significantly correlated with DG→CA1 Granger causality, a well-established analytical measure of directional neural transmission. These results support the hypothesis that inter-regional PAC (ir-PAC) can be used to relate the output of a “driver” network (i.e., high gamma) to the input of a “receiver” network (i.e., theta) and thereby establish the direction and strength of rhythmic neural transmission.</dcterms:abstract>
+        <z:language>en</z:language>
+        <z:libraryCatalog>Zotero</z:libraryCatalog>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_37">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://www.mdpi.com/1999-4893/17/11/517">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1999-4893"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Šverko</foaf:surname>
+                        <foaf:givenName>Zoran</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Vlahinić</foaf:surname>
+                        <foaf:givenName>Saša</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Rogelj</foaf:surname>
+                        <foaf:givenName>Peter</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_38"/>
+        <dc:title>A Framework for Evaluating Dynamic Directed Brain Connectivity Estimation Methods Using Synthetic EEG Signal Generation</dc:title>
+        <dcterms:abstract>This study presents a method for generating synthetic electroencephalography (EEG) signals to test dynamic directed brain connectivity estimation methods. Current methods for evaluating dynamic brain connectivity estimation techniques face challenges due to the lack of ground truth in real EEG signals. To address this, we propose a framework for generating synthetic EEG signals with predefined dynamic connectivity changes. Our approach allows for evaluating and optimizing dynamic connectivity estimation methods, particularly Granger causality (GC). We demonstrate the framework’s utility by identifying optimal window sizes and regression orders for GC analysis. The findings could guide the development of more accurate dynamic connectivity techniques.</dcterms:abstract>
+        <dc:date>2024-11-09</dc:date>
+        <z:language>en</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://www.mdpi.com/1999-4893/17/11/517</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-10 14:44:43</dcterms:dateSubmitted>
+        <bib:pages>517</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1999-4893">
+        <prism:volume>17</prism:volume>
+        <dc:title>Algorithms</dc:title>
+        <dc:identifier>DOI 10.3390/a17110517</dc:identifier>
+        <prism:number>11</prism:number>
+        <dcterms:alternative>Algorithms</dcterms:alternative>
+        <dc:identifier>ISSN 1999-4893</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_38">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://linkinghub.elsevier.com/retrieve/pii/S1053811914002717">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:10538119"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Plomp</foaf:surname>
+                        <foaf:givenName>Gijs</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Quairiaux</foaf:surname>
+                        <foaf:givenName>Charles</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Michel</foaf:surname>
+                        <foaf:givenName>Christoph M.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Astolfi</foaf:surname>
+                        <foaf:givenName>Laura</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_39"/>
+        <dc:title>The physiological plausibility of time-varying Granger-causal modeling: Normalization and weighting by spectral power</dc:title>
+        <dc:date>08/2014</dc:date>
+        <z:language>en</z:language>
+        <z:shortTitle>The physiological plausibility of time-varying Granger-causal modeling</z:shortTitle>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://linkinghub.elsevier.com/retrieve/pii/S1053811914002717</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-10 14:44:46</dcterms:dateSubmitted>
+        <bib:pages>206-216</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:10538119">
+        <prism:volume>97</prism:volume>
+        <dc:title>NeuroImage</dc:title>
+        <dc:identifier>DOI 10.1016/j.neuroimage.2014.04.016</dc:identifier>
+        <dcterms:alternative>NeuroImage</dcterms:alternative>
+        <dc:identifier>ISSN 10538119</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_39">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://academic.oup.com/cercor/article-lookup/doi/10.1093/cercor/bhp001">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>19</prism:volume>
+                <dc:title>Cerebral Cortex</dc:title>
+                <dc:identifier>DOI 10.1093/cercor/bhp001</dc:identifier>
+                <prism:number>10</prism:number>
+                <dc:identifier>ISSN 1460-2199, 1047-3211</dc:identifier>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Rochefort</foaf:surname>
+                        <foaf:givenName>N. L.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Buzás</foaf:surname>
+                        <foaf:givenName>P.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Quenech'du</foaf:surname>
+                        <foaf:givenName>N.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Koza</foaf:surname>
+                        <foaf:givenName>A.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Eysel</foaf:surname>
+                        <foaf:givenName>U. T.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Milleret</foaf:surname>
+                        <foaf:givenName>C.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Kisvárday</foaf:surname>
+                        <foaf:givenName>Z. F.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_40"/>
+        <dc:title>Functional Selectivity of Interhemispheric Connections in Cat Visual Cortex</dc:title>
+        <dc:date>10/2009</dc:date>
+        <z:language>en</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://academic.oup.com/cercor/article-lookup/doi/10.1093/cercor/bhp001</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-10 14:44:49</dcterms:dateSubmitted>
+        <bib:pages>2451-2465</bib:pages>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_40">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://linkinghub.elsevier.com/retrieve/pii/S1571064524000460">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:15710645"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Huang</foaf:surname>
+                        <foaf:givenName>Shenyang</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>De Brigard</foaf:surname>
+                        <foaf:givenName>Felipe</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Cabeza</foaf:surname>
+                        <foaf:givenName>Roberto</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Davis</foaf:surname>
+                        <foaf:givenName>Simon W.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_41"/>
+        <dc:title>Connectivity analyses for task-based fMRI</dc:title>
+        <dcterms:abstract>Functional connectivity is conventionally defined by measuring the similarity between brain signals from two regions. The technique has become widely adopted in the analysis of functional magnetic resonance imaging (fMRI) data, where it has provided cognitive neuroscientists with abundant information on how brain regions interact to support complex cognition. However, in the past decade the notion of “connectivity” has expanded in both the complexity and heterogeneity of its application to cognitive neuroscience, resulting in greater difficulty of interpretation, replication, and cross-study comparisons. In this paper, we begin with the canonical notions of functional connectivity and then introduce recent methodological developments that either estimate some alternative form of connectivity or extend the analytical framework, with the hope of bringing better clarity for cognitive neuroscience researchers.</dcterms:abstract>
+        <dc:date>07/2024</dc:date>
+        <z:language>en</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://linkinghub.elsevier.com/retrieve/pii/S1571064524000460</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-10 14:44:52</dcterms:dateSubmitted>
+        <bib:pages>139-156</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:15710645">
+        <prism:volume>49</prism:volume>
+        <dc:title>Physics of Life Reviews</dc:title>
+        <dc:identifier>DOI 10.1016/j.plrev.2024.04.012</dc:identifier>
+        <dcterms:alternative>Physics of Life Reviews</dcterms:alternative>
+        <dc:identifier>ISSN 15710645</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_41">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://dx.plos.org/10.1371/journal.pone.0198846">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1932-6203"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Pagnotta</foaf:surname>
+                        <foaf:givenName>Mattia F.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Plomp</foaf:surname>
+                        <foaf:givenName>Gijs</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <bib:editors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Sendiña-Nadal</foaf:surname>
+                        <foaf:givenName>Irene</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:editors>
+        <link:link rdf:resource="#item_42"/>
+        <dc:title>Time-varying MVAR algorithms for directed connectivity analysis: Critical comparison in simulations and benchmark EEG data</dc:title>
+        <dcterms:abstract>Human brain function depends on directed interactions between multiple areas that evolve in the subsecond range. Time-varying multivariate autoregressive (tvMVAR) modeling has been proposed as a way to help quantify directed functional connectivity strengths with high temporal resolution. While several tvMVAR approaches are currently available, there is a lack of unbiased systematic comparative analyses of their performance and of their sensitivity to parameter choices. Here, we critically compare four recursive tvMVAR algorithms and assess their performance while systematically varying adaptation coefficients, model order, and signal sampling rate. We also compared two ways of exploiting repeated observations: single-trial modeling followed by averaging, and multi-trial modeling where one tvMVAR model is fitted across all trials. Results from numerical simulations and from benchmark EEG recordings showed that: i) across a broad range of model orders all algorithms correctly reproduced patterns of interactions; ii) signal downsampling degraded connectivity estimation accuracy for most algorithms, although in some cases downsampling was shown to reduce variability in the estimates by lowering the number of parameters in the model; iii) single-trial modeling followed by averaging showed optimal performance with larger adaptation coefficients than previously suggested, and showed slower adaptation speeds than multi-trial modeling. Overall, our findings identify strengths and weaknesses of existing tvMVAR approaches and provide practical recommendations for their application to modeling dynamic directed interactions from electrophysiological signals.</dcterms:abstract>
+        <dc:date>2018-6-11</dc:date>
+        <z:language>en</z:language>
+        <z:shortTitle>Time-varying MVAR algorithms for directed connectivity analysis</z:shortTitle>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://dx.plos.org/10.1371/journal.pone.0198846</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-10 14:44:55</dcterms:dateSubmitted>
+        <bib:pages>e0198846</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1932-6203">
+        <prism:volume>13</prism:volume>
+        <dc:title>PLOS ONE</dc:title>
+        <dc:identifier>DOI 10.1371/journal.pone.0198846</dc:identifier>
+        <prism:number>6</prism:number>
+        <dcterms:alternative>PLoS ONE</dcterms:alternative>
+        <dc:identifier>ISSN 1932-6203</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_42">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://www.frontiersin.org/articles/10.3389/fnagi.2025.1496235/full">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1663-4365"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Paitel</foaf:surname>
+                        <foaf:givenName>Elizabeth R.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Otteman</foaf:surname>
+                        <foaf:givenName>Christian B. D.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Polking</foaf:surname>
+                        <foaf:givenName>Mary C.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Licht</foaf:surname>
+                        <foaf:givenName>Henry J.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Nielson</foaf:surname>
+                        <foaf:givenName>Kristy A.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_43"/>
+        <dc:title>Functional and effective EEG connectivity patterns in Alzheimer’s disease and mild cognitive impairment: a systematic review</dc:title>
+        <dcterms:abstract>Background: Alzheimer’s disease (AD) might be best conceptualized as a disconnection syndrome, such that symptoms may be largely attributable to disrupted communication between brain regions, rather than to deterioration within discrete systems. EEG is uniquely capable of directly and non-invasively measuring neural activity with precise temporal resolution; connectivity quantifies the relationships between such signals in different brain regions. EEG research on connectivity in AD and mild cognitive impairment (MCI), often considered a prodromal phase of AD, has produced mixed results and has yet to be synthesized for comprehensive review. Thus, we performed a systematic review of EEG connectivity in MCI and AD participants compared with cognitively healthy older adult controls.
+Methods: We searched PsycINFO, PubMed, and Web of Science for peerreviewed studies in English on EEG, connectivity, and MCI/AD relative to controls. Of 1,344 initial matches, 124 articles were ultimately included in the systematic review.
+Results: The included studies primarily analyzed coherence, phase-locked, and graph theory metrics. The influence of factors such as demographics, design, and approach was integrated and discussed. An overarching pattern emerged of lower connectivity in both MCI and AD compared to healthy controls, which was most prominent in the alpha band, and most consistent in AD. In the minority of studies reporting greater connectivity, theta band was most commonly implicated in both AD and MCI, followed by alpha. The overall prevalence of alpha effects may indicate its potential to provide insight into nuanced changes associated with AD-related networks, with the caveat that most studies were during the resting state where alpha is the dominant frequency. When greater connectivity was reported in MCI, it was primarily during task engagement, suggesting compensatory resources may be employed. In AD, greater connectivity was most common during rest, suggesting compensatory resources during task engagement may already be exhausted.
+Conclusion: The review highlighted EEG connectivity as a powerful tool to advance understanding of AD-related changes in brain communication. We address the need for including demographic and methodological details, using source space connectivity, and extending this work to cognitively healthy older adults with AD risk toward advancing early AD detection and intervention. OPEN ACCESS</dcterms:abstract>
+        <dc:date>2025-2-12</dc:date>
+        <z:language>en</z:language>
+        <z:shortTitle>Functional and effective EEG connectivity patterns in Alzheimer’s disease and mild cognitive impairment</z:shortTitle>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.frontiersin.org/articles/10.3389/fnagi.2025.1496235/full</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-10 14:44:58</dcterms:dateSubmitted>
+        <bib:pages>1496235</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1663-4365">
+        <prism:volume>17</prism:volume>
+        <dc:title>Frontiers in Aging Neuroscience</dc:title>
+        <dc:identifier>DOI 10.3389/fnagi.2025.1496235</dc:identifier>
+        <dcterms:alternative>Front. Aging Neurosci.</dcterms:alternative>
+        <dc:identifier>ISSN 1663-4365</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_43">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://www.frontiersin.org/article/10.3389/fnana.2020.00050/full">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1662-5129"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Russell</foaf:surname>
+                        <foaf:givenName>David F.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Warnock</foaf:surname>
+                        <foaf:givenName>Thomas C.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Zhang</foaf:surname>
+                        <foaf:givenName>Wenjuan</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Rogers</foaf:surname>
+                        <foaf:givenName>Desmon E.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Neiman</foaf:surname>
+                        <foaf:givenName>Lilia L.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_44"/>
+        <dc:title>Large-Scale Convergence of Receptor Cell Arrays Onto Afferent Terminal Arbors in the Lorenzinian Electroreceptors of Polyodon</dc:title>
+        <dc:date>2020-10-19</dc:date>
+        <z:language>en</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.frontiersin.org/article/10.3389/fnana.2020.00050/full</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-10 14:45:01</dcterms:dateSubmitted>
+        <bib:pages>50</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1662-5129">
+        <prism:volume>14</prism:volume>
+        <dc:title>Frontiers in Neuroanatomy</dc:title>
+        <dc:identifier>DOI 10.3389/fnana.2020.00050</dc:identifier>
+        <dcterms:alternative>Front. Neuroanat.</dcterms:alternative>
+        <dc:identifier>ISSN 1662-5129</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_44">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="http://journal.frontiersin.org/article/10.3389/fncom.2013.00057/abstract">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1662-5188"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Moran</foaf:surname>
+                        <foaf:givenName>Rosalyn</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Pinotsis</foaf:surname>
+                        <foaf:givenName>Dimitris A.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Friston</foaf:surname>
+                        <foaf:givenName>Karl</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_45"/>
+        <dc:title>Neural masses and fields in dynamic causal modeling</dc:title>
+        <dcterms:abstract>Dynamic causal modeling (DCM) provides a framework for the analysis of effective connectivity among neuronal subpopulations that subtend invasive (electrocorticograms and local ﬁeld potentials) and non-invasive (electroencephalography and magnetoencephalography) electrophysiological responses. This paper reviews the suite of neuronal population models including neural masses, ﬁelds and conductance-based models that are used in DCM. These models are expressed in terms of sets of differential equations that allow one to model the synaptic underpinnings of connectivity. We describe early developments using neural mass models, where convolution-based dynamics are used to generate responses in laminar-speciﬁc populations of excitatory and inhibitory cells. We show that these models, though resting on only two simple transforms, can recapitulate the characteristics of both evoked and spectral responses observed empirically. Using an identical neuronal architecture, we show that a set of conductance based models—that consider the dynamics of speciﬁc ion-channels—present a richer space of responses; owing to non-linear interactions between conductances and membrane potentials. We propose that conductance-based models may be more appropriate when spectra present with multiple resonances. Finally, we outline a third class of models, where each neuronal subpopulation is treated as a ﬁeld; in other words, as a manifold on the cortical surface. By explicitly accounting for the spatial propagation of cortical activity through partial differential equations (PDEs), we show that the topology of connectivity—through local lateral interactions among cortical layers—may be inferred, even in the absence of spatially resolved data. We also show that these models allow for a detailed analysis of structure–function relationships in the cortex. Our review highlights the relationship among these models and how the hypothesis asked of empirical data suggests an appropriate model class.</dcterms:abstract>
+        <dc:date>2013</dc:date>
+        <z:language>en</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://journal.frontiersin.org/article/10.3389/fncom.2013.00057/abstract</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-10 14:45:03</dcterms:dateSubmitted>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1662-5188">
+        <prism:volume>7</prism:volume>
+        <dc:title>Frontiers in Computational Neuroscience</dc:title>
+        <dc:identifier>DOI 10.3389/fncom.2013.00057</dc:identifier>
+        <dcterms:alternative>Front. Comput. Neurosci.</dcterms:alternative>
+        <dc:identifier>ISSN 1662-5188</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_45">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://www.frontiersin.org/article/10.3389/fncom.2018.00076/full">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>12</prism:volume>
+                <dc:title>Frontiers in Computational Neuroscience</dc:title>
+                <dc:identifier>DOI 10.3389/fncom.2018.00076</dc:identifier>
+                <dcterms:alternative>Front. Comput. Neurosci.</dcterms:alternative>
+                <dc:identifier>ISSN 1662-5188</dc:identifier>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Williams</foaf:surname>
+                        <foaf:givenName>Nitin J.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Daly</foaf:surname>
+                        <foaf:givenName>Ian</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Nasuto</foaf:surname>
+                        <foaf:givenName>Slawomir J.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_46"/>
+        <dc:title>Markov Model-Based Method to Analyse Time-Varying Networks in EEG Task-Related Data</dc:title>
+        <dc:date>2018-9-21</dc:date>
+        <z:language>en</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.frontiersin.org/article/10.3389/fncom.2018.00076/full</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-10 14:45:06</dcterms:dateSubmitted>
+        <bib:pages>76</bib:pages>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_46">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="http://journal.frontiersin.org/article/10.3389/fnhum.2012.00317/abstract">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1662-5161"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Chang</foaf:surname>
+                        <foaf:givenName>Jui-Yang</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Pigorini</foaf:surname>
+                        <foaf:givenName>Andrea</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Massimini</foaf:surname>
+                        <foaf:givenName>Marcello</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Tononi</foaf:surname>
+                        <foaf:givenName>Giulio</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Nobili</foaf:surname>
+                        <foaf:givenName>Lino</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Van Veen</foaf:surname>
+                        <foaf:givenName>Barry D.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_47"/>
+        <dc:title>Multivariate autoregressive models with exogenous inputs for intracerebral responses to direct electrical stimulation of the human brain</dc:title>
+        <dcterms:abstract>A multivariate autoregressive (MVAR) model with exogenous inputs (MVARX) is developed for describing the cortical interactions excited by direct electrical current stimulation of the cortex. Current stimulation is challenging to model because it excites neurons in multiple locations both near and distant to the stimulation site. The approach presented here models these effects using an exogenous input that is passed through a bank of ﬁlters, one for each channel. The ﬁltered input and a random input excite a MVAR system describing the interactions between cortical activity at the recording sites. The exogenous input ﬁlter coefﬁcients, the autoregressive coefﬁcients, and random input characteristics are estimated from the measured activity due to current stimulation. The effectiveness of the approach is demonstrated using intracranial recordings from three surgical epilepsy patients. We evaluate models for wakefulness and NREM sleep in these patients with two stimulation levels in one patient and two stimulation sites in another resulting in a total of 10 datasets. Excellent agreement between measured and model-predicted evoked responses is obtained across all datasets. Furthermore, one-step prediction is used to show that the model also describes dynamics in pre-stimulus and evoked recordings. We also compare integrated information—a measure of intracortical communication thought to reﬂect the capacity for consciousness—associated with the network model in wakefulness and sleep. As predicted, higher information integration is found in wakefulness than in sleep for all ﬁve cases.</dcterms:abstract>
+        <dc:date>2012</dc:date>
+        <z:language>en</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://journal.frontiersin.org/article/10.3389/fnhum.2012.00317/abstract</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-10 14:45:09</dcterms:dateSubmitted>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1662-5161">
+        <prism:volume>6</prism:volume>
+        <dc:title>Frontiers in Human Neuroscience</dc:title>
+        <dc:identifier>DOI 10.3389/fnhum.2012.00317</dc:identifier>
+        <dcterms:alternative>Front. Hum. Neurosci.</dcterms:alternative>
+        <dc:identifier>ISSN 1662-5161</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_47">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://www.frontiersin.org/article/10.3389/fninf.2019.00057/full">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1662-5196"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Unakafova</foaf:surname>
+                        <foaf:givenName>Valentina A.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Gail</foaf:surname>
+                        <foaf:givenName>Alexander</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_48"/>
+        <dc:title>Comparing Open-Source Toolboxes for Processing and Analysis of Spike and Local Field Potentials Data</dc:title>
+        <dcterms:abstract>Analysis of spike and local ﬁeld potential (LFP) data is an essential part of neuroscientiﬁc research. Today there exist many open-source toolboxes for spike and LFP data analysis implementing various functionality. Here we aim to provide a practical guidance for neuroscientists in the choice of an open-source toolbox best satisfying their needs. We overview major open-source toolboxes for spike and LFP data analysis as well as toolboxes with tools for connectivity analysis, dimensionality reduction and generalized linear modeling. We focus on comparing toolboxes functionality, statistical and visualization tools, documentation and support quality. To give a better insight, we compare and illustrate functionality of the toolboxes on open-access dataset or simulated data and make corresponding MATLAB scripts publicly available.</dcterms:abstract>
+        <dc:date>2019-7-30</dc:date>
+        <z:language>en</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.frontiersin.org/article/10.3389/fninf.2019.00057/full</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-10 14:45:12</dcterms:dateSubmitted>
+        <bib:pages>57</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1662-5196">
+        <prism:volume>13</prism:volume>
+        <dc:title>Frontiers in Neuroinformatics</dc:title>
+        <dc:identifier>DOI 10.3389/fninf.2019.00057</dc:identifier>
+        <dcterms:alternative>Front. Neuroinform.</dcterms:alternative>
+        <dc:identifier>ISSN 1662-5196</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_48">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="http://journal.frontiersin.org/Article/10.3389/fnsys.2015.00175/abstract">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1662-5137"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Bastos</foaf:surname>
+                        <foaf:givenName>André M.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Schoffelen</foaf:surname>
+                        <foaf:givenName>Jan-Mathijs</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_49"/>
+        <dc:title>A Tutorial Review of Functional Connectivity Analysis Methods and Their Interpretational Pitfalls</dc:title>
+        <dc:date>2016-01-08</dc:date>
+        <z:language>en</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://journal.frontiersin.org/Article/10.3389/fnsys.2015.00175/abstract</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-10 14:45:14</dcterms:dateSubmitted>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1662-5137">
+        <prism:volume>9</prism:volume>
+        <dc:title>Frontiers in Systems Neuroscience</dc:title>
+        <dc:identifier>DOI 10.3389/fnsys.2015.00175</dc:identifier>
+        <dcterms:alternative>Front. Syst. Neurosci.</dcterms:alternative>
+        <dc:identifier>ISSN 1662-5137</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_49">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="http://journal.frontiersin.org/Article/10.3389/fnsys.2016.00035/abstract">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>10</prism:volume>
+                <dc:title>Frontiers in Systems Neuroscience</dc:title>
+                <dc:identifier>DOI 10.3389/fnsys.2016.00035</dc:identifier>
+                <dcterms:alternative>Front. Syst. Neurosci.</dcterms:alternative>
+                <dc:identifier>ISSN 1662-5137</dc:identifier>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Vinck</foaf:surname>
+                        <foaf:givenName>Martin</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Bosman</foaf:surname>
+                        <foaf:givenName>Conrado A.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_50"/>
+        <dc:title>More Gamma More Predictions: Gamma-Synchronization as a Key Mechanism for Efficient Integration of Classical Receptive Field Inputs with Surround Predictions</dc:title>
+        <dcterms:abstract>During visual stimulation, neurons in visual cortex often exhibit rhythmic and synchronous ﬁring in the gamma-frequency (30–90 Hz) band. Whether this phenomenon plays a functional role during visual processing is not fully clear and remains heavily debated. In this article, we explore the function of gamma-synchronization in the context of predictive and efﬁcient coding theories. These theories hold that sensory neurons utilize the statistical regularities in the natural world in order to improve the efﬁciency of the neural code, and to optimize the inference of the stimulus causes of the sensory data. In visual cortex, this relies on the integration of classical receptive ﬁeld (CRF) data with predictions from the surround. Here we outline two main hypotheses about gamma-synchronization in visual cortex. First, we hypothesize that the precision of gamma-synchronization reﬂects the extent to which CRF data can be accurately predicted by the surround. Second, we hypothesize that different cortical columns synchronize to the extent that they accurately predict each other’s CRF visual input. We argue that these two hypotheses can account for a large number of empirical observations made on the stimulus dependencies of gamma-synchronization. Furthermore, we show that they are consistent with the known laminar dependencies of gamma-synchronization and the spatial proﬁle of intercolumnar gamma-synchronization, as well as the dependence of gamma-synchronization on experience and development. Based on our two main hypotheses, we outline two additional hypotheses. First, we hypothesize that the precision of gamma-synchronization shows, in general, a negative dependence on RF size. In support, we review evidence showing that gamma-synchronization decreases in strength along the visual hierarchy, and tends to be more prominent in species with small V1 RFs. Second, we hypothesize that gamma-synchronized network dynamics facilitate the emergence of spiking output that is particularly information-rich and sparse.</dcterms:abstract>
+        <dc:date>2016-04-25</dc:date>
+        <z:language>en</z:language>
+        <z:shortTitle>More Gamma More Predictions</z:shortTitle>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://journal.frontiersin.org/Article/10.3389/fnsys.2016.00035/abstract</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-10 14:45:17</dcterms:dateSubmitted>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_50">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="http://journal.frontiersin.org/article/10.3389/fnsys.2016.00086/full">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>10</prism:volume>
+                <dc:title>Frontiers in Systems Neuroscience</dc:title>
+                <dc:identifier>DOI 10.3389/fnsys.2016.00086</dc:identifier>
+                <dcterms:alternative>Front. Syst. Neurosci.</dcterms:alternative>
+                <dc:identifier>ISSN 1662-5137</dc:identifier>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Restani</foaf:surname>
+                        <foaf:givenName>Laura</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Caleo</foaf:surname>
+                        <foaf:givenName>Matteo</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_51"/>
+        <dc:title>Reorganization of Visual Callosal Connections Following Alterations of Retinal Input and Brain Damage</dc:title>
+        <dcterms:abstract>Vision is a very important sensory modality in humans. Visual disorders are numerous and arising from diverse and complex causes. Deﬁcits in visual function are highly disabling from a social point of view and in addition cause a considerable economic burden. For all these reasons there is an intense effort by the scientiﬁc community to gather knowledge on visual deﬁcit mechanisms and to ﬁnd possible new strategies for recovery and treatment. In this review, we focus on an important and sometimes neglected player of the visual function, the corpus callosum (CC). The CC is the major white matter structure in the brain and is involved in information processing between the two hemispheres. In particular, visual callosal connections interconnect homologous areas of visual cortices, binding together the two halves of the visual ﬁeld. This interhemispheric communication plays a signiﬁcant role in visual cortical output. Here, we will ﬁrst review the essential literature on the physiology of the callosal connections in normal vision. The available data support the view that the callosum contributes to both excitation and inhibition to the target hemisphere, with a dynamic adaptation to the strength of the incoming visual input. Next, we will focus on data showing how callosal connections may sense visual alterations and respond to the classical paradigm for the study of visual plasticity, i.e., monocular deprivation (MD). This is a prototypical example of a model for the study of callosal plasticity in pathological conditions (e.g., strabismus and amblyopia) characterized by unbalanced input from the two eyes. We will also discuss the ﬁndings of callosal alterations in blind subjects. Noteworthy, we will discuss data showing that inter-hemispheric transfer mediates recovery of visual responsiveness following cortical damage. Finally, we will provide an overview of how callosal projections dysfunction could contribute to pathologies such as neglect and occipital epilepsy. A particular focus will be on reviewing noninvasive brain stimulation techniques and optogenetic approaches that allow to selectively manipulate callosal function and to probe its involvement in cortical processing and plasticity. Overall, the data indicate that experience can potently impact on transcallosal connectivity, and that the callosum itself is crucial for plasticity and recovery in various disorders of the visual pathway.</dcterms:abstract>
+        <dc:date>2016-11-14</dc:date>
+        <z:language>en</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://journal.frontiersin.org/article/10.3389/fnsys.2016.00086/full</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-10 14:45:20</dcterms:dateSubmitted>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_51">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="http://journal.frontiersin.org/article/10.3389/fnsys.2017.00072/full">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>11</prism:volume>
+                <dc:title>Frontiers in Systems Neuroscience</dc:title>
+                <dc:identifier>DOI 10.3389/fnsys.2017.00072</dc:identifier>
+                <dcterms:alternative>Front. Syst. Neurosci.</dcterms:alternative>
+                <dc:identifier>ISSN 1662-5137</dc:identifier>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Young</foaf:surname>
+                        <foaf:givenName>Calvin K.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Ruan</foaf:surname>
+                        <foaf:givenName>Ming</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>McNaughton</foaf:surname>
+                        <foaf:givenName>Neil</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_52"/>
+        <dc:title>A Critical Assessment of Directed Connectivity Estimates with Artificially Imposed Causality in the Supramammillary-Septo-Hippocampal Circuit</dc:title>
+        <dcterms:abstract>Algorithms for estimating directed connectivity have become indispensable to further understand the neurodynamics between functionally coupled brain areas. The evaluation of directed connectivity on the propagation of brain activity has largely been based on simulated data or toy models, where various hidden properties of neurophysiological data may not be fully recapitulated. In this study, directionality was unequivocally manipulated in the freely moving rat in a unique dataset, where normal oscillatory interactions between the supramammillary nucleus (SuM) and hippocampus (HPC) were attenuated by temporary medial septal (MS) inactivation, and replaced by electrical stimulation of the fornix to evaluate the performance of several directed connectivity assessment methods. The directed transfer function, partial directed coherence, directed coherence, pair-wise Geweke-Granger causality, phase slope index, and phase transfer entropy, all found SuM to HPC theta propagation when the MS is inactivated, and HPC activity was driven by peaks of simultaneously recorded SuM theta. As expected from theoretical expectations and simulated data, signal features including coupling strength, signal-to-noise ratio, and stationarity all weakly affected directed connectivity measures. We conclude that all the examined directed connectivity estimates correctly identify artiﬁcially imposed uni-directionality of brain oscillations in freely moving animals. Non-auto-regressive modeling based methods appear to be the most robust, and are least affected by inherent features in data such as signal-to-noise ratio and stationarity.</dcterms:abstract>
+        <dc:date>2017-09-29</dc:date>
+        <z:language>en</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://journal.frontiersin.org/article/10.3389/fnsys.2017.00072/full</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-10 14:45:23</dcterms:dateSubmitted>
+        <bib:pages>72</bib:pages>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_52">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="http://link.springer.com/10.1007/BF00608236">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:0014-4819,%201432-1106"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Diao</foaf:surname>
+                        <foaf:givenName>Y. -C.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Jia</foaf:surname>
+                        <foaf:givenName>W. -G.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Swindale</foaf:surname>
+                        <foaf:givenName>N. V.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Cynader</foaf:surname>
+                        <foaf:givenName>M. S.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_53"/>
+        <dc:title>Functional organization of the cortical 17/18 border region in the cat</dc:title>
+        <dc:date>1990</dc:date>
+        <z:language>en</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>http://link.springer.com/10.1007/BF00608236</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-10 14:45:26</dcterms:dateSubmitted>
+        <dc:rights>http://www.springer.com/tdm</dc:rights>
+        <bib:pages>271-282</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:0014-4819,%201432-1106">
+        <prism:volume>79</prism:volume>
+        <dc:title>Experimental Brain Research</dc:title>
+        <dc:identifier>DOI 10.1007/BF00608236</dc:identifier>
+        <prism:number>2</prism:number>
+        <dcterms:alternative>Exp Brain Res</dcterms:alternative>
+        <dc:identifier>ISSN 0014-4819, 1432-1106</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_53">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <rdf:Description rdf:about="http://biorxiv.org/lookup/doi/10.1101/2024.07.10.602833">
+        <z:itemType>preprint</z:itemType>
+        <dc:publisher>
+            <foaf:Organization>
+               <foaf:name>Neuroscience</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Ness</foaf:surname>
+                        <foaf:givenName>Torbjørn V.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Tetzlaff</foaf:surname>
+                        <foaf:givenName>Tom</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Einevoll</foaf:surname>
+                        <foaf:givenName>Gaute T.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Dahmen</foaf:surname>
+                        <foaf:givenName>David</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_54"/>
+        <dc:title>On the validity of electric brain signal predictions based on population firing rates</dc:title>
+        <dcterms:abstract>Neural activity at the population level is commonly studied experimentally through measurements of electric brain signals like local field potentials (LFPs), or electroencephalography (EEG) signals. To allow for comparison between observed and simulated neural activity it is therefore important that simulations of neural activity can accurately predict these brain signals. Simulations of neural activity at the population level often rely on point-neuron network models or firing-rate models. While these simplified representations of neural activity are computationally efficient, they lack the explicit spatial information needed for calculating LFP/EEG signals. Different heuristic approaches have been suggested for overcoming this limitation, but the accuracy of these approaches has not fully been assessed. One such heuristic approach, the so-called kernel method, has previously been applied with promising results and has the additional advantage of being well-grounded in the biophysics underlying electric brain signal generation. It is based on calculating rate-to-LFP/EEG kernels for each synaptic pathway in a network model, after which LFP/EEG signals can be obtained directly from population firing rates. This amounts to a massive reduction in the computational effort of calculating brain signals because the brain signals are calculated for each population instead of for each neuron. Here, we investigate how and when the kernel method can be expected to work, and present a theoretical framework for predicting its accuracy. We show that the relative error of the brain signal predictions is a function of the single-cell kernel heterogeneity and the spike-train correlations. Finally, we demonstrate that the kernel method is most accurate for contributions which are also dominating the brain signals: spatially clustered and correlated synaptic input to large populations of pyramidal cells. We thereby further establish the kernel method as a promising approach for calculating electric brain signals from large-scale neural simulations.</dcterms:abstract>
+        <dc:date>2024-07-13</dc:date>
+        <z:language>en</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://biorxiv.org/lookup/doi/10.1101/2024.07.10.602833</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-10 14:45:28</dcterms:dateSubmitted>
+        <dc:identifier>DOI 10.1101/2024.07.10.602833</dc:identifier>
+    </rdf:Description>
+    <z:Attachment rdf:about="#item_54">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://linkinghub.elsevier.com/retrieve/pii/S2666956025000522">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:26669560"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Hindriks</foaf:surname>
+                        <foaf:givenName>Rikkert</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Rot</foaf:surname>
+                        <foaf:givenName>Thomas O.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Van Putten</foaf:surname>
+                        <foaf:givenName>Michel J.A.M.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Tewarie</foaf:surname>
+                        <foaf:givenName>Prejaas</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_55"/>
+        <dc:title>Building blocks of functional connectivity measures for aperiodic electrophysiological brain signals</dc:title>
+        <dcterms:abstract>A challenge in interpreting functional connectivity results in electroencephalography (EEG) data is volume conduction. A common way to mitigate spurious connectivity due to volume conduction is to use connectivity measures that are insensitive to volume conduction. Examples of such measures are the imaginary coherence, the lagged coherence, and the (weighted) phase-lag index. Their insensitivity to volume conduction stems from an invariant property and it is of both practical and theoretical interest to identify all measures with this property. In this study we derive a set of invariant connectivity measures that are fundamental in the sense that all others can be constructed from them by combination. These &quot;building blocks&quot; of connectivity measures quantify the lack of invariance of multivariate EEG signals under permutation of the time-points. We use this result to construct a new connectivity measure for stationary aperiodic EEG signals, referred to as the temporal irreversibility index (TII) and illustrate its use by applying it to local field potentials recorded from primary visual cortex of a macaque monkey and to EEG data from comatose survivors of cardiac arrest. As far as we are aware, the TII is currently the only functional connectivity measure for aperiodic signals that is insensitive to volume conduction.</dcterms:abstract>
+        <dc:date>12/2025</dc:date>
+        <z:language>en</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://linkinghub.elsevier.com/retrieve/pii/S2666956025000522</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-10 14:45:32</dcterms:dateSubmitted>
+        <bib:pages>100284</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:26669560">
+        <prism:volume>5</prism:volume>
+        <dc:title>NeuroImage: Reports</dc:title>
+        <dc:identifier>DOI 10.1016/j.ynirp.2025.100284</dc:identifier>
+        <prism:number>4</prism:number>
+        <dcterms:alternative>NeuroImage: Reports</dcterms:alternative>
+        <dc:identifier>ISSN 26669560</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_55">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://direct.mit.edu/netn/article/5/4/874/106951/Directed-functional-and-structural-connectivity-in">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:2472-1751"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Nunes</foaf:surname>
+                        <foaf:givenName>Ronaldo V.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Reyes</foaf:surname>
+                        <foaf:givenName>Marcelo B.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Mejias</foaf:surname>
+                        <foaf:givenName>Jorge F.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>De Camargo</foaf:surname>
+                        <foaf:givenName>Raphael Y.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_56"/>
+        <dc:title>Directed functional and structural connectivity in a large-scale model for the mouse cortex</dc:title>
+        <dcterms:abstract>Inferring the structural connectivity from electrophysiological measurements is a fundamental challenge in systems neuroscience. Directed functional connectivity measures, such as the generalized partial directed coherence (GPDC), provide estimates of the causal influence between areas. However, the relation between causality estimates and structural connectivity is still not clear. We analyzed this problem by evaluating the effectiveness of GPDC to estimate the connectivity of a ground-truth, data-constrained computational model of a large-scale network model of the mouse cortex. The model contains 19 cortical areas composed of spiking neurons, with areas connected by long-range projections with weights obtained from a tract-tracing cortical connectome. We show that GPDC values provide a reasonable estimate of structural connectivity, with an average Pearson correlation over simulations of 0.74. Moreover, even in a typical electrophysiological recording scenario containing five areas, the mean correlation was above 0.6. These results suggest that it may be possible to empirically estimate structural connectivity from functional connectivity even when detailed whole-brain recordings are not achievable.</dcterms:abstract>
+        <dc:date>2021-11-30</dc:date>
+        <z:language>en</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://direct.mit.edu/netn/article/5/4/874/106951/Directed-functional-and-structural-connectivity-in</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-10 14:45:34</dcterms:dateSubmitted>
+        <bib:pages>874-889</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:2472-1751">
+        <prism:volume>5</prism:volume>
+        <dc:title>Network Neuroscience</dc:title>
+        <dc:identifier>DOI 10.1162/netn_a_00206</dc:identifier>
+        <prism:number>4</prism:number>
+        <dc:identifier>ISSN 2472-1751</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_56">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://ieeexplore.ieee.org/document/8708690/">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:0018-9294,%201558-2531"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>He</foaf:surname>
+                        <foaf:givenName>Bin</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Astolfi</foaf:surname>
+                        <foaf:givenName>Laura</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Valdes-Sosa</foaf:surname>
+                        <foaf:givenName>Pedro Antonio</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Marinazzo</foaf:surname>
+                        <foaf:givenName>Daniele</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Palva</foaf:surname>
+                        <foaf:givenName>Satu O.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Benar</foaf:surname>
+                        <foaf:givenName>Christian-George</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Michel</foaf:surname>
+                        <foaf:givenName>Christoph M.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Koenig</foaf:surname>
+                        <foaf:givenName>Thomas</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_57"/>
+        <dc:title>Electrophysiological Brain Connectivity: Theory and Implementation</dc:title>
+        <dcterms:abstract>We review the theory and algorithms of electrophysiological brain connectivity analysis. This tutorial is aimed at providing an introduction to brain functional connectivity from electrophysiological signals, including electroencephalography (EEG), magnetoencephalography (MEG), electrocorticography (ECoG), stereoelectroencephalography (SEEG). Various connectivity estimators are discussed, and algorithms introduced Important issues for estimating and mapping brain functional connectivity with electrophysiology are discussed.</dcterms:abstract>
+        <dc:date>7/2019</dc:date>
+        <z:language>en</z:language>
+        <z:shortTitle>Electrophysiological Brain Connectivity</z:shortTitle>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://ieeexplore.ieee.org/document/8708690/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-10 14:45:36</dcterms:dateSubmitted>
+        <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+        <bib:pages>2115-2137</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:0018-9294,%201558-2531">
+        <prism:volume>66</prism:volume>
+        <dc:title>IEEE Transactions on Biomedical Engineering</dc:title>
+        <dc:identifier>DOI 10.1109/TBME.2019.2913928</dc:identifier>
+        <prism:number>7</prism:number>
+        <dcterms:alternative>IEEE Trans. Biomed. Eng.</dcterms:alternative>
+        <dc:identifier>ISSN 0018-9294, 1558-2531</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_57">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://www.nature.com/articles/s41593-019-0510-4">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1097-6256,%201546-1726"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Reid</foaf:surname>
+                        <foaf:givenName>Andrew T.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Headley</foaf:surname>
+                        <foaf:givenName>Drew B.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Mill</foaf:surname>
+                        <foaf:givenName>Ravi D.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Sanchez-Romero</foaf:surname>
+                        <foaf:givenName>Ruben</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Uddin</foaf:surname>
+                        <foaf:givenName>Lucina Q.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Marinazzo</foaf:surname>
+                        <foaf:givenName>Daniele</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Lurie</foaf:surname>
+                        <foaf:givenName>Daniel J.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Valdés-Sosa</foaf:surname>
+                        <foaf:givenName>Pedro A.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Hanson</foaf:surname>
+                        <foaf:givenName>Stephen José</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Biswal</foaf:surname>
+                        <foaf:givenName>Bharat B.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Calhoun</foaf:surname>
+                        <foaf:givenName>Vince</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Poldrack</foaf:surname>
+                        <foaf:givenName>Russell A.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Cole</foaf:surname>
+                        <foaf:givenName>Michael W.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_58"/>
+        <dc:title>Advancing functional connectivity research from association to causation</dc:title>
+        <dc:date>11/2019</dc:date>
+        <z:language>en</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.nature.com/articles/s41593-019-0510-4</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-10 14:45:39</dcterms:dateSubmitted>
+        <bib:pages>1751-1760</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1097-6256,%201546-1726">
+        <prism:volume>22</prism:volume>
+        <dc:title>Nature Neuroscience</dc:title>
+        <dc:identifier>DOI 10.1038/s41593-019-0510-4</dc:identifier>
+        <prism:number>11</prism:number>
+        <dcterms:alternative>Nat Neurosci</dcterms:alternative>
+        <dc:identifier>ISSN 1097-6256, 1546-1726</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_58">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://linkinghub.elsevier.com/retrieve/pii/S1053811916306553">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>146</prism:volume>
+                <dc:title>NeuroImage</dc:title>
+                <dc:identifier>DOI 10.1016/j.neuroimage.2016.11.037</dc:identifier>
+                <dcterms:alternative>NeuroImage</dcterms:alternative>
+                <dc:identifier>ISSN 10538119</dc:identifier>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Mill</foaf:surname>
+                        <foaf:givenName>Ravi D.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Bagic</foaf:surname>
+                        <foaf:givenName>Anto</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Bostan</foaf:surname>
+                        <foaf:givenName>Andreea</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Schneider</foaf:surname>
+                        <foaf:givenName>Walter</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Cole</foaf:surname>
+                        <foaf:givenName>Michael W.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_59"/>
+        <dc:title>Empirical validation of directed functional connectivity</dc:title>
+        <dcterms:abstract>Mapping directions of influence in the human brain connectome represents the next phase in understanding its functional architecture. However, a host of methodological uncertainties have impeded the application of directed connectivity methods, which have primarily been validated via “ground truth” connectivity patterns embedded in simulated functional MRI (fMRI) and magneto-/ electro-encephalography (MEG/EEG) datasets. Such simulations rely on many generative assumptions, and we hence utilized a different strategy involving empirical data in which a ground truth directed connectivity pattern could be anticipated with confidence. Specifically, we exploited the established “sensory reactivation” effect in episodic memory, in which retrieval of sensory information reactivates regions involved in perceiving that sensory modality. Subjects performed a paired associate task in separate fMRI and MEG sessions, in which a ground truth reversal in directed connectivity between auditory and visual sensory regions was instantiated across task conditions. This directed connectivity reversal was successfully recovered across different algorithms, including Granger causality and Bayes network (IMAGES) approaches, and across fMRI (“raw” and deconvolved) and source-modeled MEG. These results extend simulation studies of directed connectivity, and offer practical guidelines for the use of such methods in clarifying causal mechanisms of neural processing.</dcterms:abstract>
+        <dc:date>02/2017</dc:date>
+        <z:language>en</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://linkinghub.elsevier.com/retrieve/pii/S1053811916306553</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-10 14:45:41</dcterms:dateSubmitted>
+        <bib:pages>275-287</bib:pages>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_59">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://onlinelibrary.wiley.com/doi/10.1155/2013/397176">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:2090-5904,%201687-5443"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Schmidt</foaf:surname>
+                        <foaf:givenName>Kerstin E.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <bib:editors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Ptito</foaf:surname>
+                        <foaf:givenName>Maurice</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:editors>
+        <link:link rdf:resource="#item_60"/>
+        <dc:title>The Visual Callosal Connection: A Connection Like Any Other?</dc:title>
+        <dcterms:abstract>Recent work about the role of visual callosal connections in ferrets and cats is reviewed, and morphological and functional homologies between the lateral intrinsic and callosal network in early visual areas are discussed. Both networks selectively link distributed neuronal groups with similar response properties, and the actions exerted by callosal input reflect the functional topography of those networks. This supports the notion that callosal connections perpetuate the function of the lateral intrahemispheric circuit onto the other hemisphere. Reversible deactivation studies indicate that the main action of visual callosal input is a multiplicative shift of responses rather than a changing response selectivity. Both the gain of that action and its excitatory‐inhibitory balance seem to be dynamically adapted to the feedforward drive by the visual stimulus onto primary visual cortex. Taken together anatomical and functional evidence from corticocortical and lateral circuits further leads to the conclusion that visual callosal connections share more features with lateral intrahemispheric connections on the same hierarchical level and less with feedback connections. I propose that experimental results about the callosal circuit in early visual areas can be interpreted with respect to lateral connectivity in general.</dcterms:abstract>
+        <dc:date>01/2013</dc:date>
+        <z:language>en</z:language>
+        <z:shortTitle>The Visual Callosal Connection</z:shortTitle>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://onlinelibrary.wiley.com/doi/10.1155/2013/397176</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-10 14:45:44</dcterms:dateSubmitted>
+        <bib:pages>397176</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:2090-5904,%201687-5443">
+        <prism:volume>2013</prism:volume>
+        <dc:title>Neural Plasticity</dc:title>
+        <dc:identifier>DOI 10.1155/2013/397176</dc:identifier>
+        <prism:number>1</prism:number>
+        <dcterms:alternative>Neural Plasticity</dcterms:alternative>
+        <dc:identifier>ISSN 2090-5904, 1687-5443</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_60">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://academic.oup.com/scan/article/17/5/510/6549317">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1749-5016,%201749-5024"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Krendl</foaf:surname>
+                        <foaf:givenName>Anne C</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Betzel</foaf:surname>
+                        <foaf:givenName>Richard F</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_61"/>
+        <dc:title>Social cognitive network neuroscience</dc:title>
+        <dcterms:abstract>Over the past three decades, research from the field of social neuroscience has identified a constellation of brain regions that relate to social cognition. Although these studies have provided important insights into the specific neural regions underlying social behavior, they may overlook the broader neural context in which those regions and the interactions between them are embedded. Network neuroscience is an emerging discipline that focuses on modeling and analyzing brain networks—collections of interacting neural elements. Because human cognition requires integrating information across multiple brain regions and systems, we argue that a novel social cognitive network neuroscience approach—which leverages methods from the field of network neuroscience and graph theory—can advance our understanding of how brain systems give rise to social behavior. This review provides an overview of the field of network neuroscience, discusses studies that have leveraged this approach to advance social neuroscience research, highlights the potential contributions of social cognitive network neuroscience to understanding social behavior and provides suggested tools and resources for conducting network neuroscience research.</dcterms:abstract>
+        <dc:date>2022-05-05</dc:date>
+        <z:language>en</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://academic.oup.com/scan/article/17/5/510/6549317</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-10 14:45:47</dcterms:dateSubmitted>
+        <dc:rights>https://creativecommons.org/licenses/by-nc/4.0/</dc:rights>
+        <bib:pages>510-529</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1749-5016,%201749-5024">
+        <prism:volume>17</prism:volume>
+        <dc:title>Social Cognitive and Affective Neuroscience</dc:title>
+        <dc:identifier>DOI 10.1093/scan/nsac020</dc:identifier>
+        <prism:number>5</prism:number>
+        <dc:identifier>ISSN 1749-5016, 1749-5024</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_61">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://dx.plos.org/10.1371/journal.pcbi.1007566">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1553-7358"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Pascucci</foaf:surname>
+                        <foaf:givenName>D.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Rubega</foaf:surname>
+                        <foaf:givenName>M.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Plomp</foaf:surname>
+                        <foaf:givenName>G.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <bib:editors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Battaglia</foaf:surname>
+                        <foaf:givenName>Francesco P.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:editors>
+        <link:link rdf:resource="#item_62"/>
+        <dc:title>Modeling time-varying brain networks with a self-tuning optimized Kalman filter</dc:title>
+        <dcterms:abstract>Brain networks are complex dynamical systems in which directed interactions between different areas evolve at the sub-second scale of sensory, cognitive and motor processes. Due to the highly non-stationary nature of neural signals and their unknown noise components, however, modeling dynamic brain networks has remained one of the major challenges in contemporary neuroscience. Here, we present a new algorithm based on an innovative formulation of the Kalman filter that is optimized for tracking rapidly evolving patterns of directed functional connectivity under unknown noise conditions. The Self-Tuning Optimized Kalman filter (STOK) is a novel adaptive filter that embeds a self-tuning memory decay and a recursive regularization to guarantee high network tracking accuracy, temporal precision and robustness to noise. To validate the proposed algorithm, we performed an extensive comparison against the classical Kalman filter, in both realistic surrogate networks and real electroencephalography (EEG) data. In both simulations and real data, we show that the STOK filter estimates time-frequency patterns of directed connectivity with significantly superior performance. The advantages of the STOK filter were even clearer in real EEG data, where the algorithm recovered latent structures of dynamic connectivity from epicranial EEG recordings in rats and human visual evoked potentials, in excellent agreement with known physiology. These results establish the STOK filter as a powerful tool for modeling dynamic network structures in biological systems, with the potential to yield new insights into the rapid evolution of network states from which brain functions emerge.</dcterms:abstract>
+        <dc:date>2020-8-17</dc:date>
+        <z:language>en</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://dx.plos.org/10.1371/journal.pcbi.1007566</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-10 14:45:49</dcterms:dateSubmitted>
+        <bib:pages>e1007566</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1553-7358">
+        <prism:volume>16</prism:volume>
+        <dc:title>PLOS Computational Biology</dc:title>
+        <dc:identifier>DOI 10.1371/journal.pcbi.1007566</dc:identifier>
+        <prism:number>8</prism:number>
+        <dcterms:alternative>PLoS Comput Biol</dcterms:alternative>
+        <dc:identifier>ISSN 1553-7358</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_62">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://dx.plos.org/10.1371/journal.pcbi.1007924">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>16</prism:volume>
+                <dc:title>PLOS Computational Biology</dc:title>
+                <dc:identifier>DOI 10.1371/journal.pcbi.1007924</dc:identifier>
+                <prism:number>6</prism:number>
+                <dcterms:alternative>PLoS Comput Biol</dcterms:alternative>
+                <dc:identifier>ISSN 1553-7358</dc:identifier>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Lerma-Usabiaga</foaf:surname>
+                        <foaf:givenName>Garikoitz</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Benson</foaf:surname>
+                        <foaf:givenName>Noah</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Winawer</foaf:surname>
+                        <foaf:givenName>Jonathan</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Wandell</foaf:surname>
+                        <foaf:givenName>Brian A.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <bib:editors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Jbabdi</foaf:surname>
+                        <foaf:givenName>Saad</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:editors>
+        <link:link rdf:resource="#item_63"/>
+        <dc:title>A validation framework for neuroimaging software: The case of population receptive fields</dc:title>
+        <dc:date>2020-6-25</dc:date>
+        <z:language>en</z:language>
+        <z:shortTitle>A validation framework for neuroimaging software</z:shortTitle>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://dx.plos.org/10.1371/journal.pcbi.1007924</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-10 14:45:52</dcterms:dateSubmitted>
+        <bib:pages>e1007924</bib:pages>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_63">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://peerj.com/articles/923">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:2167-8359"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Rodrigues</foaf:surname>
+                        <foaf:givenName>João</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Andrade</foaf:surname>
+                        <foaf:givenName>Alexandre</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_64"/>
+        <dc:title>Synthetic neuronal datasets for benchmarking directed functional connectivity metrics</dc:title>
+        <dcterms:abstract>Background. Datasets consisting of synthetic neural data generated with quantifiable and controlled parameters are a valuable asset in the process of testing and validating directed functional connectivity metrics. Considering the recent debate in the neuroimaging community concerning the use of these metrics for fMRI data, synthetic datasets that emulate the BOLD signal dynamics have played a central role by supporting claims that argue in favor or against certain choices. Generative models often used in studies that simulate neuronal activity, with the aim of gaining insight into specific brain regions and functions, have different requirements from the generative models for benchmarking datasets. Even though the latter must be realistic, there is a tradeoff between realism and computational demand that needs to be contemplated and simulations that efficiently mimic the real behavior of single neurons or neuronal populations are preferred, instead of more cumbersome and marginally precise ones. Methods. This work explores how simple generative models are able to produce neuronal datasets, for benchmarking purposes, that reflect the simulated effective connectivity and, how these can be used to obtain synthetic recordings of EEG and fMRI BOLD signals. The generative models covered here are AR processes, neural mass models consisting of linear and nonlinear stochastic differential equations and populations with thousands of spiking units. Forward models for EEG consist in the simple three-shell head model while the fMRI BOLD signal is modeled with the Balloon-Windkessel model or by convolution with a hemodynamic response function. Results. The simulated datasets are tested for causality with the original spectral formulation for Granger causality. Modeled effective connectivity can be detected in the generated data for varying connection strengths and interaction delays. Discussion. All generative models produce synthetic neuronal data with detectable causal effects although the relation between modeled and detected causality varies and less biophysically realistic models offer more control in causal relations such as modeled strength and frequency location.</dcterms:abstract>
+        <dc:date>2015-05-05</dc:date>
+        <z:language>en</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://peerj.com/articles/923</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-10 14:45:54</dcterms:dateSubmitted>
+        <bib:pages>e923</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:2167-8359">
+        <prism:volume>3</prism:volume>
+        <dc:title>PeerJ</dc:title>
+        <dc:identifier>DOI 10.7717/peerj.923</dc:identifier>
+        <dc:identifier>ISSN 2167-8359</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_64">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="http://link.springer.com/10.1007/s00422-010-0406-6">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>103</prism:volume>
+                <dc:title>Biological Cybernetics</dc:title>
+                <dc:identifier>DOI 10.1007/s00422-010-0406-6</dc:identifier>
+                <prism:number>5</prism:number>
+                <dcterms:alternative>Biol Cybern</dcterms:alternative>
+                <dc:identifier>ISSN 0340-1200, 1432-0770</dc:identifier>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Faes</foaf:surname>
+                        <foaf:givenName>Luca</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Nollo</foaf:surname>
+                        <foaf:givenName>Giandomenico</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_65"/>
+        <dc:title>Extended causal modeling to assess Partial Directed Coherence in multiple time series with significant instantaneous interactions</dc:title>
+        <dc:date>11/2010</dc:date>
+        <z:language>en</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://link.springer.com/10.1007/s00422-010-0406-6</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-10 14:45:57</dcterms:dateSubmitted>
+        <dc:rights>http://www.springer.com/tdm</dc:rights>
+        <bib:pages>387-400</bib:pages>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_65">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="#item_108">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+           <bib:Journal></bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Lewis-Healey</foaf:surname>
+                        <foaf:givenName>Evan</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Pallavicini</foaf:surname>
+                        <foaf:givenName>Carla</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Cavanna</foaf:surname>
+                        <foaf:givenName>Federico</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>D’Amelio</foaf:surname>
+                        <foaf:givenName>Tomas</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_66"/>
+        <dc:title>Time-resolved neural and experience dynamics of medium- and high-dose DMT</dc:title>
+        <dcterms:abstract>N,N-Dimethyltryptamine (DMT) is a potent and fast-acting psychedelic drug that induces a radical reorganisation of the contents of consciousness, comprising the dissolution of time and space and perceptual immersion into an ‘alternate reality’. While contemporary research has somewhat advanced our understanding of DMT, and psychedelics more broadly, there is little research that integrates time-resolved measures of subjective experience with temporally fine-grained brain imaging. We therefore present the current study, a repeated-measures dose-dependent study of the subjective and neural dynamics induced through DMT under naturalistic conditions. Nineteen participants received either a 20mg or 40mg dose of freebase DMT across two dosing sessions in a blinded, counterbalanced order, with blinding rates consistent across doses. Electroencephalography (EEG) data was collected, as well as time-resolved retrospective measures of subjective experience (Temporal Experience Tracing). Both doses of DMT induced rapid changes in experience dimensions. However, the 40mg dose induced significantly more extreme visual hallucinations and emotionally intense experiences. Further, we computed a variety of neural markers on the EEG data, and found that oscillatory alpha power and permutation entropy were most strongly associated with continuous subjective experience dimensions. Strikingly, lempel-ziv complexity, a previously hailed as a robust correlate of subjective experiences within the psychedelic-state, was the least strongly associated neural marker. These findings provide an important insight into how distinct neural dynamics may contribute to this radical and intense altered state of consciousness.</dcterms:abstract>
+        <z:language>en</z:language>
+        <z:libraryCatalog>Zotero</z:libraryCatalog>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_66">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+</rdf:RDF>

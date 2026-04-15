@@ -93,7 +93,7 @@ Furthermore, the transition to high-density electrophysiology (e.g., 32-64 chann
 
         % ================= PANEL B =================
         \draw[thick, dashed, draw=gray!40] (-4, -1) -- (13, -1); % Divisória visual
-        \node[font=\bfseries\sffamily\large, anchor=west] at (-4, -2) {Panel B: Temporal Collapse vs. Transient Dynome};
+        \node[font=\bfseries\sffamily\large, anchor=west] at (-4, -2) {Panel B: Temporal Collapse vs. Transient Dynamics Network };
         
         % 1. Abordagem Estática (Colapso)
         \node[state_box] (t1) at (-1.5, -4) {Brain State $T_1$};
@@ -121,31 +121,31 @@ Furthermore, the transition to high-density electrophysiology (e.g., 32-64 chann
         
         % 2. Abordagem Dinâmica (Dinoma)
         % Engrama 1
-        \node[engram_bg] (g1) at (8, -4) {};
-        \node[font=\sffamily\scriptsize\bfseries, text=green!50!black, above] at (8, -2.8) {Engram 1};
-        \coordinate (s1) at (7.6, -3.8); \coordinate (s2) at (8.4, -4.2);
+        \node[engram_bg] (g1) at (7, -4) {};
+        \node[font=\sffamily\scriptsize\bfseries, text=green!50!black, above] at (7, -2.8) {Engram 1};
+        \coordinate (s1) at (6.6, -3.8); \coordinate (s2) at (7.4, -4.2);
         \draw[green!60!black, thick] (s1) -- (s2);
         \filldraw[black!70] (s1) circle (1.5pt); \filldraw[black!70] (s2) circle (1.5pt);
         
         % Engrama 2
-        \node[engram_bg] (g2) at (10.5, -6.5) {};
-        \node[font=\sffamily\scriptsize\bfseries, text=green!50!black, below] at (10.5, -7.7) {Engram 2};
-        \coordinate (s3) at (10.1, -6.3); \coordinate (s4) at (10.9, -6.3); \coordinate (s5) at (10.5, -6.9);
+        \node[engram_bg] (g2) at (9.5, -6.5) {};
+        \node[font=\sffamily\scriptsize\bfseries, text=green!50!black, below] at (9.5, -7.7) {Engram 2};
+        \coordinate (s3) at (9.1, -6.3); \coordinate (s4) at (9.9, -6.3); \coordinate (s5) at (9.5, -6.9);
         \draw[green!60!black, thick] (s3) -- (s5) -- (s4);
         \filldraw[black!70] (s3) circle (1.5pt); \filldraw[black!70] (s4) circle (1.5pt); \filldraw[black!70] (s5) circle (1.5pt);
         
         % Engrama 3
-        \node[engram_bg] (g3) at (13, -4) {};
-        \node[font=\sffamily\scriptsize\bfseries, text=green!50!black, above] at (13, -2.8) {Engram 3};
-        \coordinate (s6) at (12.6, -3.8); \coordinate (s7) at (13.4, -4.2); \coordinate (s8) at (13.0, -4.5);
+        \node[engram_bg] (g3) at (12, -4) {};
+        \node[font=\sffamily\scriptsize\bfseries, text=green!50!black, above] at (12, -2.8) {Engram 3};
+        \coordinate (s6) at (11.6, -3.8); \coordinate (s7) at (11.4, -4.2); \coordinate (s8) at (12.0, -4.5);
         \draw[green!60!black, thick] (s6) -- (s8);
         \filldraw[black!70] (s6) circle (1.5pt); \filldraw[black!70] (s7) circle (1.5pt); \filldraw[black!70] (s8) circle (1.5pt);
         
         % Flow arrows
-        \draw[->, ultra thick, dashed, draw=blue!60] (g1) -- node[above right, font=\sffamily\scriptsize, align=center] {Temporal\\Flexibility} (g2);
-        \draw[->, ultra thick, dashed, draw=blue!60] (g2) -- node[above left, font=\sffamily\scriptsize, align=center] {Reorganization} (g3);
+        \draw[->, ultra thick, dashed, draw=blue!60] (g1) -- node[below left, font=\sffamily\scriptsize, align=center] {Temporal\\Flexibility} (g2);
+        \draw[->, ultra thick, dashed, draw=blue!60] (g2) -- node[below right, font=\sffamily\scriptsize, align=center] {Reorganization} (g3);
         
-        \node[font=\sffamily\scriptsize\bfseries, text=blue!80!black, align=center] at (10.5, -3.5) {Dynome Exploration\\(Preserved Network Transitions)};
+        \node[font=\sffamily\scriptsize\bfseries, text=blue!80!black, align=center] at (9.5, -2.8) {Preserved Network Transitions};
 
     \end{tikzpicture}
 

@@ -7,8 +7,8 @@ The empirical validation of the framework utilized the `c1608a01` dataset \cite{
 To process the high-density recordings, the \textit{VisionICeIO} pipeline \cite{visioniceio2024} was integrated to act as a bridge between legacy proprietary formats (e.g., SPASS binaries) and modern data structures. 
 \begin{itemize}
 \item \textbf{Tensor Standardization:} Dispersed binaries containing spike times, waveforms, and continuous LFP traces were parsed and merged into regularized multidimensional arrays. Ragged arrays (e.g., varying spike counts per trial) were standardized using `NaN` padding.
+\item \textbf{Zarr and Xarray Encapsulation:} The output is structured as a cloud-native \texttt{Zarr} store \cite{zarr2020}. By encapsulating the data within an \texttt{xarray.Dataset} \cite{hoyer2017xarray}, the framework leverages \textit{lazy loading}, allowing the frontend to read metadata trees without exhausting system RAM.
 \end{itemize}
-\textit{   \textbf{Zarr and Xarray Encapsulation:} The output is structured as a cloud-native \texttt{Zarr} store \cite{zarr2020}. By encapsulating the data within an \texttt{xarray.Dataset} \cite{hoyer2017xarray}, the framework leverages }\textit{lazy loading}, allowing the frontend to read metadata trees without exhausting system RAM.
 
 \section{Distributed Pre-Computation Engine (HPC)}
 Analyzing dynamic connectivity across continuous recordings poses a severe combinatorial challenge. NECTA addresses this through a distributed pre-computation engine orchestrated by \textbf{Dask}\cite{rocklin2015dask}.

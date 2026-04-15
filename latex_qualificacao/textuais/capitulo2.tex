@@ -16,8 +16,8 @@ The primary objective of this thesis is to develop, validate, and empirically ap
 To achieve the general goal, the project is subdivided into the following specific aims:
 
 \begin{enumerate}
-\item \textbf{Data Ingestion and Standardization:} To develop a robust pipeline (the \textit{Isaac} ecosystem) capable of converting dispersed legacy electrophysiological binaries (e.g., SPASS format) into standardized, cloud-native, n-dimensional tensors (Zarr/Xarray) using lazy-loading mechanisms.
-
+\item \textbf{Data Ingestion and Standardization:} To integrate a robust pipeline (the \textit{VisionICeIO} ecosystem) capable of converting dispersed legacy electrophysiological binaries (e.g., SPASS format) into standardized, cloud-native, n-dimensional tensors (Zarr/Xarray) using lazy-loading mechanisms.
+    
 \item \textbf{High-Performance Computation Engine:} To architect a distributed pre-computation backend using Dask, capable of orchestrating parallel pipelines for spectral connectivity, phase-based metrics, and graph topology across multiple frequency bands and sliding time windows.
 
 \item \textbf{Advanced Causal Inference:} To implement a self-optimizing Partial Directed Coherence (PDC) module that automatically selects the optimal Multivariate Autoregressive (MVAR) model order via the Bayesian Information Criterion (BIC), thereby preventing overfitting and ensuring rigorous information flow directionality.

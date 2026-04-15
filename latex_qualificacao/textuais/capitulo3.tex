@@ -3,8 +3,8 @@
 \section{Animal Preparation and Data Acquisition}
 The empirical validation of the framework utilized the `c1608a01` dataset \cite{wunderle2013}. Multichannel electrophysiological recordings (Local Field Potentials and multi-unit spikes) were obtained from the primary visual cortex of an adult cat. To isolate intrinsic cortical network dynamics from confounding behavioral variables (e.g., saccadic eye movements or fluctuations in conscious attention), the animal was maintained under general anesthesia and paralysis. High-density matrix electrodes (32–64 channels) were implanted spanning Area 17 (A17), the A17/18 Transition Zone (TZ), and Area 18 (A18). 
 
-\section{Data Ingestion Architecture (The Isaac Pipeline)}
-To process the high-density recordings, the \textit{VisionICeIO} (Isaac) pipeline was developed to act as a bridge between legacy proprietary formats (e.g., SPASS binaries) and modern data structures. 
+\section{Data Ingestion Architecture (The VisionICeIO Pipeline)}
+To process the high-density recordings, the \textit{VisionICeIO} pipeline \cite{visioniceio2024} was integrated to act as a bridge between legacy proprietary formats (e.g., SPASS binaries) and modern data structures. 
 \begin{itemize}
 \item \textbf{Tensor Standardization:} Dispersed binaries containing spike times, waveforms, and continuous LFP traces were parsed and merged into regularized multidimensional arrays. Ragged arrays (e.g., varying spike counts per trial) were standardized using `NaN` padding.
 \end{itemize}
@@ -33,7 +33,7 @@ Analyzing dynamic connectivity across continuous recordings poses a severe combi
 
     % --- LAYER 1: INGESTION (XARRAY / ZARR) ---
     \node[block, fill=gray!10, dashed] (spass) at (-4.5, 0) {Legacy Binaries\\(SPASS LFP)};
-    \node[block, fill=blue!10] (parser) at (0, 0) {Isaac Pipeline\\(Data Ingestion)};
+    \node[block, fill=blue!10] (parser) at (0, 0) {VisionICeIO Pipeline\\(Data Ingestion)};
     \node[db] (zarr) at (4.5, 0.6) {Zarr Store\\(Data Chunks)};
     \node[block, fill=green!5] (xarray) at (4.5, -1.2) {Xarray Dataset\\(Metadata / Lazy)};
 
@@ -75,7 +75,7 @@ Analyzing dynamic connectivity across continuous recordings poses a severe combi
 
     \end{tikzpicture}
     
-    \caption[Distributed and Cloud-Oriented Architecture]{\textbf{Block Diagram of Data Ingestion and Distribution in Dask.} The schematic details the architecture of the NECTA ecosystem: \textbf{(1)} Raw binaries are converted by the \textit{Isaac Pipeline} into a chunked format, where heavy data resides in a \textit{Zarr Store} and the semantic structure (\textit{Metadata}) in an \textit{Xarray Dataset} that supports \textit{lazy loading}. \textbf{(2)} Upon requesting the computation, Xarray generates \textit{Task Graphs} (directed acyclic graphs) submitted to the \textit{Dask Scheduler}. \textbf{(3)} The scheduler stochastically distributes tasks (e.g., independent data \textit{Chunks}) across multiple \textit{Worker Nodes}. \textbf{(4)} The results computed in parallel are synchronized on a bus and exported via JSON to the interactive visualization layer of the \textit{Frontend}.}
+    \caption[Distributed and Cloud-Oriented Architecture]{\textbf{Block Diagram of Data Ingestion and Distribution in Dask.} The schematic details the architecture of the NECTA ecosystem: \textbf{(1)} Raw binaries are converted by the \textit{VisionICeIO Pipeline} into a chunked format, where heavy data resides in a \textit{Zarr Store} and the semantic structure (\textit{Metadata}) in an \textit{Xarray Dataset} that supports \textit{lazy loading}. \textbf{(2)} Upon requesting the computation, Xarray generates \textit{Task Graphs} (directed acyclic graphs) submitted to the \textit{Dask Scheduler}. \textbf{(3)} The scheduler stochastically distributes tasks (e.g., independent data \textit{Chunks}) across multiple \textit{Worker Nodes}. \textbf{(4)} The results computed in parallel are synchronized on a bus and exported via JSON to the interactive visualization layer of the \textit{Frontend}.}
     \label{fig:necta_architecture}
 \end{figure}
 

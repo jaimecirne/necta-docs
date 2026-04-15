@@ -8,14 +8,15 @@ To process the high-density recordings, the \textit{VisionICeIO} pipeline \cite{
 \begin{itemize}
 \item \textbf{Tensor Standardization:} Dispersed binaries containing spike times, waveforms, and continuous LFP traces were parsed and merged into regularized multidimensional arrays. Ragged arrays (e.g., varying spike counts per trial) were standardized using `NaN` padding.
 \end{itemize}
-\textit{   \textbf{Zarr and Xarray Encapsulation:} The output is structured as a cloud-native `Zarr` store. By encapsulating the data within an `xarray.Dataset`, the framework leverages }lazy loading*, allowing the frontend to read metadata trees without exhausting system RAM.
+\textit{   \textbf{Zarr and Xarray Encapsulation:} The output is structured as a cloud-native \texttt{Zarr} store \cite{zarr2020}. By encapsulating the data within an \texttt{xarray.Dataset} \cite{hoyer2017xarray}, the framework leverages }\textit{lazy loading}, allowing the frontend to read metadata trees without exhausting system RAM.
 
 \section{Distributed Pre-Computation Engine (HPC)}
-Analyzing dynamic connectivity across continuous recordings poses a severe combinatorial challenge. NECTA addresses this through a distributed pre-computation engine orchestrated by \textbf{Dask}.
+Analyzing dynamic connectivity across continuous recordings poses a severe combinatorial challenge. NECTA addresses this through a distributed pre-computation engine orchestrated by \textbf{Dask}\cite{rocklin2015dask}.
 \begin{itemize}
 \item \textbf{Task Graphs:} Computations are divided into discrete, independent tasks (e.g., computing coherence for a specific frequency band and time window) and mapped across a cluster of worker nodes.
 
-\item \textbf{Fingerprinting and Cache Versioning:} To ensure data integrity, the orchestrator implements a cryptographic fingerprinting mechanism. Any modification to analytical parameters (e.g., altering variance thresholds or VAR criteria) alters the global hash, safely invalidating obsolete `Zarr` caches.
+\item \textbf{Fingerprinting and Cache Versioning:} To ensure data integrity, the orchestrator implements a cryptographic fingerprinting mechanism. Any modification to analytical parameters (e.g., altering variance thresholds or VAR criteria) alters the global hash, safely invalidating obsolete \texttt{Zarr} caches.
+
 \end{itemize}
 
 \vspace{0.5cm}
@@ -94,8 +95,8 @@ To infer causal interactions and hierarchical information flow, NECTA implements
 \begin{enumerate}
     \item \textbf{Stationarity Filtering:} LFP windows exceeding a predefined variance threshold are identified as artifacts and discarded, preserving the assumptions of autoregressive modeling.
     
-    \item \textbf{Frequency Transformation:} Autoregressive coefficients $A_r$ are transformed into the frequency domain $A(f)$ using Fast Fourier Transforms accelerated via \texttt{Numba} (FastMath), yielding the normalized PDC matrices.
-    
+    \item \textbf{Frequency Transformation:} Autoregressive coefficients $A_r$ are transformed into the frequency domain $A(f)$ using Fast Fourier Transforms accelerated via \texttt{Numba} (FastMath) \cite{lam2015numba}, yielding the normalized PDC matrices.
+
     \item \textbf{Automated Order Selection:} Instead of imposing a static model order, the Dask workers dynamically fit Multivariate Autoregressive (MVAR) models using Ordinary Least Squares (OLS). The algorithm iterates through orders (up to \texttt{max\_order=20}) and selects the optimal $p$ that minimizes the Bayesian Information Criterion (BIC), balancing model fit against parametric complexity.
 \end{enumerate}
 
@@ -139,4 +140,5 @@ A crucial aspect of NECTA is its rigorous statistical and topological validation
 \end{itemize}
 
 \section{Interactive Visualization Dashboard}
-The final tier of NECTA is a Single Page Application (SPA) built with `Dash` and `Cytoscape`. The interface performs on-the-fly slicing of the pre-computed `Zarr` cache using `xarray.sel()`. Changes in the global state trigger instantaneous callbacks that serialize exact data slices into JSON, seamlessly re-rendering complex Connectome Matrices, Temporal Integration scatter plots, and anatomical Information Flow graphs.
+The final tier of NECTA is a Single Page Application (SPA) built with \texttt{Dash} \cite{plotly2015} and \texttt{Cytoscape} \cite{shannon2003cytoscape}. The interface performs on-the-fly slicing of the pre-computed \texttt{Zarr} cache using \texttt{xarray.sel()}. Changes in the global state trigger instantaneous callbacks that serialize exact data slices into JSON, seamlessly re-rendering complex Connectome Matrices, Temporal Integration scatter plots, and anatomical Information Flow graphs.
+`'

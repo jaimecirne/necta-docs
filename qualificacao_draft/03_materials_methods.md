@@ -19,7 +19,7 @@ To mitigate the artifacts of volume conduction inherent to LFP recordings, NECTA
 *   **Imaginary Coherence (iCoh) & Weighted Phase Lag Index (wPLI):** The framework computes `iCoh` to strictly isolate interactions with non-zero phase delays. Furthermore, `wPLI` is calculated by weighting the phase differences by the magnitude of the imaginary component of the cross-spectrum, providing a highly robust metric against uncorrelated noise and instantaneous spatial spread.
 
 ## 3.5 Directed Functional Connectivity (PDC)
-To infer causal interactions and hierarchical information flow, NECTA implements an advanced Partial Directed Coherence (PDC) pipeline.
+To infer causal interactions and hierarchical information flow, NECTA implements an Partial Directed Coherence (PDC) pipeline.
 1.  **Stationarity Filtering:** LFP windows exceeding a predefined variance threshold are identified as artifacts and discarded, preserving the assumptions of autoregressive modeling.
 2.  **Automated Order Selection:** Instead of imposing a static model order, the Dask workers dynamically fit Multivariate Autoregressive (MVAR) models using Ordinary Least Squares (OLS). The algorithm iterates through orders (up to `max_order=20`) and selects the optimal $p$ that minimizes the Bayesian Information Criterion (BIC), balancing model fit against parametric complexity.
 3.  **Frequency Transformation:** Autoregressive coefficients $A_r$ are transformed into the frequency domain $A(f)$ using Fast Fourier Transforms accelerated via `Numba` (FastMath), yielding the normalized PDC matrices.

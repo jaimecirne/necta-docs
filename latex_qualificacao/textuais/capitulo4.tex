@@ -64,37 +64,37 @@ The dynamic analysis revealed that the network's topological efficiency is not s
     ]
 
     % --- PANEL A: Baseline ---
-    \node[font=\sffamily\bfseries] at (0, 3) {Painel A: Período Basal (Pré-Estímulo Silencioso)};
+    \node[font=\sffamily\bfseries] at (0, 3) {Panel A: Baseline Period (Silent Pre-Stimulus)};
     
     \node[area, source] (A17_A) at (-3, 0) {A17\\(+ Net)};
-    \node[area, neutral] (TZ_A) at (0, -2) {TZ\\(Neutro)};
+    \node[area, neutral] (TZ_A) at (0, -2) {TZ\\(Neutral)};
     \node[area, sink] (A18_A) at (3, 0) {A18\\(- Net)};
     
     % Flows for Panel A
-    \draw[strongflow] (A17_A) -- node[above, font=\sffamily\scriptsize] {Driver Dominante} (A18_A);
+    \draw[strongflow] (A17_A) -- node[above, font=\sffamily\scriptsize] {Dominant Driver} (A18_A);
     \draw[weakflow] (A17_A) -- (TZ_A);
     \draw[weakflow] (TZ_A) -- (A18_A);
     
-    \node[font=\sffamily\scriptsize, text=gray!80!black, align=center] at (0, -3.2) {Fluxo Crônico em Repouso:\\ Hierarquia A17 $\rightarrow$ A18};
+    \node[font=\sffamily\scriptsize, text=gray!80!black, align=center] at (0, -3.2) {Chronic Resting Flow:\\ Hierarchy A17 $\rightarrow$ A18};
 
     % --- PANEL B: Stimulus Peak ---
     \begin{scope}[yshift=-7.5cm]
-        \node[font=\sffamily\bfseries] at (0, 3) {Painel B: Pico Modular (Entrada do \textit{Grating})};
+        \node[font=\sffamily\bfseries] at (0, 3) {Panel B: Modular Peak (\textit{Grating} Onset)};
         
-        \node[area, source] (A17_B) at (-3, 0) {A17\\(Fonte)};
-        \node[area, mod, fill=orange!30, draw=orange!80!black] (TZ_B) at (0, -2) {TZ\\(Ativa)};
-        \node[area, sink] (A18_B) at (3, 0) {A18\\(Sumidouro)};
+        \node[area, source] (A17_B) at (-3, 0) {A17\\(Source)};
+        \node[area, mod, fill=orange!30, draw=orange!80!black] (TZ_B) at (0, -2) {TZ\\(Active)};
+        \node[area, sink] (A18_B) at (3, 0) {A18\\(Sink)};
         
         % Flows for Panel B
         \draw[strongflow, line width=1.5pt] (A17_B) -- (A18_B);
-        \draw[activeflow] (TZ_B) -- node[left=0.2cm, font=\sffamily\scriptsize, align=right] {Inversão\\Direcional} (A17_B);
-        \draw[activeflow] (TZ_B) -- node[right=0.2cm, font=\sffamily\scriptsize, align=left] {Modulação\\Intensa} (A18_B);
+        \draw[activeflow] (TZ_B) -- node[left=0.2cm, font=\sffamily\scriptsize, align=right] {Directional\\Inversion} (A17_B);
+        \draw[activeflow] (TZ_B) -- node[right=0.2cm, font=\sffamily\scriptsize, align=left] {Intense\\Modulation} (A18_B);
         
-        \node[font=\sffamily\scriptsize, text=orange!80!black, align=center] at (0, -3.2) {Polaridade Mutável:\\ TZ coordena a integração espacial};
+        \node[font=\sffamily\scriptsize, text=orange!80!black, align=center] at (0, -3.2) {Mutable Polarity:\\ TZ coordinates spatial integration};
     \end{scope}
 
     \end{tikzpicture}
-    \caption[Mapeamento Evolutivo de Net Flow]{\textbf{Mapeamento Evolutivo Topológico do Net-Flow de Informação (Banda Baixa-Gama).} Proporções de entrada (\textit{in-degree}) menos saída (\textit{out-degree}). \textbf{(A)} Durante o período basal, a rede opera numa hierarquia visual preditiva estrita, onde a Área 17 (A17) é o polo motriz primário e a Área 18 (A18) o sumidouro passivo, com a Zona de Transição (TZ) em estado neutro. \textbf{(B)} No exato momento do estímulo (inserção do \textit{grating} móvel), a topologia sofre uma remodelação ativa. A TZ reverte a sua polaridade passiva e adota dinâmicas de modulação aguda, alterando drasticamente os \textit{edge weights} (espessura das setas) e provando que a flexibilidade mesoscópica reage transitoriamente à entrada do estímulo periférico.}
+    \caption[Evolutionary Mapping of Net Flow]{\textbf{Evolutionary Topological Mapping of Information Net-Flow (Low-Gamma Band).} In-degree minus out-degree proportions. \textbf{(A)} During the baseline period, the network operates in a strict predictive visual hierarchy, where Area 17 (A17) is the primary driving pole and Area 18 (A18) the passive sink, with the Transition Zone (TZ) in a neutral state. \textbf{(B)} At the exact moment of the stimulus (moving \textit{grating} onset), the topology undergoes active remodeling. The TZ reverses its passive polarity and adopts acute modulation dynamics, drastically altering the \textit{edge weights} (arrow thickness) and proving that mesoscopic flexibility reacts transiently to the peripheral stimulus input.}
     \label{fig:netflow_evolution}
 \end{figure}
 

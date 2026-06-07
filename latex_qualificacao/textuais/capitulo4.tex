@@ -1,10 +1,5 @@
 \chapter{RESULTS}
 
-\section{In Silico Ground Truth Extraction and Hardware Benchmarking}
-Prior to empirical applications, the NECTA mathematical modules were tested \textit{in silico} against synthetic data matrices. By feeding the architecture with pre-programmed neural mass signals embedded in progressive layers of Pink/White noise and modeled electrical spatial leakage (simulated Volume Conduction), the `wPLI` and dynamically optimized PDC estimators consistently filtered the spurious zero-phase interactions. Analyzing the Receiver Operating Characteristic (ROC) outputs confirmed high precision in extracting the embedded causal ground-truth graphs, despite severe Signal-to-Noise (SNR) corruption.
-
-Concurrently, hardware stress testing evaluated the distributed execution of these complex tasks. The monolithic extraction of MVAR matrices combined with phase-randomized surrogate networks (e.g., iterating through multiple frequency bands) resulted in deterministic Out-of-Memory (OOM) failures or intractable execution times when running sequentially. However, by deploying NECTA’s Dask-driven orchestrator, linear scalability was achieved across active worker threads (1, 2, 4, 8, 16), effectively accelerating combinatorial FDR validation and dynamically preventing memory exhaustion by leveraging chunked Zarr abstractions.
-
 \section{Baseline Characterization and the Static Backbone}
 To establish a baseline structural framework, static functional connectivity was evaluated across the entire recording session. Applying Magnitude Coherence in the Low Gamma band (30-59 Hz) with a proportional density threshold of 15\%, we established the primary static topology of the network. The Louvain community algorithm blindly extracted functional clusters that mapped perfectly onto the physical anatomical placement of the multielectrode arrays, naturally partitioning into three distinct topological modules corresponding to Area 17 (A17), the Transition Zone (TZ), and Area 18 (A18). This static connectome serves as the anatomical "structural backbone" \cite{vezoli2021}.
 

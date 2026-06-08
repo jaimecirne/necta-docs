@@ -121,7 +121,7 @@ A crucial aspect of NECTA is its rigorous statistical and topological validation
 
 
 \begin{itemize}
-\item \textbf{Surrogate Data \& FDR Correction:} For connectivity edges, significance is established by generating 100 phase-randomized surrogate datasets. Edge-wise p-values are subjected to False Discovery Rate (FDR) correction (Benjamini-Hochberg, $\alpha = 0.05$).
+\item \textbf{Surrogate Data \& FDR Correction:} For connectivity edges, significance is established by generating 1000 phase-randomized surrogate datasets. Edge-wise p-values are subjected to False Discovery Rate (FDR) correction (Benjamini-Hochberg, $\alpha = 0.05$).
 
 \item \textbf{Topological Null Models:} Macro-topology is validated against Erdös-Rényi and Configuration Models to ensure detected communities preserve empirical degree distributions.
 
@@ -130,4 +130,3 @@ A crucial aspect of NECTA is its rigorous statistical and topological validation
 
 \section{Interactive Visualization Dashboard}
 The final tier of NECTA is a Single Page Application (SPA) built with \texttt{Dash} \cite{plotly2015} and \texttt{Cytoscape} \cite{shannon2003cytoscape}. The interface performs on-the-fly slicing of the pre-computed \texttt{Zarr} cache using \texttt{xarray.sel()}. Changes in the global state trigger instantaneous callbacks that serialize exact data slices into JSON, seamlessly re-rendering complex Connectome Matrices, Temporal Integration scatter plots, and anatomical Information Flow graphs.
-`'

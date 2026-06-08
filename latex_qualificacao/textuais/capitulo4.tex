@@ -1,5 +1,17 @@
 \chapter{RESULTS}
 
+\label{sec:results_intro}
+The NECTA framework functions not merely as an underlying analytical script, but as an integrated, high-performance neuroinformatic tool engineered to ingest high-density electrophysiological data and interactively map time-resolved cortical workflows. Before breaking down the specific statistical topographies of the network, the baseline operational capacity of this developed framework is established. As visualized in Figure~\ref{fig:necta_tool} (previously conceptualized as the framework entry point), the pipeline orchestrates multi-channel inputs to slice the functional connectome millisecond-by-millisecond, overcoming standard computational bottlenecks.
+
+\vspace{1cm}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\linewidth]{./figuras/Intro/Figura01.pdf}
+    \caption[Mapping directly to the anatomically separated electrode matrixes]{\textbf{Direct Mapping of Coherence Clusters onto Anatomically Separated Electrode Matrices.} Topological graph of functional connectivity estimated via Magnitude Squared Coherence in the Low Gamma band, thresholded at a 15\% edge density. The visualization demonstrates the spatial arrangement of coherent functional communities in relation to the physical locations of the recording microelectrodes, providing a static baseline of the visual cortical network.}
+    \label{fig:necta_tool}
+\end{figure}
+\vspace{1cm}
+
 \section{Baseline Characterization and the Static Backbone}
 To establish a baseline structural framework, static functional connectivity was evaluated across the entire recording session. Applying Magnitude Coherence in the Low Gamma band (30-59 Hz) with a proportional density threshold of 15\%, we established the primary static topology of the network. The Louvain community algorithm blindly extracted functional clusters that mapped perfectly onto the physical anatomical placement of the multielectrode arrays, naturally partitioning into three distinct topological modules corresponding to Area 17 (A17), the Transition Zone (TZ), and Area 18 (A18). This static connectome serves as the anatomical "structural backbone" \cite{vezoli2021}.
 

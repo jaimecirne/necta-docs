@@ -1,5 +1,5 @@
 # ESBOÇO DA TESE DE QUALIFICAÇÃO (PRE-TESE)
-**Projeto:** NECTA: Neural Connectivity Time-resolved Analysis
+**Projeto:** NECTA: Neural Electrophysiological Connectivity Time-resolved Analysis
 **Autor:** Jaime Bruno Cirne de Oliveira
 **Orientadora:** Prof. Dr. Kerstin E. Schmidt
 **Programa:** Pós-Graduação em Bioinformática (e interface em Neurociências) / Instituto do Cérebro (ICe) - UFRN

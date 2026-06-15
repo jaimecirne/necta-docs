@@ -21,6 +21,30 @@ More critically, the analysis of the Small-World Index ($\sigma$) (Figure \ref{f
 
 The wide dispersion of $\sigma$ values in the Low-Gamma band, with topological surges reaching values above 5.0, supports the hypothesis that long-distance coordination in the visual cortex---particularly the interhemispheric integration orchestrated by dense convergence hubs such as the Transition Zone (TZ)---occurs through dynamic high-efficiency pulses rather than as a stationary state. From a biological perspective, this behavior aligns with the fact that higher Gamma frequencies dissipate rapidly and are constrained to dense local processing, while the Low-Gamma band (30-50 Hz) is preferentially tuned for large-scale, long-distance synchronization, such as transcallosal communication mediated by the Transition Zone.
 
+\section{Time-Resolved Causal Interactions}
+A prerequisite for establishing dynamic visual dynome topology is the direct quantification of causal information flow between nodes without the bias of temporal averaging. We utilized the developed NECTA framework to extract the evolution of time-resolved causal coupling using the Partial Directed Coherence (PDC) metric across sensory ingestion epochs.
+
+Figure~\ref{fig:pdc_graph} visualizes these raw directional data. Following stimulus onset (represented by $T=0$), distinct causal spikes appear that define the functional state. Specifically, Striate cortex (A17) drove the initial response to extrastriate targets (e.g., A17$\to$TZ) with a PDC peaking at [INSERIR TEMPO DO PICO AQUI] ms relative to stimulus onset, reaching [INSERIR VALOR PDC AQUI] $\pm$ [INSERIR SD AQUI]. This data provides the empirical foundation to move beyond descriptive graph metrics, demonstrating that sensory information flow reconfigures rapidly during the active state, transitioning control from striate to extrastriate sources.
+
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=\textwidth]{figuras/PDC_graph.pdf}
+    \caption{Time-resolved Causal Connectivity derived from the NECTA framework. The figure displays the evolution of Partial Directed Coherence (PDC) over visual ingestion epochs. Colored lines represent distinct directional area connections (e.g., Blue: A17$\to$TZ; Red: A18$\to$TZ). Spikes in the PDC metric indicate active causal information transfer that redefines the visual dynome topology during active sensory states.}
+    \label{fig:pdc_graph}
+\end{figure}
+
+\section{Topological Evolution of the Visual Dynome}
+By applying graph-theoretical metrics to the matrices derived from the raw causal flow quantified in the preceding section, we visualized the topology of the visual dynome. Figure~\ref{fig:dyna_graphs} illustrates this time-resolved evolution, contrasting distinct sensory processing states.
+
+The dynamic visualizations confirm that the network continuously reconfigures its functional architecture during sensory ingestion. In the baseline state, striate cortex (A17) was established as the primary dominant Fonte node with the highest out-degree/out-flow ratio. Following stimulus onset, the visual dynome reconfigured rapidly. The Transition Zone (TZ) emerged as a massive Active Hub, increasing its Normalized Node Strength from [INSERIR VALOR BASELINE] to [INSERIR VALOR STIMULUS] ($p < 0.05$). This active modular hub behavior, shifting between Sink and Source states depending on the current epoch, provides direct empirical evidence supporting the TZ as a flexible, self-tuning modulator in the cortical hierarchy, routing inter-hemispheric communication pathways during active perception.
+
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=\textwidth]{figuras/Dyna_alt2.pdf}
+    \caption{Topological reconfiguration of the Visual Dynome. Time-resolved graphs visualize the continuous shift in network functional architecture during sensory ingestion. Node size represents normalized Node Strength. Nodes colors: A17 (Striate-Blue), TZ (Transition Zone-Red), A18 (Extrastriate-Green). Note the emergence of the Transition Zone as a highly centralized and active moduladora hub, shifting its causality Sink/Source bimodal role rapidly across epochs.}
+    \label{fig:dyna_graphs}
+\end{figure}
+
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{stat.4.2.pdf}

@@ -128,5 +128,24 @@ A crucial aspect of NECTA is its rigorous statistical and topological validation
 \item \textbf{Open Science and Reproducibility:} Complying with open-source global standards, the NECTA framework ensures transparency. All algorithms, Dask partition logs, and dependencies are containerized, version-controlled, and openly hosted on digital repositories (GitHub/CodeMeta), allowing independent researchers to audit, reproduce, and expand the methodological codebase.
 \end{itemize}
 
+\subsection{Topological Filtering: Maximum Spanning Tree and Proportional Thresholding}
+\label{subsec:mst_thresholding}
+
+The extraction of dense functional graphs (often resulting in fully connected networks) imposes a significant visual and analytical challenge, commonly known as the ``hairball effect'', which obscures the primary routes of information flow. To overcome this limitation and preserve the physiological integrity of the network, we implemented a dual topological filtering approach.
+
+First, the Maximum Spanning Tree (MST) algorithm was applied using foundational graph theory libraries. The MST extracts the subgraph of maximum cumulative weight that connects all nodes in the system, ensuring that no recording channel (areas A17, A18, or the Transition Zone - TZ) becomes isolated from the connectome due to thresholding artifacts.
+
+Following the structural anchoring via MST, the remaining edges are subjected to proportional thresholding (e.g., retaining the top 10\% to 15\% of the strongest connections). Mathematically, if $W$ is the coherence adjacency matrix, the filtered matrix $W'$ is defined as:
+
+\begin{equation}
+W'_{ij} = 
+\begin{cases} 
+W_{ij}, & \text{if } (i,j) \in \text{MST} \lor W_{ij} \geq P_{k} \\
+0, & \text{otherwise}
+\end{cases}
+\end{equation}
+
+where $P_{k}$ represents the $k$-th percentile of the edge weights. This combined approach effectively highlights the hub role of the Transition Zone (TZ) without compromising the global connectivity layout of the examined visual cortex.
+
 \section{Interactive Visualization Dashboard}
 The final tier of NECTA is a Single Page Application (SPA) built with \texttt{Dash} \cite{plotly2015} and \texttt{Cytoscape} \cite{shannon2003cytoscape}. The interface performs on-the-fly slicing of the pre-computed \texttt{Zarr} cache using \texttt{xarray.sel()}. Changes in the global state trigger instantaneous callbacks that serialize exact data slices into JSON, seamlessly re-rendering complex Connectome Matrices, Temporal Integration scatter plots, and anatomical Information Flow graphs.

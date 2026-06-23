@@ -15,7 +15,7 @@ Analyzing dynamic connectivity across continuous recordings poses a severe combi
 \begin{itemize}
 \item \textbf{Task Graphs:} Computations are divided into discrete, independent tasks (e.g., computing coherence for a specific frequency band and time window) and mapped across a cluster of worker nodes.
 
-\item \textbf{Fingerprinting and Cache Versioning:} To ensure data integrity, the orchestrator implements a cryptographic fingerprinting mechanism. Any modification to analytical parameters (e.g., altering variance thresholds or VAR criteria) alters the global hash, safely invalidating obsolete \texttt{Zarr} caches.
+\item \textbf{Fingerprinting and Cache Versioning:} To ensure data integrity, the orchestrator implements a cryptographic fingerprinting mechanism. Any modification to analytical parameters (e.g., altering variance thresholds or VAR criteria) alters the global hash, ensuring analytical consistency after parameter modifications.
 
 \end{itemize}
 
@@ -100,6 +100,8 @@ To infer causal interactions and hierarchical information flow, NECTA implements
     \item \textbf{Automated Order Selection:} Instead of imposing a static model order, the Dask workers dynamically fit Multivariate Autoregressive (MVAR) models using Ordinary Least Squares (OLS). The algorithm iterates through orders (up to \texttt{max\_order=20}) and selects the optimal $p$ that minimizes the Bayesian Information Criterion (BIC), balancing model fit against parametric complexity.
 \end{enumerate}
 
+Once connectivity matrices were estimated and statistically validated, graph-theoretical analyses were applied to characterize the resulting network topology.
+
 \section{Graph Theory, Statistical Validation, and Open Science}
 A crucial aspect of NECTA is its rigorous statistical and topological validation.
 
@@ -110,10 +112,10 @@ A crucial aspect of NECTA is its rigorous statistical and topological validation
 \begin{tabular}{|>{\raggedright\arraybackslash}p{0.15\linewidth}|>{\raggedright\arraybackslash}p{0.16\linewidth}|>{\raggedright\arraybackslash}p{0.22\linewidth}|>{\raggedright\arraybackslash}p{0.18\linewidth}|>{\raggedright\arraybackslash}p{0.19\linewidth}|}
 \hline
 \textbf{Algorithmic Family} & \textbf{Representative Examples} & \textbf{Vulnerability to Instantaneous Spread (Volume Conduction)} & \textbf{Dimensionality of Causal Informational Direction} & \textbf{Justification Employed in NECTA Study} \\ \hline
-\textit{Traditional Parametric Time-Domain Correlations} & Pearson Coefficient, Zero-lag covariance Cross-correlation & \textbf{Severe Level.} Extreme analytical contamination due to the systematic generation of false instantaneous topological interactions. & Exclusively Symmetric and Non-Directed & Unfeasible for high-density mesoscopic analysis; method entirely suppressed from the Framework. \\ \hline
-\textit{Mixed Spectral Synchrony} & Phase Locking Value (PLV), Classical Magnitude Squared Coherence & \textbf{High Level.} Latent topological interference in combined phase-magnitude domains. & Essentially Non-Directed & Baseline use restricted only for primary macro-anatomical recognition and historical comparison. \\ \hline
-\textit{Analytical Modeling Delayed by Instantaneous Phase Shifts} & Weighted Phase Lag Index (wPLI), Strict Imaginary Coherence (iCoh) & \textbf{Low Sensitivity.} Extreme robustness arising from strict subtraction in complex domains of null real projection (strict delay $>0$). & Non-Directed & Validated fundamental basis for clean extraction of network modularity sub-windows and artifact-free small-world coefficients. \\ \hline
-\textit{Multi-Regressive Equation Models for Mathematical Causality} & Partial Directed Coherence (PDC), Directed Transfer Function (DTF) & \textbf{Medium to Low.} Attenuated and shielded in association and thresholding against non-null interactions via surrogate validation. & Exploratory Causal Asymmetry (Allows stipulating Driver/Source and Receiver/Sink) & Suitable for directional inference, coupled with optimized window processing via BIC, to track dynamic feline temporal hierarchical Feedforward/Feedback oscillation. \\ \hline
+\textit{Traditional Parametric Time-Domain Correlations} & Pearson Coefficient, Zero-lag covariance Cross-correlation & \textbf{High susceptibility.} Strong contamination risk due to the systematic generation of false instantaneous topological interactions. & Exclusively Symmetric and Non-Directed & Unfeasible for high-density mesoscopic analysis; method entirely suppressed from the Framework. \\ \hline
+\textit{Mixed Spectral Synchrony} & Phase Locking Value (PLV), Classical Magnitude Squared Coherence & \textbf{Moderate susceptibility.} Latent topological interference in combined phase-magnitude domains. & Essentially Non-Directed & Baseline use restricted only for primary macro-anatomical recognition and historical comparison. \\ \hline
+\textit{Analytical Modeling Delayed by Instantaneous Phase Shifts} & Weighted Phase Lag Index (wPLI), Imaginary Coherence (iCoh) & \textbf{Low susceptibility.} High robustness arising from consistent subtraction in complex domains of null real projection (consistent delay $>0$). & Non-Directed & Validated fundamental basis for clean extraction of network modularity sub-windows and artifact-free small-world coefficients. \\ \hline
+\textit{Multi-Regressive Equation Models for Mathematical Causality} & Partial Directed Coherence (PDC), Directed Transfer Function (DTF) & \textbf{Medium to low susceptibility.} Attenuated and shielded in association and thresholding against non-null interactions via surrogate validation. & Exploratory Causal Asymmetry (Allows stipulating Driver/Source and Receiver/Sink) & Suitable for directional inference, coupled with optimized window processing via BIC, to track dynamic feline temporal hierarchical Feedforward/Feedback oscillation. \\ \hline
 \end{tabular}
 \caption{\textbf{Table of Methodological Synthesis of Connectivity Estimation.} Comparison of state-of-the-art metrics against the fundamental needs and physiological challenges faced by the NECTA framework.}
 \label{tab:estimators}
@@ -125,7 +127,7 @@ A crucial aspect of NECTA is its rigorous statistical and topological validation
 
 \item \textbf{Topological Null Models:} Macro-topology is validated against Erdös-Rényi and Configuration Models to ensure detected communities preserve empirical degree distributions.
 
-\item \textbf{Open Science and Reproducibility:} Complying with open-source global standards, the NECTA framework ensures transparency. All algorithms, Dask partition logs, and dependencies are containerized, version-controlled, and openly hosted on digital repositories (GitHub/CodeMeta), allowing independent researchers to audit, reproduce, and expand the methodological codebase.
+\item \textbf{Open Science and Reproducibility:} Complying with open-source global standards, the NECTA framework facilitates transparency. All algorithms, Dask partition logs, and dependencies are containerized, version-controlled, and openly hosted on digital repositories (GitHub/CodeMeta), allowing independent researchers to audit, reproduce, and expand the methodological codebase.
 \end{itemize}
 
 \subsection{Topological Filtering: Maximum Spanning Tree and Proportional Thresholding}
@@ -148,4 +150,4 @@ W_{ij}, & \text{if } (i,j) \in \text{MST} \lor W_{ij} \geq P_{k} \\
 where $P_{k}$ represents the $k$-th percentile of the edge weights. This combined approach effectively highlights the hub role of the Transition Zone (TZ) without compromising the global connectivity layout of the examined visual cortex.
 
 \section{Interactive Visualization Dashboard}
-The final tier of NECTA is a Single Page Application (SPA) built with \texttt{Dash} \cite{plotly2015} and \texttt{Cytoscape} \cite{shannon2003cytoscape}. The interface performs on-the-fly slicing of the pre-computed \texttt{Zarr} cache using \texttt{xarray.sel()}. Changes in the global state trigger instantaneous callbacks that serialize exact data slices into JSON, seamlessly re-rendering complex Connectome Matrices, Temporal Integration scatter plots, and anatomical Information Flow graphs.
+The final tier of NECTA is a Single Page Application (SPA) built with \texttt{Dash} \cite{plotly2015} and \texttt{Cytoscape} \cite{shannon2003cytoscape}. The interface performs on-the-fly slicing of the pre-computed \texttt{Zarr} cache using \texttt{xarray.sel()}. Changes in the global state trigger instantaneous callbacks that serialize specific data slices into JSON, seamlessly re-rendering complex Connectome Matrices, Temporal Integration scatter plots, and anatomical Information Flow graphs.

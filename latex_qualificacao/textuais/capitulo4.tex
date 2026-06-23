@@ -1,7 +1,7 @@
 \chapter{RESULTS}
 
 \label{sec:results_intro}
-The NECTA framework functions not merely as an underlying analytical script, but as an integrated, high-performance neuroinformatic tool engineered to ingest high-density electrophysiological data and interactively map time-resolved cortical workflows. Before breaking down the specific statistical topographies of the network, the baseline operational capacity of this developed framework is established.
+This chapter presents the operational benchmarks of the NECTA framework and the statistical topographies of the network derived from high-density electrophysiological data.
 
 \section{Framework Validation and Computational Profiling}
 \label{sec:framework_validation}
@@ -66,11 +66,11 @@ While this aggregated baseline characterization maps a highly dense functional c
 \section{Global and Local Topological Evolution of the Visual Dynome}
 \label{sec:topological_evolution}
 
-The analysis of global topological metrics extracted by NECTA revealed a marked dynamic reconfiguration in the functional connectivity of the network. As illustrated in Figure~\ref{fig:topological_dynamics}(A), both Global Efficiency and the Clustering Coefficient exhibited high variability across time windows, evidencing the non-stationary and volatile character of cortical processing.
+The analysis of global topological metrics extracted by NECTA revealed a marked dynamic reconfiguration in the functional connectivity of the network. As illustrated in Figure~\ref{fig:topological_dynamics}(A), both Global Efficiency and the Clustering Coefficient exhibited high variability across time windows.
 
-More critically, the analysis of the Small-World Index ($\sigma$) (Figure~\ref{fig:topological_dynamics}(B)) demonstrated that the network transitions into highly efficient topological optimization states in specific frequency bands. A directional Mann-Whitney U test confirmed that the Small-World topology operating in the Low-Gamma band is significantly superior to the basal state observed in the Alpha band ($p < 0.05$).
+The analysis of the Small-World Index ($\sigma$) (Figure~\ref{fig:topological_dynamics}(B)) showed higher Small-Worldness values in the Low-Gamma band compared to the Alpha band. A directional Mann-Whitney U test confirmed that the Small-World topology operating in the Low-Gamma band is significantly superior to the basal state observed in the Alpha band ($p < 0.05$).
 
-The wide dispersion of $\sigma$ values in the Low-Gamma band reveals transient topological surges reaching values above 5.0. These fluctuations demonstrate that the small-world configuration in this frequency range does not maintain a stationary state, but rather alternates between baseline levels and discrete peaks of high network integration.
+The dispersion of $\sigma$ values in the Low-Gamma band included peaks reaching values above 5.0. The small-world index in this frequency range fluctuated between baseline levels and these peak values.
 
 \begin{figure}[H]
     \centering
@@ -79,9 +79,9 @@ The wide dispersion of $\sigma$ values in the Low-Gamma band reveals transient t
     \label{fig:topological_dynamics}
 \end{figure}
 
-To understand the relationship between localized neural activity and global network architecture, we analyzed the aggregate spike counts alongside the Small-Worldness ($\sigma$) index across continuous 250 ms sliding windows. As illustrated in Figure~\ref{fig:spike_vs_sw}, the transition from the baseline state to active sensory ingestion triggers a synchronized physiological and topological response.
+To understand the relationship between localized neural activity and global network architecture, we analyzed the aggregate spike counts alongside the Small-Worldness ($\sigma$) index across continuous 250 ms sliding windows. Figure~\ref{fig:spike_vs_sw} displays the aggregate spike counts and the Small-Worldness index over time.
 
-Following the stimulus onset, a prominent peak in the aggregate spike count is closely accompanied by a pronounced increase in the Small-Worldness index, particularly visible around Window 3 and Window 4. The network consistently maintains a $\sigma > 1$ threshold, confirming that the visual dynome operates within a highly efficient small-world regime. This temporal alignment provides consistent evidence that the visual cortex rapidly shifts towards a highly integrated and segregated topology during periods associated with increased sensory processing.
+Following the stimulus onset, a prominent peak in the aggregate spike count is closely accompanied by a pronounced increase in the Small-Worldness index, particularly visible around Window 3 and Window 4. The network maintained a $\sigma > 1$ threshold throughout the analyzed windows.
 
 \begin{figure}[H]
     \centering
@@ -90,9 +90,9 @@ Following the stimulus onset, a prominent peak in the aggregate spike count is c
     \label{fig:spike_vs_sw}
 \end{figure}
 
-While global metrics such as Small-Worldness indicate an overall optimization in network efficiency, the true complexity of the visual dynome is unmasked by observing the specific topological microstates. By extracting the Maximum Spanning Tree (MST) backbones at a proportional density threshold of 23\%, we can track the specific causal routing pathways milisecond-by-millisecond.
+To analyze specific topological microstates, the Maximum Spanning Tree (MST) backbones were extracted at a proportional density threshold of 23\% across sliding windows.
 
-Figure~\ref{fig:dynamic_graphs} visualizes these time-resolved structural reconfigurations across the first six epochs. In the initial windows (0.00s--0.50s), the network exhibits a dense, highly clustered state. However, as the processing demands evolve (e.g., Windows 4 and 5), the topology transitions into transient microstates where specific extrastriate and Transition Zone (TZ) nodes become central communication hubs. This rhythmic pulsation---shifting between dense integration and targeted segregation---demonstrates that the A17-TZ-A18 axis does not rely on a rigid communication structure, but rather forms ephemeral pathways to dynamically route visual information.
+Figure~\ref{fig:dynamic_graphs} visualizes these time-resolved structural reconfigurations across the first six epochs. In the initial windows (0.00s--0.50s), the network exhibited a dense clustered state. In Windows 4 and 5, specific extrastriate and Transition Zone (TZ) nodes displayed higher centrality.
 
 \begin{figure}[H]
     \centering
@@ -110,9 +110,9 @@ To further evaluate the structural hierarchy of the visual network, we investiga
 
 As evidenced in Figure~\ref{fig:node_strength}, Area 17 presents a restricted network centrality with low dispersion. The empirical distribution indicates that network integration within the Gamma band is concentrated in the A18-TZ axis, while A17 remains at the structural periphery.
 
-A defining feature of this functional axis is the bimodal signature evident in the raw scatter distributions of both Area 18 and the Transition Zone. The individual data points do not cluster homogeneously around the median; rather, they segregate into two distinct topological regimes: a basal state of low connectivity (clustering near a Node Strength of 5) and discrete surges of substantial systemic integration (reaching values near 30). This pronounced bimodality reveals that the functional architecture is not a stationary state but a highly dynamic mechanism. The network effectively operates in discrete bursts, with the TZ and A18 transiently exhibiting increased hub-like properties to coordinate stimulus processing, before subsequently relaxing into a decoupled state.
+The raw scatter distributions of both Area 18 and the Transition Zone displayed a bimodal signature. The data points segregated into two clusters: one near a Node Strength of 5 and another reaching values near 30.
 
-Furthermore, the Transition Zone displays a Node Strength visibly superior to that of Area 18. At a proportional density threshold of 15\% in the Low Gamma band, the Transition Zone (TZ) exhibited a Node Strength ($M = 9.60$, $SD = 3.50$), compared to A18 ($M = 7.25$, $SD = 3.11$). The statistical analysis revealed a significant difference between the regions (Mann-Whitney $U = 186.0$, $p = 0.030$, effect size $r = 0.453$). This demonstrates that the Transition Zone operates under a connectivity load that statistically surpasses Area 18.
+At a proportional density threshold of 15\% in the Low Gamma band, the Transition Zone (TZ) exhibited a Node Strength ($M = 9.60$, $SD = 3.50$), compared to A18 ($M = 7.25$, $SD = 3.11$). The statistical analysis indicated a significant difference between the regions (Mann-Whitney $U = 186.0$, $p = 0.030$, effect size $r = 0.453$).
 
 \begin{figure}[H]
     \centering
@@ -128,7 +128,7 @@ While localized nodal statistics confirm the topological dominance and high proc
 
 A prerequisite for establishing dynamic visual dynome topology is the direct quantification of causal information flow between nodes without the bias of temporal averaging. We utilized the developed NECTA framework to extract the evolution of time-resolved causal coupling using the Partial Directed Coherence (PDC) metric across sensory ingestion epochs.
 
-Figure~\ref{fig:pdc_graph} visualizes these raw directional data. Following stimulus onset (represented by $T=0$), distinct causal spikes appear that define the functional state. Specifically, Striate cortex (A17) drove the initial response to extrastriate targets (e.g., A17$\to$TZ) with a PDC peaking at  752.4~ms relative to stimulus onset, reaching $0.19 \pm 0.13$. This data provides the empirical foundation to move beyond descriptive graph metrics, demonstrating that sensory information flow reconfigures rapidly during the active state, transitioning control from striate to extrastriate sources.
+Figure~\ref{fig:pdc_graph} visualizes these raw directional data. Following stimulus onset (represented by $T=0$), distinct causal spikes appear. Specifically, the PDC from A17 to TZ peaked at 752.4~ms relative to stimulus onset, reaching $0.19 \pm 0.13$.
 
 \begin{figure}[H]
     \centering
@@ -142,7 +142,7 @@ By calculating the Net Flow for each region, the analysis indicates that A17 beh
 
 The core capability of NECTA lies in capturing the time-varying network dynamics---the transition from static networks to chronological connectomes. Connectivity was recalculated using a sliding-window approach ($W = 500$ ms, 50\% overlap). The Temporal Integration panel overlaid the global population spiking activity (Peri-Stimulus Time Histogram - PSTH) with the topological evolution of the network's \textit{Small-Worldness} ($\sigma$).
 
-The dynamic analysis revealed that the network's topological efficiency is not static but responds to visual processing phases. The network achieved its absolute peak in \textit{Small-Worldness} specifically during the moving grating stimulus phase. This transient optimization was driven primarily by a rapid surge in local clustering, indicating that the cortical network reorganizes into a highly efficient state to process dynamic visual inputs.
+The network achieved its peak \textit{Small-Worldness} during the moving grating stimulus phase. This peak coincided with an increase in local clustering.
 
 \vspace{1cm}
 
@@ -199,4 +199,4 @@ The dynamic analysis revealed that the network's topological efficiency is not s
 
 \vspace{0.5cm}
 
-Extracting frame-by-frame snapshots (Connectome Filmstrip) of the dynamic Low Gamma Coherence network illustrated a stable rhythmic organization over time. The hubs located in A17 and the TZ maintained cohesive clustering. Crucially, evaluating the \textit{Net Flow Evolution} (Figure~\ref{fig:netflow_evolution}) uncovered a complex temporal interplay obscured by static analysis. While A17 consistently acted as a "Volatile Source" and A18 as a "Stable Sink", the Transition Zone (TZ) exhibited unique behavior. The TZ functioned as a \textit{Dynamic Modulator}, actively switching its directional role (from sink to source, or vice versa) precisely at the onset of visual stimulation. This highlights the framework's capacity to dissect the mesoconnectome chronologically, revealing dynamic hierarchical relays that coordinate sensory integration across the interhemispheric boundary.
+Extracting frame-by-frame snapshots (Connectome Filmstrip) of the dynamic Low Gamma Coherence network illustrated a stable rhythmic organization over time. The hubs located in A17 and the TZ maintained cohesive clustering. The \textit{Net Flow Evolution} (Figure~\ref{fig:netflow_evolution}) showed that A17 maintained a positive net flow and A18 maintained a negative net flow. The Transition Zone (TZ) exhibited changes in its directional role, switching between positive and negative net flow at the onset of visual stimulation.

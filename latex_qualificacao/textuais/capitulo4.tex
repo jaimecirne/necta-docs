@@ -36,18 +36,31 @@ Figure~\ref{fig:pdc_graph} visualizes these raw directional data. Following stim
 \section{Topological Evolution of the Visual Dynome}
 By applying graph-theoretical metrics to the matrices derived from the raw causal flow quantified in the preceding section, we visualized the topology of the visual dynome. Figure~\ref{fig:dyna_graphs} illustrates this time-resolved evolution, contrasting distinct sensory processing states.
 
-The dynamic visualizations confirm that the network continuously reconfigures its functional architecture during sensory ingestion. In the baseline state, striate cortex (A17) was established as the primary dominant Fonte node with the highest out-degree/out-flow ratio. Following stimulus onset, the visual dynome reconfigured rapidly. The Transition Zone (TZ) emerged as a massive Active Hub, increasing its Normalized Node Strength from [INSERIR VALOR BASELINE] to [INSERIR VALOR STIMULUS] ($p < 0.05$). This active modular hub behavior, shifting between Sink and Source states depending on the current epoch, provides direct empirical evidence supporting the TZ as a flexible, self-tuning modulator in the cortical hierarchy, routing inter-hemispheric communication pathways during active perception.
+To understand the relationship between localized neural activity and global network architecture, we analyzed the aggregate spike counts alongside the Small-Worldness ($\sigma$) index across continuous 250 ms sliding windows. As illustrated in Figure~\ref{fig:spike_vs_sw}, the transition from the baseline state to active sensory ingestion triggers a synchronized physiological and topological response.
+
+Following the stimulus onset, a prominent peak in the aggregate spike count is closely accompanied by a massive surge in the Small-Worldness index, particularly visible around Window 3 and Window 4. The network consistently maintains a $\sigma > 1$ threshold, confirming that the visual dynome operates within a highly efficient small-world regime. This temporal alignment provides robust empirical evidence that the visual cortex rapidly shifts towards a highly integrated and segregated topology exactly when peak sensory routing is required.
 
 \begin{figure}[htpb]
     \centering
-    \includegraphics[width=\textwidth]{figuras/Dyna_alt2.pdf}
-    \caption[Topological reconfiguration of the Visual Dynome]{Time-resolved graphs visualize the continuous shift in network functional architecture during sensory ingestion. Node size represents normalized Node Strength. Nodes colors: A17 (Striate-Blue), TZ (Transition Zone-Red), A18 (Extrastriate-Green). Note the emergence of the Transition Zone as a highly centralized and active moduladora hub, shifting its causality Sink/Source bimodal role rapidly across epochs.}
-    \label{fig:dyna_graphs}
+    \includegraphics[width=\textwidth]{figuras/SpikeVsSW.pdf}
+    \caption[Temporal alignment of localized neural activity and global network topology]{Temporal alignment of localized neural activity and global network topology. (Top) Aggregate spike count across the recorded channels, highlighting the peak firing rate during the active visual motion epoch. (Bottom) Evolution of the Small-Worldness ($\sigma$) index computed over 250 ms sliding windows with a 250 ms step. The network consistently operates above the random network limit ($\sigma = 1$), dynamically optimizing its efficiency in response to sensory ingestion.}
+    \label{fig:spike_vs_sw}
+\end{figure}
+
+While global metrics such as Small-Worldness indicate an overall optimization in network efficiency, the true complexity of the visual dynome is unmasked by observing the exact topological microstates. By extracting the Maximum Spanning Tree (MST) backbones at a proportional density threshold of 23\%, we can track the exact causal routing pathways milisecond-by-millisecond.
+
+Figure~\ref{fig:dynamic_graphs} visualizes these time-resolved structural reconfigurations across the first six epochs. In the initial windows (0.00s--0.50s), the network exhibits a dense, highly clustered state. However, as the processing demands evolve (e.g., Windows 4 and 5), the topology transitions into transient microstates where specific extrastriate and Transition Zone (TZ) nodes become central communication hubs. This rhythmic pulsation---shifting between dense integration and targeted segregation---demonstrates that the A17-TZ-A18 axis does not rely on a rigid communication structure, but rather forms ephemeral pathways to dynamically route visual information.
+
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=\textwidth]{figuras/Dynamic Graphs.pdf}
+    \caption[Time-resolved topological microstates of the visual dynome]{Time-resolved topological microstates of the visual dynome. The sequence illustrates the dynamic graph coherence in the Low Gamma band across 250 ms sliding windows. To highlight the primary routing architecture and eliminate spurious connections, networks are thresholded at 23\% density with a Maximum Spanning Tree (MST) backbone. Node colors correspond to distinct cortical areas: A17 (Blue), Transition Zone (Red), and A18 (Green). The topological volatility confirms the continuous reconfiguration of the cortical hierarchy during active perception.}
+    \label{fig:dynamic_graphs}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=\textwidth]{stat.4.2.pdf}
+    \includegraphics[width=\textwidth]{Metricas_NECTA.pdf}
     \caption[Topological Dynamics and Small-World Optimization]{\textbf{Topological Dynamics and Small-World Optimization in the Visual Cortex.} \textbf{(A)} High temporal variability of Global Efficiency and Clustering Coefficient. The substantial dispersion (ranging from 0.2 to 0.8) illustrates the volatile dynamics of cortical processing, as the network continuously balances moments of strong local processing (high clustering) with global communication jumps (high efficiency). \textbf{(B)} Comparison of the Small-World Index ($\sigma$) between the Alpha (8-12 Hz) and Low-Gamma (30-59 Hz) bands. The asterisk (*) denotes a statistically significant increase in Small-World topology during Low-Gamma. The pronounced dispersion (elongated whiskers) underscores that the network operates through transient, high-efficiency topological pulses rather than remaining in a static optimized configuration.}
     \label{fig:topological_dynamics}
 \end{figure}

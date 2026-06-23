@@ -117,7 +117,7 @@ At a proportional density threshold of 15\% in the Low Gamma band, the Transitio
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{Forca_Nodal_TZ.pdf}
-    \caption[Node Strength Distribution in the Gamma Band]{\textbf{Node Strength Distribution in the Gamma Band.} Area 17 displays restricted centrality with low variability. In contrast, both the Transition Zone (TZ) and Area 18 exhibit bimodal distributions with high variability. The Transition Zone operates under a connectivity load tendentially superior to that of Area 18, highlighting its role as a primary interhemispheric convergence hub.}
+    \caption[Node Strength Distribution in the Gamma Band]{\textbf{Node Strength Distribution in the Gamma Band.} Area 17 displays restricted centrality with low variability. In contrast, both the Transition Zone (TZ) and Area 18 exhibit bimodal distributions with high variability. The Transition Zone operates under a connectivity load statistically superior to that of Area 18, highlighting its role as a primary interhemispheric convergence hub.}
     \label{fig:node_strength}
 \end{figure}
 
@@ -139,10 +139,6 @@ Figure~\ref{fig:pdc_graph} visualizes these raw directional data. Following stim
 
 To decode the causal relationships within this structural backbone, Partial Directed Coherence (PDC) was applied using the BIC-optimized MVAR models. The static PDC analysis in the Low Gamma band revealed a highly asymmetrical and hierarchical information flow across the visual cortex. 
 By calculating the Net Flow for each region, the analysis indicates that A17 behaves as the dominant persistent Driver, exhibiting a significantly higher Net Flow ($M = 1.21$, $SD = 1.17$) compared to the rest of the network ($M = -0.60$, $SD = 1.37$; Mann-Whitney $U = 424.0$, $p = 1.245 \times 10^{-4}$, effect size $r = -0.656$). In contrast, A18 behaves as the primary \textit{Receiver} (Sink) (-1.36 net flow). These results suggest a directional pathway extending from A17 through the TZ and terminating in A18 (A17 $\rightarrow$ TZ $\rightarrow$ A18).
-
-The core capability of NECTA lies in capturing the time-varying network dynamics---the transition from static networks to chronological connectomes. Connectivity was recalculated using a sliding-window approach ($W = 500$ ms, 50\% overlap). The Temporal Integration panel overlaid the global population spiking activity (Peri-Stimulus Time Histogram - PSTH) with the topological evolution of the network's \textit{Small-Worldness} ($\sigma$).
-
-The network achieved its peak \textit{Small-Worldness} during the moving grating stimulus phase. This peak coincided with an increase in local clustering.
 
 \vspace{1cm}
 

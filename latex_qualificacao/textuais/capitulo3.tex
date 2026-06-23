@@ -1,5 +1,7 @@
 \chapter{MATERIALS AND METHODS}
 
+To test the biological and computational hypotheses described above, the NECTA framework was designed to simultaneously address two challenges: (i) reliable estimation of directed connectivity in the presence of volume conduction and (ii) scalable computation of time-resolved graph metrics.
+
 \section{Animal Preparation and Data Acquisition}
 The empirical validation of the framework utilized the `c1608a01` dataset \cite{wunderle2013}. Multichannel electrophysiological recordings (Local Field Potentials and multi-unit spikes) were obtained from the primary visual cortex of an adult cat. To isolate intrinsic cortical network dynamics from confounding behavioral variables (e.g., saccadic eye movements or fluctuations in conscious attention), the animal was maintained under general anesthesia and paralysis. High-density matrix electrodes (32–64 channels) were implanted spanning Area 17 (A17), the A17/18 Transition Zone (TZ), and Area 18 (A18). 
 
@@ -19,10 +21,12 @@ Analyzing dynamic connectivity across continuous recordings poses a severe combi
 
 \end{itemize}
 
+The complete architecture of this distributed data processing pipeline, from initial ingestion via \textit{VisionICeIO} to parallel execution via Dask and frontend visualization, is illustrated in Figure~\ref{fig:necta_architecture}.
+
 \vspace{0.5cm}
 
 % --- VISUAL INSERTION 2 USING TIKZ ---
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
     \begin{tikzpicture}[
         >=Stealth,
@@ -105,7 +109,7 @@ Once connectivity matrices were estimated and statistically validated, graph-the
 \section{Graph Theory, Statistical Validation, and Open Science}
 A crucial aspect of NECTA is its rigorous statistical and topological validation.
 
-\begin{table}[hbtp]
+\begin{table}[H]
 \centering
 \renewcommand{\arraystretch}{1.4} % Melhor espaçamento vertical para leitura
 \footnotesize % Fonte menor para acomodar as 5 colunas de forma legível

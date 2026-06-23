@@ -1,10 +1,55 @@
 \chapter{RESULTS}
 
 \label{sec:results_intro}
-The NECTA framework functions not merely as an underlying analytical script, but as an integrated, high-performance neuroinformatic tool engineered to ingest high-density electrophysiological data and interactively map time-resolved cortical workflows. Before breaking down the specific statistical topographies of the network, the baseline operational capacity of this developed framework is established. As visualized in Figure~\ref{fig:necta_tool} (previously conceptualized as the framework entry point), the pipeline orchestrates multi-channel inputs to slice the functional connectome millisecond-by-millisecond, overcoming standard computational bottlenecks.
+The NECTA framework functions not merely as an underlying analytical script, but as an integrated, high-performance neuroinformatic tool engineered to ingest high-density electrophysiological data and interactively map time-resolved cortical workflows. Before breaking down the specific statistical topographies of the network, the baseline operational capacity of this developed framework is established.
+
+\section{Framework Technical Results}
+\label{sec:framework_technical_results}
+
+\subsection{Framework Validation}
+\label{sec:framework_validation}
+
+To evaluate the computational viability and scalability of the proposed solution, the framework underwent performance profiling. The aim was to assess the potential improvements in processing time and resource efficiency provided by the distributed architecture. The validation focused on four main aspects: processing time, memory optimization, parallelization benchmarks, and caching efficiency.
+
+\subsubsection{Processing Time Analysis}
+
+The framework's architecture partitions the processing pipeline into five distinct phases (Phases A through E), facilitating the identification of computational bottlenecks. Analysis of the execution logs indicated that Phase D (Parallel Compute) generally presents the highest computational density, scaling according to the workload volume. In scenarios with smaller datasets, parallel computation was completed in under one minute. Conversely, under higher data demands, the parallel processing approach sustained extended executions without observed memory allocation failures.
+
+The table below summarizes samples of the framework's behavior under different computational loads:
+
+\begin{table}[htbp]
+\centering
+\caption{Framework performance samples under different computational loads.}
+\label{tab:framework_performance}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lcccc}
+\hline
+\textbf{Execution Date} & \textbf{Phase A (Loading)} & \textbf{Phase C (DAG)} & \textbf{Phase D (Compute)} & \textbf{Phase E (I/O)} \\
+\hline
+2026-04-20 & 0.81s & 0.31s & \textbf{39.57s} & 1.81s \\
+2026-05-25 & 2.69s & 0.23s & \textbf{354.05s} & 4.64s \\
+2026-06-13 & 1.29s & 0.23s & \textbf{2521.82s} & 4.74s \\
+\hline
+\end{tabular}%
+}
+\end{table}
+
+\subsubsection{Computational Benchmark: Dask vs. Serial Execution}
+
+To examine the impact of large-scale parallelization, the performance of the distributed model (implemented via Dask) was analyzed using its execution reports. While the aggregated computation time for the 3,737 tasks---equivalent to a strictly serial execution---totaled 4 hours and 11 minutes, distributing the workload across 12 threads reduced the wall-clock time to 33 minutes and 46 seconds. This suggests an approximate speedup of 7.4x. Furthermore, the duration of Phase B (Scatter) remained consistently below 0.05s, indicating that the overhead associated with task distribution to the workers was minimal relative to the observed performance gains.
+
+\subsubsection{Caching Efficiency (Cache Hit Rate)}
+
+Redundant computations were minimized through a caching mechanism based on directory identifiers and analysis parameters. The pipeline incorporates a validation step to check for the existence of pre-processed datasets in Zarr format prior to resource allocation. For previously processed data flows, this approach can achieve a high cache hit rate, loading historical data asynchronously and effectively bypassing the execution time of Phase D during re-analyses.
+
+\subsubsection{Memory Consumption Optimization}
+
+Memory allocation often presents a bottleneck when processing large neural matrices. By employing a Directed Acyclic Graph (DAG) in Phase C and utilizing data partitioning managed by the Dask scheduler, data chunks could be processed sequentially via lazy evaluation. Memory profiling indicated an approximate 75\% reduction in peak RAM consumption during processing. While a purely serial approach required loading data structures that reached peaks of around 15~GB, the distributed framework maintained a maximum active memory footprint of under 4~GB. This stabilization helps to mitigate the risk of Out-of-Memory (OOM) errors during extensive computations.
+
+With the computational robustness and scalability of the architecture confirmed, the focus now shifts to the primary neurophysiological outcomes generated by the system. As visualized in Figure~\ref{fig:necta_tool} (previously conceptualized as the framework entry point), the pipeline orchestrates multi-channel inputs to slice the functional connectome millisecond-by-millisecond, effectively overcoming standard computational bottlenecks to map dynamic cortical workflows.
 
 \vspace{1cm}
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{./figuras/Intro/Figura01.pdf}
     \caption[Mapping directly to the anatomically separated electrode matrixes]{\textbf{Direct Mapping of Coherence Clusters onto Anatomically Separated Electrode Matrices.} Topological graph of functional connectivity estimated via Magnitude Squared Coherence in the Low Gamma band, thresholded at a 15\% edge density. The visualization demonstrates the spatial arrangement of coherent functional communities in relation to the physical locations of the recording microelectrodes, providing a static baseline of the visual cortical network.}
@@ -21,12 +66,19 @@ More critically, the analysis of the Small-World Index ($\sigma$) (Figure \ref{f
 
 The wide dispersion of $\sigma$ values in the Low-Gamma band reveals transient topological surges reaching values above 5.0. These fluctuations demonstrate that the small-world configuration in this frequency range does not maintain a stationary state, but rather alternates between baseline levels and discrete peaks of high network integration.
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{Metricas_NECTA.pdf}
+    \caption[Topological Dynamics and Small-World Optimization]{\textbf{Topological Dynamics and Small-World Optimization in the Visual Cortex.} \textbf{(A)} High temporal variability of Global Efficiency and Clustering Coefficient. The substantial dispersion (ranging from 0.2 to 0.8) illustrates the volatile dynamics of cortical processing, as the network continuously balances moments of strong local processing (high clustering) with global communication jumps (high efficiency). \textbf{(B)} Comparison of the Small-World Index ($\sigma$) between the Alpha (8-12 Hz) and Low-Gamma (30-59 Hz) bands. The asterisk (*) denotes a statistically significant increase in Small-World topology during Low-Gamma. The pronounced dispersion (elongated whiskers) underscores that the network operates through transient, high-efficiency topological pulses rather than remaining in a static optimized configuration.}
+    \label{fig:topological_dynamics}
+\end{figure}
+
 \section{Time-Resolved Causal Interactions}
 A prerequisite for establishing dynamic visual dynome topology is the direct quantification of causal information flow between nodes without the bias of temporal averaging. We utilized the developed NECTA framework to extract the evolution of time-resolved causal coupling using the Partial Directed Coherence (PDC) metric across sensory ingestion epochs.
 
 Figure~\ref{fig:pdc_graph} visualizes these raw directional data. Following stimulus onset (represented by $T=0$), distinct causal spikes appear that define the functional state. Specifically, Striate cortex (A17) drove the initial response to extrastriate targets (e.g., A17$\to$TZ) with a PDC peaking at  752.4~ms relative to stimulus onset, reaching $0.19 \pm 0.13$. This data provides the empirical foundation to move beyond descriptive graph metrics, demonstrating that sensory information flow reconfigures rapidly during the active state, transitioning control from striate to extrastriate sources.
 
-\begin{figure}[htpb]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figuras/PDC_graph.pdf}
     \caption[Time-resolved Causal Connectivity derived from the NECTA framework]{The figure displays the evolution of Partial Directed Coherence (PDC) over visual ingestion epochs. Colored lines represent distinct directional area connections (e.g., Blue: A17$\to$TZ; Red: A18$\to$TZ). Spikes in the PDC metric indicate active causal information transfer that redefines the visual dynome topology during active sensory states.}
@@ -34,13 +86,13 @@ Figure~\ref{fig:pdc_graph} visualizes these raw directional data. Following stim
 \end{figure}
 
 \section{Topological Evolution of the Visual Dynome}
-By applying graph-theoretical metrics to the matrices derived from the raw causal flow quantified in the preceding section, we visualized the topology of the visual dynome. Figure~\ref{fig:dyna_graphs} illustrates this time-resolved evolution, contrasting distinct sensory processing states.
+By applying graph-theoretical metrics to the matrices derived from the raw causal flow quantified in the preceding section, we visualized the topology of the visual dynome. Figure~\ref{fig:dynamic_graphs} illustrates this time-resolved evolution, contrasting distinct sensory processing states.
 
 To understand the relationship between localized neural activity and global network architecture, we analyzed the aggregate spike counts alongside the Small-Worldness ($\sigma$) index across continuous 250 ms sliding windows. As illustrated in Figure~\ref{fig:spike_vs_sw}, the transition from the baseline state to active sensory ingestion triggers a synchronized physiological and topological response.
 
 Following the stimulus onset, a prominent peak in the aggregate spike count is closely accompanied by a pronounced increase in the Small-Worldness index, particularly visible around Window 3 and Window 4. The network consistently maintains a $\sigma > 1$ threshold, confirming that the visual dynome operates within a highly efficient small-world regime. This temporal alignment provides consistent evidence that the visual cortex rapidly shifts towards a highly integrated and segregated topology during periods associated with increased sensory processing.
 
-\begin{figure}[htpb]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figuras/SpikeVsSW.pdf}
     \caption[Temporal alignment of localized neural activity and global network topology]{Temporal alignment of localized neural activity and global network topology. (Top) Aggregate spike count across the recorded channels, highlighting the peak firing rate during the active visual motion epoch. (Bottom) Evolution of the Small-Worldness ($\sigma$) index computed over 250 ms sliding windows with a 250 ms step. The network consistently operates above the random network limit ($\sigma = 1$), dynamically optimizing its efficiency in response to sensory ingestion.}
@@ -51,19 +103,13 @@ While global metrics such as Small-Worldness indicate an overall optimization in
 
 Figure~\ref{fig:dynamic_graphs} visualizes these time-resolved structural reconfigurations across the first six epochs. In the initial windows (0.00s--0.50s), the network exhibits a dense, highly clustered state. However, as the processing demands evolve (e.g., Windows 4 and 5), the topology transitions into transient microstates where specific extrastriate and Transition Zone (TZ) nodes become central communication hubs. This rhythmic pulsation---shifting between dense integration and targeted segregation---demonstrates that the A17-TZ-A18 axis does not rely on a rigid communication structure, but rather forms ephemeral pathways to dynamically route visual information.
 
-\begin{figure}[htpb]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figuras/Dynamic Graphs.pdf}
     \caption[Time-resolved topological microstates of the visual dynome]{Time-resolved topological microstates of the visual dynome. The sequence illustrates the dynamic graph coherence in the Low Gamma band across 250 ms sliding windows. To highlight the primary routing architecture and eliminate spurious connections, networks are thresholded at 23\% density with a Maximum Spanning Tree (MST) backbone. Node colors correspond to distinct cortical areas: A17 (Blue), Transition Zone (Red), and A18 (Green). The topological volatility confirms the continuous reconfiguration of the cortical hierarchy during active perception.}
     \label{fig:dynamic_graphs}
 \end{figure}
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=\textwidth]{Metricas_NECTA.pdf}
-    \caption[Topological Dynamics and Small-World Optimization]{\textbf{Topological Dynamics and Small-World Optimization in the Visual Cortex.} \textbf{(A)} High temporal variability of Global Efficiency and Clustering Coefficient. The substantial dispersion (ranging from 0.2 to 0.8) illustrates the volatile dynamics of cortical processing, as the network continuously balances moments of strong local processing (high clustering) with global communication jumps (high efficiency). \textbf{(B)} Comparison of the Small-World Index ($\sigma$) between the Alpha (8-12 Hz) and Low-Gamma (30-59 Hz) bands. The asterisk (*) denotes a statistically significant increase in Small-World topology during Low-Gamma. The pronounced dispersion (elongated whiskers) underscores that the network operates through transient, high-efficiency topological pulses rather than remaining in a static optimized configuration.}
-    \label{fig:topological_dynamics}
-\end{figure}
 
 To further evaluate the structural hierarchy of the visual network, we investigated the Node Strength of the cortical areas within the Gamma band. The analysis of the empirical distribution revealed markedly distinct connectivity profiles between primary and higher-order areas.
 
@@ -73,7 +119,7 @@ A defining feature of this functional axis is the bimodal signature evident in t
 
 Furthermore, the Transition Zone displays a Node Strength visibly superior to that of Area 18. At a proportional density threshold of 15\% in the Low Gamma band, the Transition Zone (TZ) exhibited a Node Strength ($M = 9.60$, $SD = 3.50$), compared to A18 ($M = 7.25$, $SD = 3.11$). The statistical analysis revealed a significant difference between the regions (Mann-Whitney $U = 186.0$, $p = 0.030$, effect size $r = 0.453$). This demonstrates that the Transition Zone operates under a connectivity load that statistically surpasses Area 18.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{Forca_Nodal_TZ.pdf}
     \caption[Node Strength Distribution in the Gamma Band]{\textbf{Node Strength Distribution in the Gamma Band.} Area 17 displays restricted centrality with low variability. In contrast, both the Transition Zone (TZ) and Area 18 exhibit bimodal distributions with high variability. The Transition Zone operates under a connectivity load tendentially superior to that of Area 18, highlighting its role as a primary interhemispheric convergence hub.}
@@ -92,7 +138,7 @@ The dynamic analysis revealed that the network's topological efficiency is not s
 \vspace{1cm}
 
 % --- VISUAL INSERTION 3 USING TIKZ ---
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
     \begin{tikzpicture}[
         >=Stealth,
@@ -145,4 +191,4 @@ The dynamic analysis revealed that the network's topological efficiency is not s
 \vspace{0.5cm}
 
 \section{Network Evolution and Modulatory Nodes}
-Extracting frame-by-frame snapshots (Connectome Filmstrip) of the dynamic Low Gamma Coherence network illustrated a stable rhythmic organization over time. The hubs located in A17 and the TZ maintained cohesive clustering. Crucially, evaluating the \textit{Net Flow Evolution} uncovered a complex temporal interplay obscured by static analysis. While A17 consistently acted as a "Volatile Source" and A18 as a "Stable Sink", the Transition Zone (TZ) exhibited unique behavior. The TZ functioned as a \textit{Dynamic Modulator}, actively switching its directional role (from sink to source, or vice versa) precisely at the onset of visual stimulation. This highlights the framework's capacity to dissect the mesoconnectome chronologically, revealing dynamic hierarchical relays that coordinate sensory integration across the interhemispheric boundary.
+Extracting frame-by-frame snapshots (Connectome Filmstrip) of the dynamic Low Gamma Coherence network illustrated a stable rhythmic organization over time. The hubs located in A17 and the TZ maintained cohesive clustering. Crucially, evaluating the \textit{Net Flow Evolution} (Figure~\ref{fig:netflow_evolution}) uncovered a complex temporal interplay obscured by static analysis. While A17 consistently acted as a "Volatile Source" and A18 as a "Stable Sink", the Transition Zone (TZ) exhibited unique behavior. The TZ functioned as a \textit{Dynamic Modulator}, actively switching its directional role (from sink to source, or vice versa) precisely at the onset of visual stimulation. This highlights the framework's capacity to dissect the mesoconnectome chronologically, revealing dynamic hierarchical relays that coordinate sensory integration across the interhemispheric boundary.
